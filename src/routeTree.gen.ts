@@ -9,38 +9,221 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkRouteImport } from './routes/work'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as EstimateRouteImport } from './routes/estimate'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesRoomAdditionsRouteImport } from './routes/services/room-additions'
+import { Route as ServicesPatiosRouteImport } from './routes/services/patios'
+import { Route as ServicesKitchenFittingRouteImport } from './routes/services/kitchen-fitting'
+import { Route as ServicesDrivewaysRouteImport } from './routes/services/driveways'
+import { Route as ServicesBathroomFittingRouteImport } from './routes/services/bathroom-fitting'
+import { Route as ServicesBasementFinishingRouteImport } from './routes/services/basement-finishing'
 
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstimateRoute = EstimateRouteImport.update({
+  id: '/estimate',
+  path: '/estimate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesRoomAdditionsRoute = ServicesRoomAdditionsRouteImport.update({
+  id: '/services/room-additions',
+  path: '/services/room-additions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesPatiosRoute = ServicesPatiosRouteImport.update({
+  id: '/services/patios',
+  path: '/services/patios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesKitchenFittingRoute = ServicesKitchenFittingRouteImport.update({
+  id: '/services/kitchen-fitting',
+  path: '/services/kitchen-fitting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesDrivewaysRoute = ServicesDrivewaysRouteImport.update({
+  id: '/services/driveways',
+  path: '/services/driveways',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesBathroomFittingRoute = ServicesBathroomFittingRouteImport.update({
+  id: '/services/bathroom-fitting',
+  path: '/services/bathroom-fitting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesBasementFinishingRoute =
+  ServicesBasementFinishingRouteImport.update({
+    id: '/services/basement-finishing',
+    path: '/services/basement-finishing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/estimate': typeof EstimateRoute
+  '/reviews': typeof ReviewsRoute
+  '/work': typeof WorkRoute
+  '/services/basement-finishing': typeof ServicesBasementFinishingRoute
+  '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/patios': typeof ServicesPatiosRoute
+  '/services/room-additions': typeof ServicesRoomAdditionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/estimate': typeof EstimateRoute
+  '/reviews': typeof ReviewsRoute
+  '/work': typeof WorkRoute
+  '/services/basement-finishing': typeof ServicesBasementFinishingRoute
+  '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/patios': typeof ServicesPatiosRoute
+  '/services/room-additions': typeof ServicesRoomAdditionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/estimate': typeof EstimateRoute
+  '/reviews': typeof ReviewsRoute
+  '/work': typeof WorkRoute
+  '/services/basement-finishing': typeof ServicesBasementFinishingRoute
+  '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/patios': typeof ServicesPatiosRoute
+  '/services/room-additions': typeof ServicesRoomAdditionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/estimate'
+    | '/reviews'
+    | '/work'
+    | '/services/basement-finishing'
+    | '/services/bathroom-fitting'
+    | '/services/driveways'
+    | '/services/kitchen-fitting'
+    | '/services/patios'
+    | '/services/room-additions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/estimate'
+    | '/reviews'
+    | '/work'
+    | '/services/basement-finishing'
+    | '/services/bathroom-fitting'
+    | '/services/driveways'
+    | '/services/kitchen-fitting'
+    | '/services/patios'
+    | '/services/room-additions'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/estimate'
+    | '/reviews'
+    | '/work'
+    | '/services/basement-finishing'
+    | '/services/bathroom-fitting'
+    | '/services/driveways'
+    | '/services/kitchen-fitting'
+    | '/services/patios'
+    | '/services/room-additions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  EstimateRoute: typeof EstimateRoute
+  ReviewsRoute: typeof ReviewsRoute
+  WorkRoute: typeof WorkRoute
+  ServicesBasementFinishingRoute: typeof ServicesBasementFinishingRoute
+  ServicesBathroomFittingRoute: typeof ServicesBathroomFittingRoute
+  ServicesDrivewaysRoute: typeof ServicesDrivewaysRoute
+  ServicesKitchenFittingRoute: typeof ServicesKitchenFittingRoute
+  ServicesPatiosRoute: typeof ServicesPatiosRoute
+  ServicesRoomAdditionsRoute: typeof ServicesRoomAdditionsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estimate': {
+      id: '/estimate'
+      path: '/estimate'
+      fullPath: '/estimate'
+      preLoaderRoute: typeof EstimateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +231,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/room-additions': {
+      id: '/services/room-additions'
+      path: '/services/room-additions'
+      fullPath: '/services/room-additions'
+      preLoaderRoute: typeof ServicesRoomAdditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/patios': {
+      id: '/services/patios'
+      path: '/services/patios'
+      fullPath: '/services/patios'
+      preLoaderRoute: typeof ServicesPatiosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/kitchen-fitting': {
+      id: '/services/kitchen-fitting'
+      path: '/services/kitchen-fitting'
+      fullPath: '/services/kitchen-fitting'
+      preLoaderRoute: typeof ServicesKitchenFittingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/driveways': {
+      id: '/services/driveways'
+      path: '/services/driveways'
+      fullPath: '/services/driveways'
+      preLoaderRoute: typeof ServicesDrivewaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/bathroom-fitting': {
+      id: '/services/bathroom-fitting'
+      path: '/services/bathroom-fitting'
+      fullPath: '/services/bathroom-fitting'
+      preLoaderRoute: typeof ServicesBathroomFittingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/basement-finishing': {
+      id: '/services/basement-finishing'
+      path: '/services/basement-finishing'
+      fullPath: '/services/basement-finishing'
+      preLoaderRoute: typeof ServicesBasementFinishingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  EstimateRoute: EstimateRoute,
+  ReviewsRoute: ReviewsRoute,
+  WorkRoute: WorkRoute,
+  ServicesBasementFinishingRoute: ServicesBasementFinishingRoute,
+  ServicesBathroomFittingRoute: ServicesBathroomFittingRoute,
+  ServicesDrivewaysRoute: ServicesDrivewaysRoute,
+  ServicesKitchenFittingRoute: ServicesKitchenFittingRoute,
+  ServicesPatiosRoute: ServicesPatiosRoute,
+  ServicesRoomAdditionsRoute: ServicesRoomAdditionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
