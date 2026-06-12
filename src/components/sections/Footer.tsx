@@ -53,11 +53,11 @@ export function Footer() {
           <FooterCol
             title="Areas We Serve"
             items={[
-              { label: "Howell, NJ", href: "/#contact" },
+              { label: "Perth Amboy, NJ", href: "/#contact" },
+              { label: "Woodbridge, NJ", href: "/#contact" },
               { label: "Freehold, NJ", href: "/#contact" },
               { label: "Toms River, NJ", href: "/#contact" },
-              { label: "Brick, NJ", href: "/#contact" },
-              { label: "Jackson, NJ", href: "/#contact" },
+              { label: "Old Bridge, NJ", href: "/#contact" },
               { label: "Lakewood, NJ", href: "/#contact" },
             ]}
           />
@@ -66,27 +66,27 @@ export function Footer() {
         {/* SEO Keywords footer */}
         <div className="border-t border-white/10 mt-12 pt-6">
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-white text-center max-w-5xl mx-auto leading-relaxed">
-            <span>Bathroom remodeling Howell NJ</span>
+            <span>Bathroom remodeling Perth Amboy NJ</span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span>Kitchen renovation contractors near me</span>
             <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Patio installation Monmouth County</span>
+            <span>Patio installation Woodbridge</span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span>Deck builders Brick NJ</span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span>Best basement finishing Freehold NJ</span>
             <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Affordable room additions Howell Township</span>
+            <span>Affordable room additions Toms River</span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span>Licensed driveway contractors NJ</span>
             <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Reliable home addition contractors Toms River</span>
+            <span>Reliable home addition contractors Old Bridge</span>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-white/10 mt-6 pt-6 flex flex-wrap justify-between items-center gap-4 text-xs text-white/60">
-          <div>© {new Date().getFullYear()} Jhay's Construction. All Rights Reserved.</div>
+          <div>© {new Date().getFullYear()} Jhay's Construction. All Rights Reserved. Design By <a href="https://stellrit.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">StellR IT LLC</a></div>
           <div className="flex gap-5">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

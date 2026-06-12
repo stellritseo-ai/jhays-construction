@@ -119,7 +119,7 @@ function RoomAdditionsPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { num: "80+", label: "Additions Completed" },
-            { num: "15+", label: "Years Experience" },
+            { num: "23", label: "Years Experience" },
             { num: "4.9★", label: "Average Rating" },
             { num: "100%", label: "Fully Permitted" },
           ].map((s) => (

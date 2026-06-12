@@ -3,7 +3,7 @@ import teamImg from "@/assets/why.png";
 
 const leftValues = [
   {
-    title: "25+ Years of Experience",
+    title: "23 Years of Experience",
     desc: "With over two decades in the residential & Commercial construction industry, we bring unmatched expertise and proven craftsmanship to every project we touch.",
   },
   {

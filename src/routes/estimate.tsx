@@ -115,19 +115,18 @@ const features = [
 ];
 
 const serviceAreas = [
-  "Howell Township (HQ)",
   "Perth Amboy",
-  "Woodbridge",
-  "Rahway",
+  "Hillside Terrace",
+  "Allentown",
   "Fords",
-  "Carteret",
-  "Linden",
-  "Elizabeth",
+  "Woodbridge",
   "Freehold",
-  "Brick Township",
+  "Old Bridge",
+  "Robertsville",
   "Toms River",
-  "Wall Township",
-  "Manalapan",
+  "Brick Township",
+  "Lakewood",
+  "Jackson Township",
 ];
 
 function EstimatePage() {

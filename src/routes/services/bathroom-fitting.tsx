@@ -143,7 +143,7 @@ function BathroomFittingPage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { num: "300+", label: "Bathrooms Renovated" },
-            { num: "15+", label: "Years Experience" },
+            { num: "23", label: "Years Experience" },
             { num: "4.9★", label: "Average Rating" },
             { num: "100%", label: "Licensed & Insured" },
           ].map((s) => (

@@ -97,7 +97,7 @@ export function Hero() {
 
       {/* Floating glass stat */}
       <div className="absolute bottom-8 right-8 hidden md:block glass rounded-2xl p-4 text-white animate-float">
-        <div className="text-3xl font-display font-bold">21+</div>
+        <div className="text-3xl font-display font-bold">23</div>
         <div className="text-xs uppercase tracking-widest text-white/80">Years Experience</div>
       </div>
     </section>

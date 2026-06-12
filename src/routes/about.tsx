@@ -312,19 +312,18 @@ function AboutPage() {
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {[
-                  "Howell Township (HQ)",
                   "Perth Amboy",
-                  "Woodbridge",
-                  "Rahway",
+                  "Hillside Terrace",
+                  "Allentown",
                   "Fords",
-                  "Carteret",
-                  "Linden",
-                  "Elizabeth",
+                  "Woodbridge",
                   "Freehold",
-                  "Brick Township",
+                  "Old Bridge",
+                  "Robertsville",
                   "Toms River",
-                  "Wall Township",
-                  "Manalapan",
+                  "Brick Township",
+                  "Lakewood",
+                  "Jackson Township",
                 ].map((town) => (
                   <span
                     key={town}
@@ -337,7 +336,7 @@ function AboutPage() {
             </div>
 
             <p className="text-xs text-gray-500 leading-relaxed bg-[#008000]/5 border border-[#008000]/10 rounded-xl p-4">
-              Can't find your town? Give us a call — we cover a wide 24 - 40 miles radius and likely serve your area too.
+              Can't find your town? Give us a call — we cover a wide 25 miles radius and likely serve your area too.
             </p>
           </div>
 

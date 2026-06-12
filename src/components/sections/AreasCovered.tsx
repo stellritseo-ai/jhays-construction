@@ -16,7 +16,7 @@ export function AreasCovered() {
             Areas <span style={{ color: "#008000" }}>Covered</span>
           </h2>
           <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
-            24 - 40 Miles Radius Of New Jersey And Surrounding Areas
+            25 Miles Radius Of New Jersey And Surrounding Areas
           </p>
         </div>
 
@@ -61,13 +61,17 @@ export function AreasCovered() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 "Perth Amboy",
+                "Hillside Terrace",
+                "Allentown",
                 "Fords",
-                "Rahway",
                 "Woodbridge",
-                "Carteret",
-                "Linden",
-                "Elizabeth",
-                "Howell (HQ)",
+                "Freehold",
+                "Old Bridge",
+                "Robertsville",
+                "Toms River",
+                "Brick Township",
+                "Lakewood",
+                "Jackson Township",
               ].map((city) => (
                 <div
                   key={city}
@@ -89,7 +93,7 @@ export function AreasCovered() {
                 i
               </div>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Don't see your town? We cover a wide <strong className="text-gray-700">24 - 40 miles radius</strong> around Howell Township, NJ. Feel free to contact us to confirm service availability for your project!
+                Don't see your town? We cover a wide <strong className="text-gray-700">25 Miles Radius</strong> around Howell Township, NJ. Feel free to contact us to confirm service availability for your project!
               </p>
             </div>
           </div>

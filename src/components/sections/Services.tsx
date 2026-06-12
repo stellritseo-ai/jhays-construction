@@ -77,111 +77,53 @@ export function Services() {
           {servicesList.map((s) => (
             <article
               key={s.title}
-              className="group relative rounded-2xl overflow-hidden cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
               style={{ minHeight: "320px" }}
             >
-              {/* Background image — always present, fades in on hover for non-featured */}
+              {/* Background image — always visible */}
               <img
                 src={s.img}
                 alt={s.title}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ opacity: s.featured ? 1 : 0, transition: "opacity 0.4s ease, transform 0.5s ease" }}
               />
-              {/* For non-featured: reveal image on hover via CSS trick */}
-              {!s.featured && (
-                <img
-                  src={s.img}
-                  alt=""
-                  aria-hidden
-                  className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-500 opacity-0 group-hover:opacity-100"
-                  style={{ transition: "opacity 0.4s ease, transform 0.5s ease" }}
-                />
-              )}
 
-              {/* White background for non-featured cards (hides on hover) */}
-              {!s.featured && (
-                <div
-                  className="absolute inset-0 bg-white group-hover:opacity-0 transition-opacity duration-400"
-                  style={{ border: "1px solid #e8e8e8", borderRadius: "1rem" }}
-                />
-              )}
-
-              {/* Dark overlay — only visible when image is shown */}
+              {/* Dark overlay — always visible */}
               <div
-                className="absolute inset-0 transition-opacity duration-400"
-                style={{
-                  backgroundColor: "rgba(0,0,0,0.58)",
-                  opacity: s.featured ? 1 : 0,
-                  borderRadius: "1rem",
-                }}
-              // Tailwind can't do this conditionally so we use the group trick below
+                className="absolute inset-0 transition-opacity duration-400 group-hover:bg-black/70 bg-black/60"
               />
-              {!s.featured && (
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 rounded-2xl"
-                  style={{ backgroundColor: "rgba(0,0,0,0.58)" }}
-                />
-              )}
 
               {/* Content */}
-              <div className="relative p-6 flex flex-col" style={{ minHeight: "320px" }}>
-                {/* Icon + Title */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="size-14 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
-                    style={{ backgroundColor: "#1a7c1a" }}
-                  >
-                    <s.icon className="size-7 text-white" />
-                  </div>
-                  <h3
-                    className="font-bold text-lg leading-tight transition-colors duration-300"
-                    style={{ color: s.featured ? "white" : undefined }}
-                  // non-featured: dark by default, white on hover
-                  >
-                    <span className={s.featured ? "text-white" : "text-gray-900 group-hover:text-white transition-colors duration-300"}>
+              <div className="relative p-6 flex flex-col h-full" style={{ minHeight: "320px" }}>
+                {/* Pushes content to the bottom */}
+                <div className="mt-auto">
+                  {/* Icon + Title */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div
+                      className="size-14 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+                      style={{ backgroundColor: "#1a7c1a" }}
+                    >
+                      <s.icon className="size-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg leading-tight text-white transition-colors duration-300">
                       {s.title}
-                    </span>
-                  </h3>
-                </div>
+                    </h3>
+                  </div>
 
-                {/* Description */}
-                <p
-                  className={`text-sm leading-relaxed mt-[53px] mb-5 flex-1 transition-colors duration-300 ${s.featured ? "text-white/85" : "text-gray-500 group-hover:text-white/85"
-                    }`}
-                >
-                  {s.desc}
-                </p>
+                  {/* Description */}
+                  <p className="text-[15px] leading-relaxed text-white/90 transition-all duration-300 group-hover:mb-4">
+                    {s.desc}
+                  </p>
 
-                {/* Read More button */}
-                <div>
-                  {s.featured ? (
+                  {/* Read More button (hidden until hover) */}
+                  <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[48px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
                     <a
                       href={s.href}
-                      className="inline-flex items-center gap-1 px-5 py-2 rounded-full text-sm font-semibold text-white"
+                      className="inline-flex items-center gap-1 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all hover:brightness-110"
                       style={{ backgroundColor: "#1a7c1a" }}
                     >
                       Read More
                     </a>
-                  ) : (
-                    <>
-                      {/* Default state: outlined green */}
-                      <a
-                        href={s.href}
-                        className="inline-flex items-center gap-1 px-5 py-2 rounded-full text-sm font-semibold group-hover:hidden transition-all"
-                        style={{ border: "1px solid #1a7c1a", color: "#1a7c1a" }}
-                      >
-                        Read More
-                      </a>
-                      {/* Hover state: white filled */}
-                      <a
-                        href={s.href}
-                        className="hidden group-hover:inline-flex items-center gap-1 px-5 py-2 rounded-full text-sm font-semibold"
-                        style={{ backgroundColor: "#1a7c1a", color: "white" }}
-                      >
-                        Read More
-                      </a>
-                    </>
-                  )}
+                  </div>
                 </div>
               </div>
             </article>

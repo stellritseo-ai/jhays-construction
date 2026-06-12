@@ -73,19 +73,19 @@ const faqs = [
 const serviceCounties = [
   {
     county: "Monmouth County",
-    cities: ["Howell", "Freehold", "Wall Township", "Manalapan", "Colts Neck", "Farmingdale"],
+    cities: ["Freehold", "Allentown", "Robertsville"],
   },
   {
     county: "Ocean County",
-    cities: ["Brick Township", "Toms River", "Lakewood", "Jackson"],
+    cities: ["Toms River", "Brick Township", "Lakewood", "Jackson Township"],
   },
   {
     county: "Middlesex County",
-    cities: ["Perth Amboy", "Woodbridge", "Rahway", "Fords", "Carteret", "Old Bridge", "Edison"],
+    cities: ["Perth Amboy", "Fords", "Woodbridge", "Old Bridge"],
   },
   {
     county: "Union County",
-    cities: ["Linden", "Elizabeth", "Rahway (partial)"],
+    cities: ["Hillside Terrace"],
   },
 ];
 
