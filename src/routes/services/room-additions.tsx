@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/room-additions")({
+  head: () => ({
+    meta: [
+      { title: "Home Additions & Extensions | Perth Amboy & Old Bridge NJ" },
+      { name: "description", content: "Expand your living space with our expert home addition and extension services in New Jersey." },
+      { property: "og:title", content: "Home Additions & Extensions in NJ" },
+      { property: "og:description", content: "Expert home addition and extension services in New Jersey." },
+    ],
+  }),
   component: RoomAdditionsPage,
 });
 

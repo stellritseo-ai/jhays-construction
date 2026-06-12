@@ -11,7 +11,7 @@ export const Route = createFileRoute("/reviews")({
       { title: "Customer Reviews — Jhay's Construction | NJ Contractor" },
       {
         name: "description",
-        content: "Read real customer reviews for Jhay's Construction in Howell, NJ. See why homeowners trust us for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. 4.9/5 rating.",
+        content: "Read real customer reviews for Jhay's Construction in New Jersey. See why homeowners trust us for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. 4.9/5 rating.",
       },
       { property: "og:title", content: "Customer Reviews — Jhay's Construction" },
       {

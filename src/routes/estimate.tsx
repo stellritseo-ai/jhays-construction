@@ -28,11 +28,11 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/estimate")({
   head: () => ({
     meta: [
-      { title: "Free Estimate — Jhay's Construction | Howell, NJ" },
+      { title: "Free Estimate — Jhay's Construction | NJ Contractor" },
       {
         name: "description",
         content:
-          "Get a free, no-obligation estimate from Jhay's Construction in Howell, NJ. Serving Perth Amboy, Woodbridge, Freehold, Brick, Toms River & more. Bathroom, kitchen, patio, deck, driveway, room additions & basement finishing. Call or fill out our form today.",
+          "Get a free, no-obligation estimate from Jhay's Construction. Serving Perth Amboy, Woodbridge, Freehold, Brick, Toms River & more. Bathroom, kitchen, patio, deck, driveway, room additions & basement finishing.",
       },
       { property: "og:title", content: "Free Estimate — Jhay's Construction" },
       {
@@ -157,7 +157,7 @@ function EstimatePage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Validate required fields
     if (
@@ -170,11 +170,41 @@ function EstimatePage() {
       alert("Please fill out all required fields marked with an asterisk (*).");
       return;
     }
-    setSubmitted(true);
-    // Smooth scroll to success info
-    const element = document.getElementById("estimate-form-container");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "New Estimate Request from Jhay's Construction",
+          Name: formData.fullName,
+          Phone: formData.phone,
+          Email: formData.email,
+          Address: formData.address,
+          ProjectType: formData.projectType,
+          Timeline: formData.timeline || "Not specified",
+          Budget: formData.budget || "Not specified",
+          Description: formData.description || "Not specified",
+          HowHeard: formData.howHeard || "Not specified",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        // Smooth scroll to success info
+        const element = document.getElementById("estimate-form-container");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Oops! There was a problem submitting your form");
     }
   };
 

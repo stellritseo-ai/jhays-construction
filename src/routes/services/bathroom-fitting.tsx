@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/bathroom-fitting")({
+  head: () => ({
+    meta: [
+      { title: "Bathroom Remodeling & Fitting | Woodbridge & Perth Amboy NJ" },
+      { name: "description", content: "Expert bathroom remodeling and fitting services in New Jersey. Upgrades, tiling, and full renovations." },
+      { property: "og:title", content: "Bathroom Remodeling & Fitting in NJ" },
+      { property: "og:description", content: "Expert bathroom remodeling and fitting services in New Jersey." },
+    ],
+  }),
   component: BathroomFittingPage,
 });
 

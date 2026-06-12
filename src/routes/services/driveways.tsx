@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/driveways")({
+  head: () => ({
+    meta: [
+      { title: "Driveway Paving & Repair Services | Old Bridge & Lakewood NJ" },
+      { name: "description", content: "Professional driveway paving, sealcoating, and repair services in New Jersey. Durable and beautiful driveways." },
+      { property: "og:title", content: "Driveway Paving & Repair Services in NJ" },
+      { property: "og:description", content: "Professional driveway paving, sealcoating, and repair services in New Jersey." },
+    ],
+  }),
   component: DrivewaysPage,
 });
 

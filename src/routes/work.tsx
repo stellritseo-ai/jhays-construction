@@ -33,11 +33,11 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Our Work — Jhay's Construction | Howell, NJ" },
+      { title: "Our Work — Jhay's Construction | NJ Contractor" },
       {
         name: "description",
         content:
-          "Explore the Jhay's Construction project gallery. Browse completed bathroom remodels, custom kitchens, decks, patios, basements, and home additions in Howell, NJ. Quality craftsmanship.",
+          "Explore the Jhay's Construction project gallery. Browse completed bathroom remodels, custom kitchens, decks, patios, basements, and home additions in New Jersey. Quality craftsmanship.",
       },
       { property: "og:title", content: "Our Work — Jhay's Construction" },
       {

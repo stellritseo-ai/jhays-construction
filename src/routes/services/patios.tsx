@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/patios")({
+  head: () => ({
+    meta: [
+      { title: "Patio Installation & Hardscaping | Woodbridge & Toms River NJ" },
+      { name: "description", content: "Enhance your outdoor living space with our custom patio installation and hardscaping services in New Jersey." },
+      { property: "og:title", content: "Patio Installation & Hardscaping in NJ" },
+      { property: "og:description", content: "Custom patio installation and hardscaping services in New Jersey." },
+    ],
+  }),
   component: PatiosPage,
 });
 

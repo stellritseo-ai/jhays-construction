@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/kitchen-fitting")({
+  head: () => ({
+    meta: [
+      { title: "Kitchen Remodeling & Fitting Contractors | Freehold NJ" },
+      { name: "description", content: "Custom kitchen remodeling and fitting services. We design and build dream kitchens across New Jersey." },
+      { property: "og:title", content: "Kitchen Remodeling & Fitting Contractors in NJ" },
+      { property: "og:description", content: "Custom kitchen remodeling and fitting services in New Jersey." },
+    ],
+  }),
   component: KitchenFittingPage,
 });
 

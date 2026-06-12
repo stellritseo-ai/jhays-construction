@@ -30,11 +30,11 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Jhay's Construction | Howell, NJ" },
+      { title: "Contact Us — Jhay's Construction | NJ Contractor" },
       {
         name: "description",
         content:
-          "Contact Jhay's Construction in Howell, NJ for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Call, email, or visit our showroom. Free estimates.",
+          "Contact Jhay's Construction in New Jersey for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Call, email, or visit our showroom. Free estimates.",
       },
       { property: "og:title", content: "Contact Us — Jhay's Construction" },
       {
@@ -150,25 +150,67 @@ function ContactPage() {
     }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.phone || !formData.email || !formData.message) {
       alert("Please fill out all required fields marked with an asterisk (*).");
       return;
     }
-    setSubmitted(true);
-    // Scroll to success card container
-    const element = document.getElementById("contact-form-card");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "New Contact Request from Jhay's Construction Website",
+          Name: formData.fullName,
+          Phone: formData.phone,
+          Email: formData.email,
+          Message: formData.message,
+          Service: formData.service || "Not specified",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        // Scroll to success card container
+        const element = document.getElementById("contact-form-card");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Oops! There was a problem submitting your form");
     }
   };
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newsletterEmail) return;
-    setNewsletterSubscribed(true);
-    setNewsletterEmail("");
+
+    try {
+      await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "New Newsletter Subscriber",
+          Email: newsletterEmail,
+        }),
+      });
+      setNewsletterSubscribed(true);
+      setNewsletterEmail("");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const toggleFaq = (idx: number) => {

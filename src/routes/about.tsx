@@ -25,10 +25,10 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Jhay's Construction | Howell, NJ" },
+      { title: "About Us — Jhay's Construction | Top Rated NJ Contractor" },
       {
         name: "description",
-        content: "Jhay's Construction is a trusted local contractor in Howell, NJ, specializing in bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Licensed & insured. Free estimates.",
+        content: "Jhay's Construction is a trusted local contractor in New Jersey, specializing in bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Licensed & insured. Free estimates.",
       },
       { property: "og:title", content: "About Us — Jhay's Construction" },
       {

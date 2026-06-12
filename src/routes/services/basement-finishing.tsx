@@ -16,6 +16,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/services/basement-finishing")({
+  head: () => ({
+    meta: [
+      { title: "Basement Finishing Contractors | Freehold & Toms River NJ" },
+      { name: "description", content: "Transform your unfinished basement into a beautiful living space. We serve Perth Amboy, Freehold, Old Bridge, and Toms River NJ." },
+      { property: "og:title", content: "Basement Finishing Contractors in NJ" },
+      { property: "og:description", content: "Top rated basement finishing in NJ. Get a free estimate today." },
+    ],
+  }),
   component: BasementFinishingPage,
 });
 

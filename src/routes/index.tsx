@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Jhay's Construction — Residential & Commercial General Contractor in NJ" },
-      { name: "description", content: "Jhay's Construction is a trusted residential & commercial general contractor in Howell Township, NJ. Kitchen, bath, paving, additions and more." },
+      { name: "description", content: "Jhay's Construction is a trusted residential & commercial general contractor serving New Jersey. Kitchen, bath, paving, additions and more." },
       { property: "og:title", content: "Jhay's Construction — NJ General Contractor" },
-      { property: "og:description", content: "No job is too small or too big. Quality residential & commercial general contracting services." },
+      { property: "og:description", content: "No job is too small or too big. Quality residential & commercial general contracting services in New Jersey." },
     ],
   }),
   component: Index,
