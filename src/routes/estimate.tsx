@@ -172,7 +172,7 @@ function EstimatePage() {
     }
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -180,6 +180,7 @@ function EstimatePage() {
         },
         body: JSON.stringify({
           _subject: "New Estimate Request from Jhay's Construction",
+          _captcha: "false",
           Name: formData.fullName,
           Phone: formData.phone,
           Email: formData.email,
@@ -192,7 +193,7 @@ function EstimatePage() {
         }),
       });
 
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         setSubmitted(true);
         // Smooth scroll to success info
         const element = document.getElementById("estimate-form-container");
@@ -200,11 +201,12 @@ function EstimatePage() {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        alert("Oops! There was a problem submitting your form");
+        const text = await response.text();
+        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert("Oops! There was a problem submitting your form");
+      alert(`Oops! There was a problem submitting your form: ${error.message}`);
     }
   };
 
@@ -434,7 +436,7 @@ function EstimatePage() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-8" noValidate>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">

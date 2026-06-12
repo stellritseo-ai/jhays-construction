@@ -1,7 +1,58 @@
-import { Phone, MapPin, Mail, Clock, ShieldCheck, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Phone, MapPin, Mail, Clock, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
 import { servicesList } from "./Services";
 
 export function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    details: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.phone) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "New Contact Request from Jhay's Construction Homepage",
+          _captcha: "false",
+          Name: formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          Service: formData.service || "Not specified",
+          Details: formData.details || "Not specified",
+        }),
+      });
+
+      if (response.ok || response.status === 200) {
+        setSubmitted(true);
+      } else {
+        const text = await response.text();
+        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
+      }
+    } catch (error: any) {
+      console.error(error);
+      alert(`Oops! There was a problem submitting your form: ${error.message}`);
+    }
+  };
   return (
     <section id="contact" className="py-[60px] px-4 text-white" style={{ backgroundColor: "#008000" }}>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -57,72 +108,108 @@ export function Contact() {
 
         {/* Right: Modern Form Card (Sticky on desktop) */}
         <div className="lg:col-span-6 lg:sticky lg:top-28 bg-white rounded-[2rem] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-gray-100">
-          <h3 className="font-display font-bold text-2xl mb-6 text-gray-900">Get a Free Estimate</h3>
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Your Name</label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
-                />
+          {submitted ? (
+            <div className="text-center py-10">
+              <div className="size-16 rounded-full bg-green-100 text-[#008000] flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="size-10" />
               </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email Address</label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
-                />
-              </div>
+              <h3 className="font-display font-bold text-2xl mb-4 text-gray-900">Message Sent!</h3>
+              <p className="text-gray-600 mb-8">We've received your request and will respond within 24 hours.</p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="text-[#008000] font-bold text-sm hover:underline cursor-pointer"
+              >
+                Send another message
+              </button>
             </div>
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Phone Number</label>
-                <input
-                  type="tel"
-                  placeholder="(732) 673-1569"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Select Service</label>
-                <div className="relative">
-                  <select
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all appearance-none cursor-pointer"
-                  >
-                    <option value="">Select Service</option>
-                    {servicesList.map((s) => (
-                      <option key={s.title} value={s.title}>
-                        {s.title}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
+          ) : (
+            <>
+              <h3 className="font-display font-bold text-2xl mb-6 text-gray-900">Get a Free Estimate</h3>
+              <form className="space-y-5" onSubmit={handleFormSubmit} noValidate>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Your Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="John Doe"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="john@example.com"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
+                    />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Project Details</label>
-              <textarea
-                rows={4}
-                placeholder="Tell us about your project (e.g. size, timeline, specific requests)..."
-                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer"
-              style={{ backgroundColor: "#008000" }}
-            >
-              Send Message <ArrowRight className="size-4" />
-            </button>
-          </form>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Phone Number *</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="(732) 673-1569"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Select Service</label>
+                    <div className="relative">
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">Select Service</option>
+                        {servicesList.map((s) => (
+                          <option key={s.title} value={s.title}>
+                            {s.title}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Project Details</label>
+                  <textarea
+                    name="details"
+                    rows={4}
+                    value={formData.details}
+                    onChange={handleInputChange}
+                    placeholder="Tell us about your project (e.g. size, timeline, specific requests)..."
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#008000] focus:ring-2 focus:ring-[#008000]/10 transition-all resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer"
+                  style={{ backgroundColor: "#008000" }}
+                >
+                  Send Message <ArrowRight className="size-4" />
+                </button>
+              </form>
+            </>
+          )}
         </div>
       </div>
     </section>

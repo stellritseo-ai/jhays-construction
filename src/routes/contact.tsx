@@ -158,7 +158,7 @@ function ContactPage() {
     }
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -166,6 +166,7 @@ function ContactPage() {
         },
         body: JSON.stringify({
           _subject: "New Contact Request from Jhay's Construction Website",
+          _captcha: "false",
           Name: formData.fullName,
           Phone: formData.phone,
           Email: formData.email,
@@ -174,7 +175,7 @@ function ContactPage() {
         }),
       });
 
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         setSubmitted(true);
         // Scroll to success card container
         const element = document.getElementById("contact-form-card");
@@ -182,11 +183,12 @@ function ContactPage() {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        alert("Oops! There was a problem submitting your form");
+        const text = await response.text();
+        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert("Oops! There was a problem submitting your form");
+      alert(`Oops! There was a problem submitting your form: ${error.message}`);
     }
   };
 
@@ -195,7 +197,7 @@ function ContactPage() {
     if (!newsletterEmail) return;
 
     try {
-      await fetch("https://formsubmit.co/ajax/stellritinc@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -447,7 +449,7 @@ function ContactPage() {
                   </p>
                 </div>
 
-                <form onSubmit={handleFormSubmit} className="space-y-6">
+                <form onSubmit={handleFormSubmit} className="space-y-6" noValidate>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
