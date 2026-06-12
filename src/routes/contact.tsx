@@ -171,7 +171,7 @@ function ContactPage() {
           Phone: formData.phone,
           Email: formData.email,
           Message: formData.message,
-          Service: formData.service || "Not specified",
+          Service: formData.serviceInterested || "Not specified",
         }),
       });
 

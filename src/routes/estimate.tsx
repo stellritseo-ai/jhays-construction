@@ -186,10 +186,10 @@ function EstimatePage() {
           Email: formData.email,
           Address: formData.address,
           ProjectType: formData.projectType,
-          Timeline: formData.timeline || "Not specified",
-          Budget: formData.budget || "Not specified",
+          PreferredDate: formData.prefDate || "Not specified",
+          PreferredTime: formData.prefTime || "Not specified",
           Description: formData.description || "Not specified",
-          HowHeard: formData.howHeard || "Not specified",
+          Referral: formData.referral || "Not specified",
         }),
       });
 
