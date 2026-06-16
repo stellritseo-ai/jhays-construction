@@ -26,10 +26,10 @@ export function CTAStrip() {
           Looking for Residential &amp; Commercial General Contractors?
         </div>
         <a
-          href="tel:7324261499"
+          href="tel:7326731569"
           className="inline-flex items-center gap-2 bg-white text-green-800 px-6 py-3 rounded-full font-bold text-sm hover:bg-white/90 transition-colors shadow-lg whitespace-nowrap"
         >
-          <Phone className="size-4" /> (732) 426-1499
+          <Phone className="size-4" /> (732) 673-1569
         </a>
       </div>
     </section>
