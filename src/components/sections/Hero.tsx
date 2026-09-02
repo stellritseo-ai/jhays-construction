@@ -28,11 +28,18 @@ export function Hero() {
         <img
           key={i}
           src={src}
-          alt={`Slide ${i + 1}`}
+          alt={
+            i === 0
+              ? "Jhay's Construction kitchen remodeling project in Howell Township, NJ"
+              : i === 1
+              ? "Bathroom renovation completed by Jhay's Construction serving Howell, NJ"
+              : "Home remodeling and construction services in Howell Township, New Jersey"
+          }
           className="absolute inset-0 size-full object-cover transition-opacity duration-1000"
           style={{ opacity: i === current ? 1 : 0 }}
           width={1920}
           height={1080}
+          loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
 
@@ -49,8 +56,8 @@ export function Hero() {
           className="font-display font-bold mb-4 animate-fade-up"
           style={{ fontSize: "35px", lineHeight: "55px", animationDelay: "0.1s" }}
         >
-          "NO JOB IS TOO SMALL OR TOO BIG" <br />
-          Residential &amp; Commercial General Contracting Services
+          General Contractor in Howell, NJ <br />
+          Residential &amp; Commercial Remodeling Services
         </h1>
         <p className="text-base md:text-lg text-white/85 max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
           From Driveways - Patios to Sidewalks and Remodeling, we work closely with you to bring your

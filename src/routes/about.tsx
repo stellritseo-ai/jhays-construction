@@ -25,16 +25,22 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Jhay's Construction | Top Rated NJ Contractor" },
+      { title: "About Jhay's Construction | General Contractor in Howell, NJ" },
       {
         name: "description",
-        content: "Jhay's Construction is a trusted local contractor in New Jersey, specializing in bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Licensed & insured. Free estimates.",
+        content: "Learn about Jhay's Construction — a trusted general contractor serving Howell Township, NJ and surrounding areas since 2003. Quality craftsmanship, honest pricing, and fully insured. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "About Us — Jhay's Construction" },
+      { property: "og:title", content: "About Jhay's Construction | General Contractor in Howell, NJ" },
       {
         property: "og:description",
-        content: "Jhay's Construction is a trusted local contractor in Howell, NJ, specializing in bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing.",
+        content: "Jhay's Construction is a trusted general contractor in Howell Township, NJ specializing in kitchen remodeling, bathroom renovation, basement finishing, home additions, patios, and driveways.",
       },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/about" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/about" },
     ],
   }),
   component: AboutPage,

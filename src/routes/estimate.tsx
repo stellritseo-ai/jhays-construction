@@ -28,18 +28,24 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/estimate")({
   head: () => ({
     meta: [
-      { title: "Free Estimate — Jhay's Construction | NJ Contractor" },
+      { title: "Free Estimate | Jhay's Construction — Howell, NJ Contractor" },
       {
         name: "description",
         content:
-          "Get a free, no-obligation estimate from Jhay's Construction. Serving Perth Amboy, Woodbridge, Freehold, Brick, Toms River & more. Bathroom, kitchen, patio, deck, driveway, room additions & basement finishing.",
+          "Request a free, no-obligation estimate from Jhay's Construction in Howell, NJ. Kitchen remodeling, bathroom renovation, basement finishing, patio installation, driveway paving, and home additions. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Free Estimate — Jhay's Construction" },
+      { property: "og:title", content: "Free Estimate | Jhay's Construction — Howell, NJ" },
       {
         property: "og:description",
         content:
-          "Get a free, no-obligation estimate from Jhay's Construction in Howell, NJ. Serving Perth Amboy, Woodbridge, Freehold, Brick, Toms River & more.",
+          "Get a free, no-obligation estimate from Jhay's Construction in Howell Township, NJ. Serving Howell, Freehold, Jackson Township, and surrounding areas.",
       },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/estimate" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/estimate" },
     ],
   }),
   component: EstimatePage,

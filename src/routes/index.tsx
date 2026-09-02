@@ -16,10 +16,16 @@ import { Footer } from "@/components/sections/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Jhay's Construction — Residential & Commercial General Contractor in NJ" },
-      { name: "description", content: "Jhay's Construction is a trusted residential & commercial general contractor serving New Jersey. Kitchen, bath, paving, additions and more." },
-      { property: "og:title", content: "Jhay's Construction — NJ General Contractor" },
-      { property: "og:description", content: "No job is too small or too big. Quality residential & commercial general contracting services in New Jersey." },
+      { title: "General Contractor in Howell, NJ | Jhay's Construction" },
+      { name: "description", content: "Jhay's Construction is Howell Township's trusted general contractor for kitchen remodeling, bathroom renovation, basement finishing, home additions, patio installation, and driveway paving. Serving Howell, NJ and surrounding areas. Call (732) 673-1569." },
+      { property: "og:title", content: "General Contractor in Howell, NJ | Jhay's Construction" },
+      { property: "og:description", content: "Trusted residential and commercial general contractor in Howell Township, NJ. Kitchen remodeling, bathroom renovation, basement finishing, home additions, patios, and driveway paving. Free estimates." },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/" },
     ],
   }),
   component: Index,

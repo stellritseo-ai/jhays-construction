@@ -18,10 +18,54 @@ import {
 export const Route = createFileRoute("/services/basement-finishing")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Contractors | Freehold & Toms River NJ" },
-      { name: "description", content: "Transform your unfinished basement into a beautiful living space. We serve Perth Amboy, Freehold, Old Bridge, and Toms River NJ." },
-      { property: "og:title", content: "Basement Finishing Contractors in NJ" },
-      { property: "og:description", content: "Top rated basement finishing in NJ. Get a free estimate today." },
+      { title: "Basement Finishing in Howell, NJ | Jhay's Construction" },
+      { name: "description", content: "Transform your unfinished basement into livable space. Jhay's Construction provides basement finishing in Howell, NJ — home theaters, offices, guest suites, and more. Serving Monmouth County. Free estimates. Call (732) 673-1569." },
+      { property: "og:title", content: "Basement Finishing in Howell, NJ | Jhay's Construction" },
+      { property: "og:description", content: "Professional basement finishing in Howell, NJ. Home theaters, offices, guest suites, and more. Free estimates from Jhay's Construction." },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Basement Finishing",
+          "serviceType": "Basement Finishing",
+          "provider": {
+            "@type": "GeneralContractor",
+            "name": "Jhay's Construction",
+            "telephone": "+17326731569",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "735 Hulses Corner Rd",
+              "addressLocality": "Howell Township",
+              "addressRegion": "NJ",
+              "postalCode": "07731",
+              "addressCountry": "US"
+            }
+          },
+          "areaServed": { "@type": "State", "name": "New Jersey" },
+          "description": "Professional basement finishing services in Howell Township, NJ. Home theaters, home offices, guest suites, wet bars, and full basement renovations."
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+          ]
+        }),
+      },
     ],
   }),
   component: BasementFinishingPage,
@@ -112,16 +156,19 @@ function BasementFinishingPage() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.75) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/30">Services</span>
-            <span className="text-white/60 text-xs">→</span>
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 mb-5">
+            <a href="/" className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/30 hover:bg-white/30 transition-colors">Home</a>
+            <span className="text-white/60 text-xs">›</span>
+            <a href="/#services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
+            <span className="text-white/60 text-xs">›</span>
             <span className="text-white/80 text-xs font-semibold">Basement Finishing</span>
-          </div>
+          </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>Service</span>
+            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/85 max-w-2xl mb-8 leading-relaxed">
-            Unlock the hidden potential of your home's largest unused room. We transform raw, unfinished basements into beautiful, fully livable spaces — home theaters, offices, gyms, guest suites, and more. Serving all of Monmouth County, NJ.
+            Unlock the hidden potential of your home's largest unused room. We transform raw, unfinished basements into beautiful, fully livable spaces — home theaters, offices, gyms, guest suites, and more. Serving Howell Township and all of Monmouth County, NJ.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="/estimate" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-lg text-sm tracking-wide shadow-xl transition-all hover:scale-105" style={{ background: "#1a7c1a" }}>
@@ -134,20 +181,23 @@ function BasementFinishingPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Service area callout */}
       <section className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { num: "100+", label: "Basements Finished" },
-            { num: "23", label: "Years Experience" },
-            { num: "4.9★", label: "Average Rating" },
-            { num: "100%", label: "Fully Permitted" },
-          ].map((s) => (
-            <div key={s.label}>
-              <div className="text-3xl font-extrabold" style={{ color: "#6ee65a" }}>{s.num}</div>
-              <div className="text-sm text-gray-400 mt-1">{s.label}</div>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
+          <div>
+            <div className="text-sm text-gray-400">Serving Howell Township, NJ</div>
+            <div className="text-lg font-bold text-white">&amp; Surrounding Monmouth County</div>
+          </div>
+          <div className="hidden md:block w-px h-10 bg-white/20" />
+          <div>
+            <div className="text-sm text-gray-400">Fully Permitted</div>
+            <div className="text-lg font-bold text-white">All Work Code Compliant</div>
+          </div>
+          <div className="hidden md:block w-px h-10 bg-white/20" />
+          <div>
+            <div className="text-sm text-gray-400">Call Today</div>
+            <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
+          </div>
         </div>
       </section>
 

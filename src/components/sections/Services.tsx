@@ -9,45 +9,51 @@ import p5 from "@/assets/basement.jpg";
 export const servicesList = [
   {
     icon: ChefHat,
-    title: "Kitchen Fitting Service",
-    desc: "We spend so much of our lives in our kitchens, whether we eat, talk, cook, or clean there. They're a key part of any home and that's why it is essential to know...",
+    title: "Kitchen Remodeling",
+    desc: "Transform your kitchen with custom cabinetry, premium countertops, and full installations. We handle everything from design to the final reveal — serving Howell, NJ and surrounding areas.",
     img: welcomeImg,
+    imgAlt: "Kitchen remodeling project in Howell Township NJ by Jhay's Construction",
     featured: true,
     href: "/services/kitchen-fitting",
   },
   {
     icon: Bath,
-    title: "Bathroom Fitting Service",
-    desc: "Is your bathroom in need of a makeover? Then this bathroom renovation service will ensure that no leaks or mould appear to guarantee your bathroom looks clean...",
+    title: "Bathroom Remodeling",
+    desc: "Is your bathroom in need of a makeover? From walk-in showers to full gut renovations, our team delivers stunning bathrooms with zero shortcuts.",
     img: p1,
+    imgAlt: "Bathroom remodeling service in Howell NJ — Jhay's Construction",
     href: "/services/bathroom-fitting",
   },
   {
     icon: Paintbrush,
-    title: "Patios Installation & Repair",
-    desc: "Looking to spruce up your patio or driveway? Go with a block or brick pavement and make your property stand out from the rest. An expert brick paver...",
+    title: "Patio Installation",
+    desc: "Custom paver patios, natural stone, pergolas, and outdoor kitchens — we create outdoor living spaces built for New Jersey's climate.",
     img: p2,
+    imgAlt: "Patio installation and hardscaping in Howell NJ by Jhay's Construction",
     href: "/services/patios",
   },
   {
     icon: Construction,
-    title: "Driveway Paving Service",
-    desc: "Driveways take quite the battering over time with cars and people coming in and out, but they can also collect other debris such as leaf matter and rubbish...",
+    title: "Driveway Paving",
+    desc: "New asphalt, concrete, or paver driveways — plus crack repair and sealcoating. Properly engineered foundations, clean edges, and lasting results.",
     img: p3,
+    imgAlt: "Driveway paving and repair service in Howell NJ by Jhay's Construction",
     href: "/services/driveways",
   },
   {
     icon: Home,
-    title: "Room Addition And Repair",
-    desc: "Thinking of extending your kitchen into a bigger, more liveable space? A local professional extensions & conversions service supplier can advise you on the...",
+    title: "Home Additions",
+    desc: "Need more space? We design and build seamless room additions — master suites, family rooms, second stories, and sunrooms — fully permitted.",
     img: p4,
+    imgAlt: "Home addition and room extension in Howell NJ by Jhay's Construction",
     href: "/services/room-additions",
   },
   {
     icon: Layers,
-    title: "Basement Finishing Service",
-    desc: "If you're dreaming of turning your basement into an extra reception room or maybe even a games room then you'll need someone to convert it for you...",
+    title: "Basement Finishing",
+    desc: "Unlock your basement's potential. We transform raw, unfinished basements into beautiful living spaces — home theaters, offices, guest suites, and more.",
     img: p5,
+    imgAlt: "Basement finishing and remodeling in Howell NJ by Jhay's Construction",
     href: "/services/basement-finishing",
   },
 ];
@@ -83,8 +89,9 @@ export function Services() {
               {/* Background image — always visible */}
               <img
                 src={s.img}
-                alt={s.title}
+                alt={s.imgAlt || s.title}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
               />
 
               {/* Dark overlay — always visible */}
