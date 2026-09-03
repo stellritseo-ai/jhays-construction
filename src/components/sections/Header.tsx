@@ -3,12 +3,12 @@ import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const serviceLinks = [
-  { label: "Kitchen Fitting Service", href: "/services/kitchen-fitting" },
-  { label: "Bathroom Fitting Service", href: "/services/bathroom-fitting" },
-  { label: "Patios Installation & Repair", href: "/services/patios" },
-  { label: "Driveway Paving Service", href: "/services/driveways" },
-  { label: "Room Addition And Repair", href: "/services/room-additions" },
-  { label: "Basement Finishing Service", href: "/services/basement-finishing" },
+  { label: "Kitchen Remodeling", href: "/services/kitchen-fitting" },
+  { label: "Bathroom Remodeling", href: "/services/bathroom-fitting" },
+  { label: "Patio Installation", href: "/services/patios" },
+  { label: "Driveway Paving", href: "/services/driveways" },
+  { label: "Home Additions", href: "/services/room-additions" },
+  { label: "Basement Finishing", href: "/services/basement-finishing" },
 ];
 
 const navLinks = [

@@ -18,10 +18,54 @@ import {
 export const Route = createFileRoute("/services/driveways")({
   head: () => ({
     meta: [
-      { title: "Driveway Paving & Repair Services | Old Bridge & Lakewood NJ" },
-      { name: "description", content: "Professional driveway paving, sealcoating, and repair services in New Jersey. Durable and beautiful driveways." },
-      { property: "og:title", content: "Driveway Paving & Repair Services in NJ" },
-      { property: "og:description", content: "Professional driveway paving, sealcoating, and repair services in New Jersey." },
+      { title: "Driveway Paving in Howell, NJ | Jhay's Construction" },
+      { name: "description", content: "Professional driveway paving, repair, and sealcoating in Howell, NJ. Asphalt, concrete, and paver driveways. Licensed and insured. Serving Howell Township and surrounding Monmouth County. Free estimates. Call (732) 673-1569." },
+      { property: "og:title", content: "Driveway Paving in Howell, NJ | Jhay's Construction" },
+      { property: "og:description", content: "Professional driveway paving in Howell, NJ. Asphalt, concrete, and paver driveways plus crack repair and sealcoating. Free estimates from Jhay's Construction." },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/driveways" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/driveways" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Driveway Paving",
+          "serviceType": "Driveway Paving",
+          "provider": {
+            "@type": "GeneralContractor",
+            "name": "Jhay's Construction",
+            "telephone": "+17326731569",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "735 Hulses Corner Rd",
+              "addressLocality": "Howell Township",
+              "addressRegion": "NJ",
+              "postalCode": "07731",
+              "addressCountry": "US"
+            }
+          },
+          "areaServed": { "@type": "State", "name": "New Jersey" },
+          "description": "Professional driveway paving, repair, and sealcoating in Howell Township, NJ. Asphalt, concrete, and interlocking paver driveways."
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Driveway Paving", "item": "https://www.jhaysconstruction.com/services/driveways" }
+          ]
+        }),
+      },
     ],
   }),
   component: DrivewaysPage,
@@ -100,16 +144,19 @@ function DrivewaysPage() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.85) 0%, rgba(26,124,26,0.75) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/30">Services</span>
-            <span className="text-white/60 text-xs">→</span>
-            <span className="text-white/80 text-xs font-semibold">Driveways</span>
-          </div>
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 mb-5">
+            <a href="/" className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-white/30 hover:bg-white/30 transition-colors">Home</a>
+            <span className="text-white/60 text-xs">›</span>
+            <a href="/#services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
+            <span className="text-white/60 text-xs">›</span>
+            <span className="text-white/80 text-xs font-semibold">Driveway Paving</span>
+          </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Driveway Paving <span style={{ color: "#6ee65a" }}>Service</span>
+            Driveway Paving <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/85 max-w-2xl mb-8 leading-relaxed">
-            New installs, full replacements, or targeted repairs — our driveway paving team delivers smooth, durable results that boost your home's curb appeal and value. Serving Howell, NJ and all surrounding areas.
+            New installs, full replacements, or targeted repairs — our driveway paving team delivers smooth, durable results that boost your home's curb appeal and value. Serving Howell Township, NJ and all surrounding areas.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="/estimate" className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-lg text-sm tracking-wide shadow-xl transition-all hover:scale-105" style={{ background: "#1a7c1a" }}>
@@ -122,20 +169,23 @@ function DrivewaysPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Service area callout */}
       <section className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { num: "120+", label: "Driveways Paved" },
-            { num: "23", label: "Years Experience" },
-            { num: "4.9★", label: "Average Rating" },
-            { num: "100%", label: "Licensed & Insured" },
-          ].map((s) => (
-            <div key={s.label}>
-              <div className="text-3xl font-extrabold" style={{ color: "#6ee65a" }}>{s.num}</div>
-              <div className="text-sm text-gray-400 mt-1">{s.label}</div>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
+          <div>
+            <div className="text-sm text-gray-400">Serving Howell Township, NJ</div>
+            <div className="text-lg font-bold text-white">&amp; Surrounding Communities</div>
+          </div>
+          <div className="hidden md:block w-px h-10 bg-white/20" />
+          <div>
+            <div className="text-sm text-gray-400">Licensed &amp; Insured</div>
+            <div className="text-lg font-bold text-white">NJ General Contractor</div>
+          </div>
+          <div className="hidden md:block w-px h-10 bg-white/20" />
+          <div>
+            <div className="text-sm text-gray-400">Call Today</div>
+            <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
+          </div>
         </div>
       </section>
 

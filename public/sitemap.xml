@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Work / Portfolio -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/work</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Reviews -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/reviews</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Free Estimate -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/estimate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Kitchen Remodeling -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/kitchen-fitting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bathroom Remodeling -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/bathroom-fitting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Basement Finishing -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/basement-finishing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Driveway Paving -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/driveways</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Patio Installation -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/patios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Home Additions -->
+  <url>
+    <loc>https://www.jhaysconstruction.com/services/room-additions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

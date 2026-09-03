@@ -53,35 +53,34 @@ export function Footer() {
           <FooterCol
             title="Areas We Serve"
             items={[
-              { label: "Perth Amboy, NJ", href: "/#contact" },
-              { label: "Woodbridge, NJ", href: "/#contact" },
-              { label: "Freehold, NJ", href: "/#contact" },
-              { label: "Toms River, NJ", href: "/#contact" },
-              { label: "Old Bridge, NJ", href: "/#contact" },
-              { label: "Lakewood, NJ", href: "/#contact" },
+              { label: "Howell Township, NJ", href: "/#areas" },
+              { label: "Freehold, NJ", href: "/#areas" },
+              { label: "Jackson Township, NJ", href: "/#areas" },
+              { label: "Lakewood, NJ", href: "/#areas" },
+              { label: "Brick Township, NJ", href: "/#areas" },
+              { label: "Toms River, NJ", href: "/#areas" },
+              { label: "Old Bridge, NJ", href: "/#areas" },
+              { label: "Perth Amboy, NJ", href: "/#areas" },
+              { label: "Woodbridge, NJ", href: "/#areas" },
             ]}
           />
         </div>
 
-        {/* SEO Keywords footer */}
-        <div className="border-t border-white/10 mt-12 pt-6">
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-white text-center max-w-5xl mx-auto leading-relaxed">
-            <span>Bathroom remodeling Perth Amboy NJ</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Kitchen renovation contractors near me</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Patio installation Woodbridge</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Deck builders Brick NJ</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Best basement finishing Freehold NJ</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Affordable room additions Toms River</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Licensed driveway contractors NJ</span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span>Reliable home addition contractors Old Bridge</span>
-          </div>
+        {/* NAP — Business Contact Info */}
+        <div className="border-t border-white/10 mt-12 pt-8">
+          <address className="not-italic flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs text-white/70 text-center">
+            <span className="font-semibold text-white">Jhay's Construction</span>
+            <a
+              href="https://www.google.com/maps/place/735+Hulses+Corner+Rd,+Howell+Township,+NJ+07731"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              735 Hulses Corner Rd, Howell Township, NJ 07731
+            </a>
+            <a href="tel:7326731569" className="hover:text-white transition-colors">(732) 673-1569</a>
+            <a href="mailto:jhaycconstruction@gmail.com" className="hover:text-white transition-colors">jhaycconstruction@gmail.com</a>
+          </address>
         </div>
 
         {/* Copyright */}

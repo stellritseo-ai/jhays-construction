@@ -8,16 +8,22 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Customer Reviews — Jhay's Construction | NJ Contractor" },
+      { title: "Customer Reviews | Jhay's Construction — Howell, NJ" },
       {
         name: "description",
-        content: "Read real customer reviews for Jhay's Construction in New Jersey. See why homeowners trust us for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. 4.9/5 rating.",
+        content: "Read customer reviews for Jhay's Construction in Howell, NJ. Homeowners praise our kitchen remodels, bathroom renovations, basement finishing, patio installation, and outdoor projects. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Customer Reviews — Jhay's Construction" },
+      { property: "og:title", content: "Customer Reviews | Jhay's Construction — Howell, NJ" },
       {
         property: "og:description",
-        content: "Read real customer reviews for Jhay's Construction in Howell, NJ. See why homeowners trust us for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing.",
+        content: "See why homeowners across Howell Township, NJ trust Jhay's Construction for kitchen remodeling, bathroom renovation, basement finishing, and outdoor hardscaping.",
       },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/reviews" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/reviews" },
     ],
   }),
   component: ReviewsPage,

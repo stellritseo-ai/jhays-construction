@@ -30,22 +30,29 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Jhay's Construction | NJ Contractor" },
+      { title: "Contact Jhay's Construction | Howell Township, NJ" },
       {
         name: "description",
         content:
-          "Contact Jhay's Construction in New Jersey for bathroom remodeling, kitchen fitting, patios, decks, driveways, room additions, and basement finishing. Call, email, or visit our showroom. Free estimates.",
+          "Contact Jhay's Construction in Howell Township, NJ. Call (732) 673-1569, email jhaycconstruction@gmail.com, or request a free estimate online. Serving Howell, Freehold, Jackson, Brick, and surrounding NJ areas.",
       },
-      { property: "og:title", content: "Contact Us — Jhay's Construction" },
+      { property: "og:title", content: "Contact Jhay's Construction | Howell Township, NJ" },
       {
         property: "og:description",
         content:
-          "Contact Jhay's Construction in Howell, NJ. Call, email, or visit our showroom. Free estimates. Serving Perth Amboy, Woodbridge, Freehold, Brick, Toms River & more.",
+          "Get in touch with Jhay's Construction in Howell Township, NJ. Call, email, or submit a contact form. Free estimates available for all services.",
       },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/contact" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/contact" },
     ],
   }),
   component: ContactPage,
 });
+
 
 const faqs = [
   {

@@ -33,18 +33,24 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Our Work — Jhay's Construction | NJ Contractor" },
+      { title: "Project Gallery | Jhay's Construction — Howell, NJ" },
       {
         name: "description",
         content:
-          "Explore the Jhay's Construction project gallery. Browse completed bathroom remodels, custom kitchens, decks, patios, basements, and home additions in New Jersey. Quality craftsmanship.",
+          "Browse completed projects by Jhay's Construction in Howell, NJ. Kitchen remodels, bathroom renovations, basement finishing, patio installations, driveways, and home additions in Monmouth County, NJ.",
       },
-      { property: "og:title", content: "Our Work — Jhay's Construction" },
+      { property: "og:title", content: "Project Gallery | Jhay's Construction — Howell, NJ" },
       {
         property: "og:description",
         content:
-          "Explore the Jhay's Construction project gallery. Browse completed bathroom remodels, custom kitchens, decks, patios, basements, and home additions.",
+          "Explore completed construction and remodeling projects by Jhay's Construction serving Howell Township and Monmouth County, NJ.",
       },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/work" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/work" },
     ],
   }),
   component: OurWorkPage,
