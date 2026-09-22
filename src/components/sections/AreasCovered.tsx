@@ -48,40 +48,41 @@ export function AreasCovered() {
               <div>
                 <h3 className="font-display font-bold text-xl text-gray-900">Serving New Jersey</h3>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">
-                  Middlesex, Union & Surrounding Counties
+                  Monmouth, Ocean &amp; Middlesex Counties
                 </p>
               </div>
             </div>
 
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              We proudly offer residential & commercial contracting services to homeowners and businesses throughout the following locations:
+              We proudly offer residential &amp; commercial contracting services to homeowners and businesses throughout our 25-mile local radius:
             </p>
 
             {/* City Grid */}
             <div className="grid grid-cols-2 gap-3">
               {[
-                "Perth Amboy",
-                "Hillside Terrace",
-                "Allentown",
-                "Fords",
-                "Woodbridge",
-                "Freehold",
-                "Old Bridge",
-                "Robertsville",
-                "Toms River",
-                "Brick Township",
-                "Lakewood",
-                "Jackson Township",
-              ].map((city) => (
-                <div
-                  key={city}
-                  className="flex items-center gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 hover:border-[#008000]/30 hover:bg-[#008000]/5 transition-all group"
+                { name: "Howell Township", href: "/areas-we-serve/howell-nj" },
+                { name: "Freehold", href: "/areas-we-serve/freehold-nj" },
+                { name: "Jackson Township", href: "/areas-we-serve/jackson-township-nj" },
+                { name: "Brick Township", href: "/areas-we-serve/brick-township-nj" },
+                { name: "Lakewood", href: "/areas-we-serve/lakewood-nj" },
+                { name: "Toms River", href: "/areas-we-serve" },
+                { name: "Old Bridge", href: "/areas-we-serve" },
+                { name: "Perth Amboy", href: "/areas-we-serve" },
+                { name: "Woodbridge", href: "/areas-we-serve" },
+                { name: "Allentown", href: "/areas-we-serve" },
+                { name: "Fords", href: "/areas-we-serve" },
+                { name: "Robertsville", href: "/areas-we-serve" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 hover:border-[#008000]/40 hover:bg-[#008000]/5 transition-all group"
                 >
                   <MapPin className="size-4 text-gray-400 group-hover:text-[#008000] transition-colors shrink-0" />
-                  <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    {city}
+                  <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-950 transition-colors">
+                    {item.name}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
 
@@ -93,7 +94,7 @@ export function AreasCovered() {
                 i
               </div>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Don't see your town? We cover a wide <strong className="text-gray-700">25 Miles Radius</strong> around Howell Township, NJ. Feel free to contact us to confirm service availability for your project!
+                Don't see your town? We cover a wide <a href="/areas-we-serve" className="text-green-700 font-bold underline">25-Mile Radius</a> around Howell Township, NJ. Feel free to contact us to confirm service availability for your project!
               </p>
             </div>
           </div>

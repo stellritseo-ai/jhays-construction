@@ -23,7 +23,7 @@ export function CTAStrip() {
           className="font-display font-bold leading-snug"
           style={{ fontSize: "28px" }}
         >
-          Looking for Residential &amp; Commercial General Contractors?
+          Looking for a General Contractor in Howell, NJ or Surrounding Areas?
         </div>
         <a
           href="tel:7326731569"

@@ -3,18 +3,20 @@ import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const serviceLinks = [
-  { label: "Kitchen Remodeling", href: "/services/kitchen-fitting" },
-  { label: "Bathroom Remodeling", href: "/services/bathroom-fitting" },
-  { label: "Patio Installation", href: "/services/patios" },
-  { label: "Driveway Paving", href: "/services/driveways" },
-  { label: "Home Additions", href: "/services/room-additions" },
+  { label: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
+  { label: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
+  { label: "Patio Installation", href: "/services/patio-installation" },
+  { label: "Driveway Paving", href: "/services/driveway-paving" },
+  { label: "Home Additions", href: "/services/home-additions" },
   { label: "Basement Finishing", href: "/services/basement-finishing" },
 ];
 
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
-  { label: "OUR WORKS", href: "/work" },
+  { label: "SERVICES", href: "/services" },
+  { label: "AREAS WE SERVE", href: "/areas-we-serve" },
+  { label: "OUR WORK", href: "/work" },
   { label: "REVIEWS", href: "/reviews" },
   { label: "FREE ESTIMATE", href: "/estimate" },
   { label: "CONTACT US", href: "/contact" },
@@ -39,7 +41,7 @@ export function Header() {
         {/* Right side: Nav + Call Now */}
         <div className="flex items-center gap-6">
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7">
             {/* HOME */}
             <a
               href="/"
@@ -59,7 +61,7 @@ export function Header() {
             {/* SERVICES Dropdown */}
             <div className="relative group">
               <a
-                href="/#services"
+                href="/services"
                 className="flex items-center gap-1 text-gray-700 text-sm font-semibold tracking-wide hover:text-green-700 transition-colors whitespace-nowrap"
               >
                 SERVICES
@@ -85,7 +87,7 @@ export function Header() {
                 {/* View All link */}
                 <div className="border-t border-gray-100 px-4 py-2.5">
                   <a
-                    href="/#services"
+                    href="/services"
                     className="text-xs font-bold text-green-700 hover:text-green-800 tracking-wider uppercase transition-colors"
                   >
                     View All Services →
@@ -95,7 +97,7 @@ export function Header() {
             </div>
 
             {/* Remaining links */}
-            {navLinks.slice(2).map((link) => (
+            {navLinks.slice(3).map((link) => (
               <a
                 key={link.label}
                 href={link.href}

@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import basementImg from "@/assets/basement.jpg";
-import expectImg from "@/assets/basement.jpg";
+import drivewayImg from "@/assets/driveway.jpeg";
+import expectImg from "@/assets/driveway.jpeg";
 import {
   CheckCircle2,
   ArrowRight,
@@ -10,40 +10,40 @@ import {
   Shield,
   Wrench,
   Layers,
-  Lightbulb,
+  Truck,
+  Sparkles,
   Thermometer,
-  Film,
   Clock,
   MapPin,
   ChevronRight,
   Home,
 } from "lucide-react";
 
-export const Route = createFileRoute("/services/basement-finishing")({
+export const Route = createFileRoute("/services/driveway-paving")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Driveway Paving Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Professional asphalt driveway paving, concrete driveways, Belgian block curbing, and sealcoating in Howell, NJ. Durable foundations built for heavy vehicles. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Driveway Paving Howell NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Expert driveway paving in Howell Township, NJ. Hot-mix asphalt, reinforced concrete, interlocking pavers, and Belgian block curbing by Jhay's Construction.",
       },
-      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/driveway-paving" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
-      { name: "twitter:description", content: "Turn your raw basement into livable square footage with Howell Township's trusted remodeling contractor." },
+      { name: "twitter:title", content: "Driveway Paving Howell NJ | Jhay's Construction" },
+      { name: "twitter:description", content: "Reliable residential and commercial driveway paving contractor serving Howell Township and Monmouth County, NJ." },
       { name: "robots", content: "index, follow" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/driveway-paving" },
     ],
     scripts: [
       {
@@ -51,9 +51,9 @@ export const Route = createFileRoute("/services/basement-finishing")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "@id": "https://www.jhaysconstruction.com/services/basement-finishing#service",
-          "name": "Basement Finishing Services",
-          "serviceType": "Basement Finishing",
+          "@id": "https://www.jhaysconstruction.com/services/driveway-paving#service",
+          "name": "Driveway Paving Services",
+          "serviceType": "Driveway Paving",
           "provider": {
             "@type": "GeneralContractor",
             "@id": "https://www.jhaysconstruction.com/#business",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
             { "@type": "City", "name": "Brick Township, NJ" },
             { "@type": "City", "name": "Lakewood, NJ" }
           ],
-          "description": "Professional basement finishing services in Howell Township, NJ: moisture vapor barriers, insulation, drywall, recessed lighting, wet bars, home theaters, and bathroom additions."
+          "description": "Professional driveway paving in Howell Township, NJ: hot-mix asphalt paving, fiber-reinforced concrete driveways, interlocking pavers, Belgian block apron curbing, and sealcoating."
         }),
       },
       {
@@ -86,7 +86,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+            { "@type": "ListItem", "position": 3, "name": "Driveway Paving", "item": "https://www.jhaysconstruction.com/services/driveway-paving" }
           ]
         }),
       },
@@ -98,34 +98,34 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much does it cost to finish a basement in Howell, NJ?",
+              "name": "How long will a new asphalt driveway last in New Jersey?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates."
+                "text": "When installed over a properly compacted 6-to-8 inch stone aggregate base and maintained with commercial sealcoating every 3 to 4 years, a residential asphalt driveway in Howell typically lasts 20 to 30 years."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you install basement waterproofing before finishing?",
+              "name": "How long do I need to wait before parking on a newly paved driveway?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall."
+                "text": "For hot-mix asphalt, you can walk on it immediately, but keep passenger cars off for 48 to 72 hours during warm months. For poured concrete, wait a minimum of 7 full days before driving or parking on it."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I legally add a bedroom in my finished basement?",
+              "name": "Do you install Belgian block curbing around driveways?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation."
+                "text": "Yes. Belgian block (granite cobblestone) curbing and driveway aprons are among our most requested curb-appeal enhancements. We set each block in a concrete footing to prevent edge unraveling."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you handle Howell Township building permits for basement finishing?",
+              "name": "Do I need a permit to repave my driveway in Howell Township?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department."
+                "text": "A direct replacement of an existing driveway footprint generally does not require a complex building permit, but widening a driveway or modifying the street curb cut / apron requires Howell Township engineering approval. We guide you through all local zoning rules."
               }
             }
           ]
@@ -133,82 +133,70 @@ export const Route = createFileRoute("/services/basement-finishing")({
       }
     ],
   }),
-  component: BasementFinishingPage,
+  component: DrivewayPavingPage,
 });
 
 const benefits = [
   {
-    icon: <Film className="w-6 h-6" />,
-    title: "Home Theater & Entertainment",
-    desc: "Acoustic insulation, soundproofing channels, built-in media consoles, hidden wire raceways, and dimmable recessed lighting.",
-  },
-  {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Home Offices & Guest Suites",
-    desc: "Egress window installations, closet framing, and whisper-quiet HVAC supply air create fully permitted, livable bedroom suites.",
-  },
-  {
     icon: <Layers className="w-6 h-6" />,
-    title: "Moisture & Vapor Barriers",
-    desc: "Heavy-duty vapor barriers against foundation walls, subfloor thermal breaks, and closed-cell spray foam for mold prevention.",
+    title: "Hot-Mix Asphalt Paving",
+    desc: "Commercial-grade I-4 and I-5 hot asphalt laid at 300°F with laser grade controls and multi-ton vibratory roller compaction.",
   },
   {
-    icon: <Thermometer className="w-6 h-6" />,
-    title: "HVAC & Climate Control",
-    desc: "Engineered supply and return air duct extensions or dedicated ductless mini-split units keeping your basement comfortable year-round.",
+    icon: <Truck className="w-6 h-6" />,
+    title: "Reinforced Concrete Driveways",
+    desc: "4,000 PSI fiber-reinforced concrete with steel rebar grids, expansion joints, and broom or decorative stamped finishes.",
+  },
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    title: "Belgian Block & Paver Aprons",
+    desc: "Granite Belgian block borders, cobblestone edging, and interlocking paver entry aprons that elevate your home's exterior curb appeal.",
   },
   {
     icon: <Wrench className="w-6 h-6" />,
-    title: "Wet Bars & Kitchenettes",
-    desc: "Custom quartz bar tops, beverage coolers, sink plumbing, tile backsplashes, and under-cabinet accent lighting.",
+    title: "Resurfacing & Overlay",
+    desc: "Pothole patching, hot rubberized crack sealing, and 2-inch asphalt overlay paving for structurally sound existing driveway bases.",
+  },
+  {
+    icon: <Thermometer className="w-6 h-6" />,
+    title: "Commercial Sealcoating",
+    desc: "Coal-tar and asphalt emulsion sealcoating with silica sand additives to protect against gas/oil spills, oxidation, and winter salt.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Dedicated Electrical Subpanels",
-    desc: "Licensed electrical work including dedicated circuits for appliances, home gyms, gaming systems, and full code-compliant GFCI outlets.",
+    title: "Engineered Drainage Grading",
+    desc: "Precision crown or side pitches to channel stormwater away from garages, walkways, and your home's foundation walls.",
   },
 ];
 
 const steps = [
-  { num: "01", title: "Moisture & Space Inspection", desc: "We evaluate existing concrete foundation walls, floor pitch, headroom clearances, and existing plumbing rough-ins." },
-  { num: "02", title: "Layout & Architectural Plans", desc: "We design a floor plan that maximizes usable space while cleverly boxing in support columns and ductwork." },
-  { num: "03", title: "Permits & Framing", desc: "We pull Howell Township permits and erect treated baseplate stud framing with proper moisture vapor separation." },
-  { num: "04", title: "Mechanicals & Insulation", desc: "Electrical rough-ins, bathroom plumbing, HVAC duct runs, and high-R value insulation are inspected and approved." },
-  { num: "05", title: "Drywall, Flooring & Finishes", desc: "Mold-resistant drywall, luxury vinyl plank (LVP) waterproof flooring, custom doors, trim, and paint completed." },
-];
-
-const ideas = [
-  "Home Theater / Media Room",
-  "Home Office or Study",
-  "Guest Bedroom Suite (with Egress)",
-  "Kids' Playroom & Game Area",
-  "Home Gym & Fitness Studio",
-  "Custom Wet Bar & Lounge",
-  "Full Lower-Level Bathroom",
-  "Wine Cellar / Tasting Room",
-  "Multi-Generational Living Suite",
+  { num: "01", title: "Free On-Site Assessment", desc: "We evaluate your current driveway slope, sub-base stability, and square footage to provide an accurate, transparent quote." },
+  { num: "02", title: "Excavation & Base Prep", desc: "Complete removal of failing pavement, grading of subgrade soil, and installation of dense-graded quarry aggregate." },
+  { num: "03", title: "Heavy Compaction", desc: "Tandem vibratory rollers compact the stone base to municipal load-bearing standards to prevent tire ruts." },
+  { num: "04", title: "Paving / Pouring", desc: "Hot-mix asphalt is machine-laid and rolled, or concrete is poured, screeded, jointed, and textured with clean borders." },
+  { num: "05", title: "Final Inspection & Care Guide", desc: "Edge trimming, clean-up of surrounding lawn, and clear curing guidelines to maximize driveway lifespan." },
 ];
 
 const faqs = [
   {
-    q: "How much does it cost to finish a basement in Howell, NJ?",
-    a: "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates.",
+    q: "How long will a new asphalt driveway last in New Jersey?",
+    a: "When installed over a properly compacted 6-to-8 inch stone aggregate base and maintained with commercial sealcoating every 3 to 4 years, a residential asphalt driveway in Howell typically lasts 20 to 30 years.",
   },
   {
-    q: "Do you install basement waterproofing before finishing?",
-    a: "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall.",
+    q: "How long do I need to wait before parking on a newly paved driveway?",
+    a: "For hot-mix asphalt, you can walk on it immediately, but keep passenger cars off for 48 to 72 hours during warm months. For poured concrete, wait a minimum of 7 full days before driving or parking on it.",
   },
   {
-    q: "Can I legally add a bedroom in my finished basement?",
-    a: "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation.",
+    q: "Do you install Belgian block curbing around driveways?",
+    a: "Yes. Belgian block (granite cobblestone) curbing and driveway aprons are among our most requested curb-appeal enhancements. We set each block in a concrete footing to prevent edge unraveling.",
   },
   {
-    q: "Do you handle Howell Township building permits for basement finishing?",
-    a: "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department.",
+    q: "Do I need a permit to repave my driveway in Howell Township?",
+    a: "A direct replacement of an existing driveway footprint generally does not require a complex building permit, but widening a driveway or modifying the street curb cut / apron requires Howell Township engineering approval. We guide you through all local zoning rules.",
   },
 ];
 
-function BasementFinishingPage() {
+function DrivewayPavingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -217,7 +205,7 @@ function BasementFinishingPage() {
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${basementImg})` }}
+          style={{ backgroundImage: `url(${drivewayImg})` }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.78) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
@@ -227,13 +215,13 @@ function BasementFinishingPage() {
             <span className="text-white/60 text-xs">›</span>
             <a href="/services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
             <span className="text-white/60 text-xs">›</span>
-            <span className="text-white/90 text-xs font-semibold">Basement Finishing</span>
+            <span className="text-white/90 text-xs font-semibold">Driveway Paving</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
+            Driveway Paving <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-            Unlock your home's hidden square footage. We turn dark, unutilized basements into bright, luxurious family rooms, home theaters, guest suites, and wet bars. Serving Monmouth and Ocean County.
+            Smooth, durable asphalt, reinforced concrete, and elegant paver driveways built on engineered stone foundations. Serving Howell Township, Freehold, Jackson, and Monmouth County homeowners.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -257,34 +245,18 @@ function BasementFinishingPage() {
       <section className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
           <div>
-            <div className="text-sm text-gray-400">Serving Local Homeowners In</div>
-            <div className="text-lg font-bold text-white">Howell Township, Freehold, Jackson &amp; Brick</div>
+            <div className="text-sm text-gray-400">Paving Crew Operating In</div>
+            <div className="text-lg font-bold text-white">Howell, Freehold, Jackson &amp; Monmouth County</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Moisture Protection</div>
-            <div className="text-lg font-bold text-white">Continuous Vapor Barriers &amp; Waterproofing</div>
+            <div className="text-sm text-gray-400">Paving Standards</div>
+            <div className="text-lg font-bold text-white">Heavy-Duty Vibratory Compaction</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Schedule Consultation</div>
+            <div className="text-sm text-gray-400">Fast Estimates</div>
             <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Ideas Pills */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-            Popular Finished Basement Concepts We Build
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ideas.map((idea) => (
-              <span key={idea} className="bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
-                {idea}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -293,12 +265,12 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Transformations</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Complete Paving Solutions</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Complete Basement Remodeling Solutions
+              Residential &amp; Commercial Driveway Services
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We manage your basement renovation with careful attention to moisture mitigation, ceiling height optimization, and building code compliance.
+              Whether you need a brand-new driveway installation, resurfacing over a sound foundation, or decorative Belgian block aprons, our crew delivers flawless results.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,9 +291,9 @@ function BasementFinishingPage() {
       <section className="py-24" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Raw to Refined</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Proven Installation Process</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Our 5-Stage Basement Finishing Process
+              How We Pave Your Driveway
             </h2>
           </div>
           <div className="relative">
@@ -346,20 +318,20 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Warm &amp; Dry Living Spaces</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Engineering That Outlasts Winters</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                Engineered Specifically for Below-Grade Longevity
+                Why Foundation Preparation Is 90% of a Great Driveway
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Basements require specialized building science. Using organic materials directly against cold concrete leads to moisture problems. We install thermal breaks, mold-resistant drywall, and waterproof LVP flooring so your space stays clean and fresh.
+                Most driveway failures occur because contractors pave over spongy, uncompacted sub-soils. At Jhay's Construction, we excavate deep, install genuine quarry process stone, and mechanically compact every layer before paving.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Continuous wall vapor barriers and subfloor air gaps",
-                  "Closed-cell spray foam insulation sealing rim joist perimeters",
-                  "Quiet exhaust ventilation and properly balanced HVAC air runs",
-                  "All permits pulled with Howell Township Code Enforcement",
-                  "Full 1-year warranty on all remodeling craftsmanship",
+                  "Complete removal and off-site disposal of old asphalt or deteriorated concrete",
+                  "Heavy-duty roller compaction on all subsoil and aggregate base layers",
+                  "Engineered slope control to direct water away from garage doorways",
+                  "Commercial state-approved hot asphalt mix delivered at peak temperature",
+                  "Neat, hand-tamped edges and clean tie-ins to roadways and sidewalks",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -371,7 +343,7 @@ function BasementFinishingPage() {
             <div className="relative">
               <img
                 src={expectImg}
-                alt="Finished basement family room in Howell NJ by Jhay's Construction"
+                alt="Driveway paving project completed in Howell NJ by Jhay's Construction"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
               />
@@ -381,8 +353,8 @@ function BasementFinishingPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Timelines</div>
-                    <div className="text-xs text-gray-500">Typical projects finish in 4–6 weeks</div>
+                    <div className="font-extrabold text-gray-900 text-lg">Quick Turnaround</div>
+                    <div className="text-xs text-gray-500">Most residential driveways paved in 1–2 days</div>
                   </div>
                 </div>
               </div>
@@ -397,54 +369,49 @@ function BasementFinishingPage() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <Home className="w-5 h-5 text-[#008000]" /> Related Home Improvement Services
+                <Home className="w-5 h-5 text-[#008000]" /> Related Exterior Remodeling
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Bathroom Additions
+                  <a href="/services/patio-installation" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Patio Installation &amp; Walkways
                   </a>
                 </li>
                 <li>
                   <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Above-Ground Space
-                  </a>
-                </li>
-                <li>
-                  <a href="/services/kitchen-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Kitchen Remodeling in Howell, NJ
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Garage Additions &amp; Expansions
                   </a>
                 </li>
                 <li>
                   <a href="/work" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Basement Before &amp; After Projects
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Driveway &amp; Paving Gallery
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#008000]" /> Basement Finishing Service Areas
+                <MapPin className="w-5 h-5 text-[#008000]" /> Driveway Paving Service Areas
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <a href="/areas-we-serve/howell-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Howell Township, NJ (07731)
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Howell Township, NJ Driveway Paving
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/freehold-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Basement Remodeling
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Asphalt &amp; Concrete
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/jackson-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Basement Finishing
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Driveway Contractors
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/brick-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Finished Basements
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Paving Services
                   </a>
                 </li>
               </ul>
@@ -457,8 +424,8 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Questions</span>
-            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Basement Finishing FAQs</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Paving Inquiries</span>
+            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Driveway Paving FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -478,10 +445,10 @@ function BasementFinishingPage() {
       <section className="py-20" style={{ background: "linear-gradient(135deg, #0a280a 0%, #1a7c1a 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Ready to Finish Your Basement?
+            Ready for a Smooth, Long-Lasting Driveway?
           </h2>
           <p className="text-green-100 text-lg mb-8">
-            Contact Jhay's Construction today for a free on-site moisture check and detailed layout estimate.
+            Contact Jhay's Construction today for a free on-site consultation and guaranteed pricing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

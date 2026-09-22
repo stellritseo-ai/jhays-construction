@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Phone, MapPin, Mail, Clock, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
 import { servicesList } from "./Services";
+import { submitLeadForm } from "@/lib/submit-lead";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,33 +26,23 @@ export function Contact() {
       return;
     }
 
+    setIsSubmitting(true);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: "New Contact Request from Jhay's Construction Homepage",
-          _captcha: "false",
-          Name: formData.name,
-          Email: formData.email,
-          Phone: formData.phone,
-          Service: formData.service || "Not specified",
-          Details: formData.details || "Not specified",
-        }),
+      await submitLeadForm({
+        formType: "Contact Message",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        details: formData.details,
       });
 
-      if (response.ok || response.status === 200) {
-        setSubmitted(true);
-      } else {
-        const text = await response.text();
-        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
-      }
+      setSubmitted(true);
     } catch (error: any) {
       console.error(error);
-      alert(`Oops! There was a problem submitting your form: ${error.message}`);
+      alert(`Oops! There was a problem submitting your form: ${error.message || "Please try again or call us at (732) 673-1569"}`);
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -73,9 +65,9 @@ export function Contact() {
           <div className="space-y-4">
             {[
               { icon: Phone, label: "Phone Number", value: "(732) 673-1569", href: "tel:7326731569" },
-              { icon: MapPin, label: "Address", value: "735 Hulses Corner Rd,Howell Township, New Jersey, 07731" },
+              { icon: MapPin, label: "Address", value: "735 Hulses Corner Rd, Howell Township, NJ 07731", href: "https://www.google.com/maps/place/735+Hulses+Corner+Rd,+Howell+Township,+NJ+07731" },
               { icon: Mail, label: "Email Address", value: "jhaycconstruction@gmail.com", href: "mailto:jhaycconstruction@gmail.com" },
-              { icon: Clock, label: "Working Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM | Sat - Sun: Closed" },
+              { icon: Clock, label: "Working Hours", value: "Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 2:00 PM | Sun: Closed" },
             ].map((c) => (
               <div key={c.label} className="bg-white/10 border border-white/10 rounded-2xl p-5 flex items-start gap-4 shadow-sm hover:bg-white/15 transition-colors">
                 <div
@@ -202,10 +194,17 @@ export function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                   style={{ backgroundColor: "#008000" }}
                 >
-                  Send Message <ArrowRight className="size-4" />
+                  {isSubmitting ? (
+                    <span>Sending Message...</span>
+                  ) : (
+                    <>
+                      Send Message <ArrowRight className="size-4" />
+                    </>
+                  )}
                 </button>
               </form>
             </>

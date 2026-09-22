@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { sendEmailWithZoho } from "./lib/email";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -40,6 +41,29 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+
+      // Handle Form Submissions via Zoho SMTP
+      if (url.pathname === "/api/send-email" && request.method === "POST") {
+        try {
+          const payload = await request.json();
+          const result = await sendEmailWithZoho(payload);
+          return new Response(JSON.stringify({ success: true, result }), {
+            status: 200,
+            headers: { "content-type": "application/json" },
+          });
+        } catch (emailErr: any) {
+          console.error("API /api/send-email error:", emailErr);
+          return new Response(
+            JSON.stringify({ success: false, error: emailErr.message || "Failed to send email" }),
+            {
+              status: 500,
+              headers: { "content-type": "application/json" },
+            },
+          );
+        }
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

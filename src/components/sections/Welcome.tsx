@@ -24,11 +24,11 @@ export function Welcome() {
           </h2>
 
           <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-6">
-            Best Home Improvement Contractor in Howell Township
+            Trusted Home Remodeling &amp; General Contracting in Howell Township
           </h3>
 
           <p className="text-gray-800 text-sm md:text-base mb-8 leading-relaxed">
-            Are you in need of a general contractor in Howell Township? Worry no more as Jhay’s Construction offers some of the best general contractors in the area. At Jhays Construction we address all your home improvement needs. From patios, driveway paving, walls, renovation, room additions, bathroom fitting, kitchen fitting, basements, and so much more. Also, once you hire us, our general contractors will always communicate with all involved parties throughout the process. You can reach us out at (732) 673 1569 if you have any questions.
+            Are you in need of an experienced general contractor in Howell Township, NJ? Jhay's Construction delivers licensed, high-quality residential and commercial construction throughout Monmouth and Ocean counties. From custom kitchen remodeling and luxury bathroom renovations to seamless home additions, finished basements, paver patios, and durable driveway paving, our team manages every detail with transparent communication and guaranteed craftsmanship. Call us directly at <a href="tel:7326731569" className="font-bold text-[#008000] hover:underline">(732) 673-1569</a> for a free consultation.
           </p>
 
           {/* Our Mission Card */}

@@ -14,7 +14,7 @@ export const servicesList = [
     img: welcomeImg,
     imgAlt: "Kitchen remodeling project in Howell Township NJ by Jhay's Construction",
     featured: true,
-    href: "/services/kitchen-fitting",
+    href: "/services/kitchen-remodeling",
   },
   {
     icon: Bath,
@@ -22,7 +22,7 @@ export const servicesList = [
     desc: "Is your bathroom in need of a makeover? From walk-in showers to full gut renovations, our team delivers stunning bathrooms with zero shortcuts.",
     img: p1,
     imgAlt: "Bathroom remodeling service in Howell NJ — Jhay's Construction",
-    href: "/services/bathroom-fitting",
+    href: "/services/bathroom-remodeling",
   },
   {
     icon: Paintbrush,
@@ -30,7 +30,7 @@ export const servicesList = [
     desc: "Custom paver patios, natural stone, pergolas, and outdoor kitchens — we create outdoor living spaces built for New Jersey's climate.",
     img: p2,
     imgAlt: "Patio installation and hardscaping in Howell NJ by Jhay's Construction",
-    href: "/services/patios",
+    href: "/services/patio-installation",
   },
   {
     icon: Construction,
@@ -38,7 +38,7 @@ export const servicesList = [
     desc: "New asphalt, concrete, or paver driveways — plus crack repair and sealcoating. Properly engineered foundations, clean edges, and lasting results.",
     img: p3,
     imgAlt: "Driveway paving and repair service in Howell NJ by Jhay's Construction",
-    href: "/services/driveways",
+    href: "/services/driveway-paving",
   },
   {
     icon: Home,
@@ -46,7 +46,7 @@ export const servicesList = [
     desc: "Need more space? We design and build seamless room additions — master suites, family rooms, second stories, and sunrooms — fully permitted.",
     img: p4,
     imgAlt: "Home addition and room extension in Howell NJ by Jhay's Construction",
-    href: "/services/room-additions",
+    href: "/services/home-additions",
   },
   {
     icon: Layers,

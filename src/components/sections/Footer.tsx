@@ -39,7 +39,8 @@ export function Footer() {
             items={[
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
-              { label: "Services", href: "/#services" },
+              { label: "Services", href: "/services" },
+              { label: "Areas We Serve", href: "/areas-we-serve" },
               { label: "Our Work", href: "/work" },
               { label: "Reviews", href: "/reviews" },
               { label: "Free Estimate", href: "/estimate" },
@@ -48,20 +49,17 @@ export function Footer() {
           />
           <FooterCol
             title="Our Services"
-            items={servicesList.map((s) => ({ label: s.title, href: s.href || "/#services" }))}
+            items={servicesList.map((s) => ({ label: s.title, href: s.href || "/services" }))}
           />
           <FooterCol
             title="Areas We Serve"
             items={[
-              { label: "Howell Township, NJ", href: "/#areas" },
-              { label: "Freehold, NJ", href: "/#areas" },
-              { label: "Jackson Township, NJ", href: "/#areas" },
-              { label: "Lakewood, NJ", href: "/#areas" },
-              { label: "Brick Township, NJ", href: "/#areas" },
-              { label: "Toms River, NJ", href: "/#areas" },
-              { label: "Old Bridge, NJ", href: "/#areas" },
-              { label: "Perth Amboy, NJ", href: "/#areas" },
-              { label: "Woodbridge, NJ", href: "/#areas" },
+              { label: "Howell Township, NJ", href: "/areas-we-serve/howell-nj" },
+              { label: "Freehold, NJ", href: "/areas-we-serve/freehold-nj" },
+              { label: "Jackson Township, NJ", href: "/areas-we-serve/jackson-township-nj" },
+              { label: "Brick Township, NJ", href: "/areas-we-serve/brick-township-nj" },
+              { label: "Lakewood, NJ", href: "/areas-we-serve/lakewood-nj" },
+              { label: "View All 25-Mile Radius", href: "/areas-we-serve" },
             ]}
           />
         </div>
@@ -87,9 +85,9 @@ export function Footer() {
         <div className="border-t border-white/10 mt-6 pt-6 flex flex-wrap justify-between items-center gap-4 text-xs text-white/60">
           <div>© {new Date().getFullYear()} Jhay's Construction. All Rights Reserved. Design By <a href="https://stellrit.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">StellR IT LLC</a></div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
-            <a href="#" className="hover:text-white">Sitemap</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>

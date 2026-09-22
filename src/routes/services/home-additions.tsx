@@ -1,49 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import basementImg from "@/assets/basement.jpg";
-import expectImg from "@/assets/basement.jpg";
+import roomAdditionImg from "@/assets/room-addition.jpeg";
+import expectImg from "@/assets/room-addition.jpeg";
 import {
   CheckCircle2,
   ArrowRight,
   Star,
   Shield,
   Wrench,
+  Home,
   Layers,
-  Lightbulb,
-  Thermometer,
-  Film,
+  Ruler,
+  DoorOpen,
   Clock,
   MapPin,
   ChevronRight,
-  Home,
 } from "lucide-react";
 
-export const Route = createFileRoute("/services/basement-finishing")({
+export const Route = createFileRoute("/services/home-additions")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Home Additions Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Expand your living space with custom home additions, master suites, second story expansions, and in-law suites in Howell, NJ. Licensed NJ builder. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Home Additions Howell NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Custom home additions, second story builds, master bedroom suites, and family room expansions in Howell Township, NJ by Jhay's Construction.",
       },
-      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/home-additions" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
-      { name: "twitter:description", content: "Turn your raw basement into livable square footage with Howell Township's trusted remodeling contractor." },
+      { name: "twitter:title", content: "Home Additions Howell NJ | Jhay's Construction" },
+      { name: "twitter:description", content: "Expert home addition and second-story expansion general contractor in Howell Township, NJ." },
       { name: "robots", content: "index, follow" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/home-additions" },
     ],
     scripts: [
       {
@@ -51,9 +50,9 @@ export const Route = createFileRoute("/services/basement-finishing")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "@id": "https://www.jhaysconstruction.com/services/basement-finishing#service",
-          "name": "Basement Finishing Services",
-          "serviceType": "Basement Finishing",
+          "@id": "https://www.jhaysconstruction.com/services/home-additions#service",
+          "name": "Home Addition Services",
+          "serviceType": "Home Addition",
           "provider": {
             "@type": "GeneralContractor",
             "@id": "https://www.jhaysconstruction.com/#business",
@@ -75,7 +74,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
             { "@type": "City", "name": "Brick Township, NJ" },
             { "@type": "City", "name": "Lakewood, NJ" }
           ],
-          "description": "Professional basement finishing services in Howell Township, NJ: moisture vapor barriers, insulation, drywall, recessed lighting, wet bars, home theaters, and bathroom additions."
+          "description": "Custom home additions in Howell Township, NJ: master suite additions, second-story expansions, family room extensions, in-law suites, sunrooms, and structural framing."
         }),
       },
       {
@@ -86,7 +85,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+            { "@type": "ListItem", "position": 3, "name": "Home Additions", "item": "https://www.jhaysconstruction.com/services/home-additions" }
           ]
         }),
       },
@@ -98,34 +97,34 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much does it cost to finish a basement in Howell, NJ?",
+              "name": "How long does a home addition take to build in Howell, NJ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates."
+                "text": "Most single-story room additions or master suite bump-outs take between 8 to 14 weeks of active construction once Howell Township building permits are approved. Full second-story additions typically require 14 to 20 weeks."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you install basement waterproofing before finishing?",
+              "name": "Do you handle the architectural drawings and building permits?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall."
+                "text": "Yes. Jhay's Construction coordinates architectural plans, structural engineering calculations, and all Howell Township zoning, building, electrical, and plumbing permit submissions."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I legally add a bedroom in my finished basement?",
+              "name": "Will our new addition match our existing home's exterior?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation."
+                "text": "Seamless architectural integration is our specialty. We meticulously match your existing roof pitch, siding color and profile, window grids, and trim details so the addition looks original to the home."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you handle Howell Township building permits for basement finishing?",
+              "name": "Can we stay in our home while the addition is built?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department."
+                "text": "In the majority of ground-level room additions, homeowners can comfortably stay in their homes. We construct temporary sealed dust barriers between the existing living area and the new addition until the exterior envelope is fully weatherproofed."
               }
             }
           ]
@@ -133,82 +132,70 @@ export const Route = createFileRoute("/services/basement-finishing")({
       }
     ],
   }),
-  component: BasementFinishingPage,
+  component: HomeAdditionsPage,
 });
 
 const benefits = [
   {
-    icon: <Film className="w-6 h-6" />,
-    title: "Home Theater & Entertainment",
-    desc: "Acoustic insulation, soundproofing channels, built-in media consoles, hidden wire raceways, and dimmable recessed lighting.",
+    icon: <Home className="w-6 h-6" />,
+    title: "Master Bedroom Suites",
+    desc: "Spacious master suites featuring walk-in closets, vaulted ceilings, and luxury en-suite spa bathrooms without moving from your neighborhood.",
   },
   {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Home Offices & Guest Suites",
-    desc: "Egress window installations, closet framing, and whisper-quiet HVAC supply air create fully permitted, livable bedroom suites.",
+    icon: <DoorOpen className="w-6 h-6" />,
+    title: "Family Room Expansions",
+    desc: "Main-floor bump-outs expanding your living room, dining room, or eat-in kitchen with continuous open floor plans.",
   },
   {
     icon: <Layers className="w-6 h-6" />,
-    title: "Moisture & Vapor Barriers",
-    desc: "Heavy-duty vapor barriers against foundation walls, subfloor thermal breaks, and closed-cell spray foam for mold prevention.",
+    title: "Second-Story Additions",
+    desc: "Double your home's usable square footage by building upwards. Engineered foundation checks, joist reinforcements, and roof framing.",
   },
   {
-    icon: <Thermometer className="w-6 h-6" />,
-    title: "HVAC & Climate Control",
-    desc: "Engineered supply and return air duct extensions or dedicated ductless mini-split units keeping your basement comfortable year-round.",
+    icon: <Ruler className="w-6 h-6" />,
+    title: "Four-Season Sunrooms",
+    desc: "Energy-efficient insulated sunrooms with thermal break windows, mini-split climate control, and panoramic yard views.",
   },
   {
     icon: <Wrench className="w-6 h-6" />,
-    title: "Wet Bars & Kitchenettes",
-    desc: "Custom quartz bar tops, beverage coolers, sink plumbing, tile backsplashes, and under-cabinet accent lighting.",
+    title: "In-Law Suites & ADUs",
+    desc: "Private multi-generational living suites equipped with dedicated accessible bathrooms, separate entrances, and kitchenette areas.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Dedicated Electrical Subpanels",
-    desc: "Licensed electrical work including dedicated circuits for appliances, home gyms, gaming systems, and full code-compliant GFCI outlets.",
+    title: "Engineered Framing & Code Compliance",
+    desc: "Poured concrete frost-depth foundations, engineered LVL headers, Hurricane tie-downs, and full New Jersey building code compliance.",
   },
 ];
 
 const steps = [
-  { num: "01", title: "Moisture & Space Inspection", desc: "We evaluate existing concrete foundation walls, floor pitch, headroom clearances, and existing plumbing rough-ins." },
-  { num: "02", title: "Layout & Architectural Plans", desc: "We design a floor plan that maximizes usable space while cleverly boxing in support columns and ductwork." },
-  { num: "03", title: "Permits & Framing", desc: "We pull Howell Township permits and erect treated baseplate stud framing with proper moisture vapor separation." },
-  { num: "04", title: "Mechanicals & Insulation", desc: "Electrical rough-ins, bathroom plumbing, HVAC duct runs, and high-R value insulation are inspected and approved." },
-  { num: "05", title: "Drywall, Flooring & Finishes", desc: "Mold-resistant drywall, luxury vinyl plank (LVP) waterproof flooring, custom doors, trim, and paint completed." },
-];
-
-const ideas = [
-  "Home Theater / Media Room",
-  "Home Office or Study",
-  "Guest Bedroom Suite (with Egress)",
-  "Kids' Playroom & Game Area",
-  "Home Gym & Fitness Studio",
-  "Custom Wet Bar & Lounge",
-  "Full Lower-Level Bathroom",
-  "Wine Cellar / Tasting Room",
-  "Multi-Generational Living Suite",
+  { num: "01", title: "Feasibility Consultation", desc: "We evaluate your Howell property's setbacks, zoning limits, lot coverage, and foundation structure to plan what is possible." },
+  { num: "02", title: "Architectural & Engineering Plans", desc: "Detailed blueprints and load calculations are developed and submitted to the Howell Township building department." },
+  { num: "03", title: "Excavation & Foundation", desc: "We pour reinforced concrete footings, block foundation walls, or concrete slabs tied into the existing structure." },
+  { num: "04", title: "Structural Framing & Shell", desc: "Wood framing, roof trusses, sheathing, weatherproofing wrap, premium windows, and roofing create a watertight envelope." },
+  { num: "05", title: "Trades, Finishes & Final C/O", desc: "Electrical, plumbing, insulation, drywall, flooring, and exterior matching siding completed for Certificate of Occupancy sign-off." },
 ];
 
 const faqs = [
   {
-    q: "How much does it cost to finish a basement in Howell, NJ?",
-    a: "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates.",
+    q: "How long does a home addition take to build in Howell, NJ?",
+    a: "Most single-story room additions or master suite bump-outs take between 8 to 14 weeks of active construction once Howell Township building permits are approved. Full second-story additions typically require 14 to 20 weeks.",
   },
   {
-    q: "Do you install basement waterproofing before finishing?",
-    a: "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall.",
+    q: "Do you handle the architectural drawings and building permits?",
+    a: "Yes. Jhay's Construction coordinates architectural plans, structural engineering calculations, and all Howell Township zoning, building, electrical, and plumbing permit submissions.",
   },
   {
-    q: "Can I legally add a bedroom in my finished basement?",
-    a: "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation.",
+    q: "Will our new addition match our existing home's exterior?",
+    a: "Seamless architectural integration is our specialty. We meticulously match your existing roof pitch, siding color and profile, window grids, and trim details so the addition looks original to the home.",
   },
   {
-    q: "Do you handle Howell Township building permits for basement finishing?",
-    a: "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department.",
+    q: "Can we stay in our home while the addition is built?",
+    a: "In the majority of ground-level room additions, homeowners can comfortably stay in their homes. We construct temporary sealed dust barriers between the existing living area and the new addition until the exterior envelope is fully weatherproofed.",
   },
 ];
 
-function BasementFinishingPage() {
+function HomeAdditionsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -217,7 +204,7 @@ function BasementFinishingPage() {
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${basementImg})` }}
+          style={{ backgroundImage: `url(${roomAdditionImg})` }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.78) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
@@ -227,13 +214,13 @@ function BasementFinishingPage() {
             <span className="text-white/60 text-xs">›</span>
             <a href="/services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
             <span className="text-white/60 text-xs">›</span>
-            <span className="text-white/90 text-xs font-semibold">Basement Finishing</span>
+            <span className="text-white/90 text-xs font-semibold">Home Additions</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
+            Home Additions <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-            Unlock your home's hidden square footage. We turn dark, unutilized basements into bright, luxurious family rooms, home theaters, guest suites, and wet bars. Serving Monmouth and Ocean County.
+            Need more living space? We design and build seamless room additions, luxury master suites, second-story expansions, and family room extensions that enhance your lifestyle and home value.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -257,34 +244,18 @@ function BasementFinishingPage() {
       <section className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
           <div>
-            <div className="text-sm text-gray-400">Serving Local Homeowners In</div>
+            <div className="text-sm text-gray-400">Serving New Jersey Homeowners In</div>
             <div className="text-lg font-bold text-white">Howell Township, Freehold, Jackson &amp; Brick</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Moisture Protection</div>
-            <div className="text-lg font-bold text-white">Continuous Vapor Barriers &amp; Waterproofing</div>
+            <div className="text-sm text-gray-400">Permits &amp; Code</div>
+            <div className="text-lg font-bold text-white">Turnkey Permit Filing &amp; Inspection Management</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Schedule Consultation</div>
+            <div className="text-sm text-gray-400">Consultations</div>
             <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Ideas Pills */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-            Popular Finished Basement Concepts We Build
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ideas.map((idea) => (
-              <span key={idea} className="bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
-                {idea}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -293,12 +264,12 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Transformations</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Solutions</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Complete Basement Remodeling Solutions
+              Expert Home Addition Services in Howell, NJ
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We manage your basement renovation with careful attention to moisture mitigation, ceiling height optimization, and building code compliance.
+              From foundation excavation and timber framing to fine architectural millwork, our in-house craftsmen manage your expansion from concept to certificate of occupancy.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,9 +290,9 @@ function BasementFinishingPage() {
       <section className="py-24" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Raw to Refined</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Blueprints to Build</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Our 5-Stage Basement Finishing Process
+              Our 5-Stage Home Addition Process
             </h2>
           </div>
           <div className="relative">
@@ -346,20 +317,20 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Warm &amp; Dry Living Spaces</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Seamless Integration</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                Engineered Specifically for Below-Grade Longevity
+                Designed to Look Like Part of the Original Home
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Basements require specialized building science. Using organic materials directly against cold concrete leads to moisture problems. We install thermal breaks, mold-resistant drywall, and waterproof LVP flooring so your space stays clean and fresh.
+                Nothing looks worse than an addition that feels tacked onto a house. Jhay's Construction works meticulously to blend rooflines, foundation finishes, siding, and interior ceiling heights seamlessly.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Continuous wall vapor barriers and subfloor air gaps",
-                  "Closed-cell spray foam insulation sealing rim joist perimeters",
-                  "Quiet exhaust ventilation and properly balanced HVAC air runs",
-                  "All permits pulled with Howell Township Code Enforcement",
-                  "Full 1-year warranty on all remodeling craftsmanship",
+                  "Architectural plans prepared to Howell Township zoning setback requirements",
+                  "Deep poured concrete footings below New Jersey frost line",
+                  "Engineered floor joists and LVL ridge beams for long open spans",
+                  "Air-tight weatherproofing, thermal insulation, and efficient HVAC integration",
+                  "Dedicated lead carpenter on-site ensuring cleanliness and craftsmanship",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -371,7 +342,7 @@ function BasementFinishingPage() {
             <div className="relative">
               <img
                 src={expectImg}
-                alt="Finished basement family room in Howell NJ by Jhay's Construction"
+                alt="Framing and home addition project in Howell NJ by Jhay's Construction"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
               />
@@ -381,8 +352,8 @@ function BasementFinishingPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Timelines</div>
-                    <div className="text-xs text-gray-500">Typical projects finish in 4–6 weeks</div>
+                    <div className="font-extrabold text-gray-900 text-lg">Full Permit Management</div>
+                    <div className="text-xs text-gray-500">We handle all township zoning &amp; inspections</div>
                   </div>
                 </div>
               </div>
@@ -397,34 +368,34 @@ function BasementFinishingPage() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <Home className="w-5 h-5 text-[#008000]" /> Related Home Improvement Services
+                <Home className="w-5 h-5 text-[#008000]" /> Related Remodeling Services
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Bathroom Additions
-                  </a>
-                </li>
-                <li>
-                  <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Above-Ground Space
-                  </a>
-                </li>
-                <li>
                   <a href="/services/kitchen-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Kitchen Remodeling in Howell, NJ
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Kitchen Expansions &amp; Remodeling
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Master En-Suite Bathroom Additions
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/basement-finishing" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Finishing &amp; Lower-Level Suites
                   </a>
                 </li>
                 <li>
                   <a href="/work" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Basement Before &amp; After Projects
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Structural Framing &amp; Additions Gallery
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#008000]" /> Basement Finishing Service Areas
+                <MapPin className="w-5 h-5 text-[#008000]" /> Home Addition Service Areas
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -434,17 +405,17 @@ function BasementFinishingPage() {
                 </li>
                 <li>
                   <a href="/areas-we-serve/freehold-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Basement Remodeling
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Home Expansions
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/jackson-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Basement Finishing
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Home Additions
                   </a>
                 </li>
                 <li>
-                  <a href="/areas-we-serve/brick-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Finished Basements
+                  <a href="/areas-we-serve/lakewood-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Lakewood, NJ Multi-Generational Additions
                   </a>
                 </li>
               </ul>
@@ -457,8 +428,8 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Questions</span>
-            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Basement Finishing FAQs</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Inquiries</span>
+            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Home Addition FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -478,10 +449,10 @@ function BasementFinishingPage() {
       <section className="py-20" style={{ background: "linear-gradient(135deg, #0a280a 0%, #1a7c1a 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Ready to Finish Your Basement?
+            Ready to Expand Your Home?
           </h2>
           <p className="text-green-100 text-lg mb-8">
-            Contact Jhay's Construction today for a free on-site moisture check and detailed layout estimate.
+            Speak with an experienced NJ addition builder about feasibility, layouts, and estimated budgets.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

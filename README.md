@@ -1,221 +1,229 @@
-# Jhay's Construction — Website
+# Jhay's Construction — Website & SEO Architecture
 
-**Live Site:** [https://www.jhaysconstruction.com](https://www.jhaysconstruction.com)
-
-A residential and commercial general contracting website built with **TanStack Start (React SSR)** and deployed on **Vercel**.
+**Live Site:** [https://www.jhaysconstruction.com](https://www.jhaysconstruction.com)  
+**Framework:** TanStack Start (React 19 SSR, Nitro Server, File-based Routing)  
+**Deployment:** Vercel  
 
 ---
 
-## Business Info
+## Authoritative Business NAP & Details
 
 | Field | Value |
-|---|---|
-| Business Name | Jhay's Construction |
-| Address | 735 Hulses Corner Rd, Howell Township, NJ 07731 |
-| Phone | (732) 673-1569 |
-| Email | jhaycconstruction@gmail.com |
-| Website | https://www.jhaysconstruction.com |
+| :--- | :--- |
+| **Business Name** | Jhay's Construction |
+| **Physical Address** | 735 Hulses Corner Rd, Howell Township, NJ 07731 |
+| **Phone** | (732) 673-1569 |
+| **Email** | jhaycconstruction@gmail.com |
+| **Operating Hours** | Mon – Fri: 8:00 AM – 6:00 PM \| Sat: 9:00 AM – 2:00 PM \| Sun: Closed |
+| **Primary Category** | General Contractor / Home Remodeling Contractor |
+| **Geographic Target** | Howell Township, Monmouth County, Ocean County, Middlesex County, NJ |
 
 ---
 
-## Tech Stack
+## Master SEO Keyword Map (Currently Working)
 
-- **Framework:** TanStack Start (React SSR / file-based routing)
-- **Styling:** Tailwind CSS + custom CSS variables
-- **Icons:** Lucide React
-- **Deployment:** Vercel (via `nitro` preset)
-- **Build Tool:** Vite (`@lovable.dev/vite-tanstack-config`)
+### 1. Primary Pages & Canonical Service Routes
 
----
-
-## SEO Keyword Map
-
-### Primary Keywords (by page)
-
-| Page | URL | Primary Keyword | Title Tag |
-|---|---|---|---|
-| Homepage | `/` | General Contractor Howell NJ | General Contractor in Howell, NJ \| Jhay's Construction |
-| Kitchen | `/services/kitchen-fitting` | Kitchen Remodeling Howell NJ | Kitchen Remodeling in Howell, NJ \| Jhay's Construction |
-| Bathroom | `/services/bathroom-fitting` | Bathroom Remodeling Howell NJ | Bathroom Remodeling in Howell, NJ \| Jhay's Construction |
-| Basement | `/services/basement-finishing` | Basement Finishing Howell NJ | Basement Finishing in Howell, NJ \| Jhay's Construction |
-| Driveways | `/services/driveways` | Driveway Paving Howell NJ | Driveway Paving in Howell, NJ \| Jhay's Construction |
-| Patios | `/services/patios` | Patio Installation Howell NJ | Patio Installation in Howell, NJ \| Jhay's Construction |
-| Room Additions | `/services/room-additions` | Home Addition Contractor Howell NJ | Home Addition Contractor in Howell, NJ \| Jhay's Construction |
-| About | `/about` | General Contractor Howell NJ (brand) | About Jhay's Construction \| General Contractor in Howell, NJ |
-| Reviews | `/reviews` | Jhay's Construction Reviews Howell NJ | Customer Reviews \| Jhay's Construction — Howell, NJ |
-| Contact | `/contact` | Contact General Contractor Howell NJ | Contact Jhay's Construction \| Howell Township, NJ |
-| Estimate | `/estimate` | Free Estimate General Contractor Howell NJ | Free Estimate \| Jhay's Construction — Howell, NJ Contractor |
-| Work/Portfolio | `/work` | Construction Projects Howell NJ | Project Gallery \| Jhay's Construction — Howell, NJ |
+| Page | Canonical URL | Primary Target Keyword | Secondary Keywords | Search Intent |
+| :--- | :--- | :--- | :--- | :--- |
+| **Homepage** | `/` | General Contractor in Howell NJ | Home Remodeling Howell NJ, Construction Company Monmouth County | Commercial / Navigational |
+| **About Us** | `/about` | Licensed General Contractor Howell NJ | NJ Home Improvement Contractor, Construction Company History | Informational / Trust |
+| **Contact Us** | `/contact` | Contractor Phone Number Howell NJ | Free Remodeling Consultation, Construction Estimate NJ | Commercial / Transactional |
+| **Free Estimate** | `/estimate` | Free Home Remodeling Estimate NJ | Contractor Quote Howell NJ, Kitchen Remodel Cost Estimate | High Transactional |
+| **Customer Reviews** | `/reviews` | Jhay's Construction Reviews | Howell NJ Contractor Reviews, Remodeling Customer Ratings | Commercial / Social Proof |
+| **Project Gallery** | `/work` | Home Remodeling Gallery NJ | Before and After Remodeling NJ, Masonry and Patio Photos | Commercial / Visual Proof |
+| **Services Hub** | `/services` | Remodeling Services Howell NJ | Residential Construction Services, General Contracting Central NJ | Commercial Investigation |
+| **Kitchen Remodeling** | `/services/kitchen-remodeling` | Kitchen Remodeling Howell NJ | Custom Kitchen Cabinets Howell, Kitchen Renovation Monmouth County | High Transactional |
+| **Bathroom Remodeling** | `/services/bathroom-remodeling` | Bathroom Remodeling Howell NJ | Master Bath Renovation NJ, Walk-in Shower Tile Contractor | High Transactional |
+| **Patio Installation** | `/services/patio-installation` | Patio Installation Howell NJ | Paver Patio Contractor NJ, Outdoor Living Hardscaping Monmouth County | High Transactional |
+| **Driveway Paving** | `/services/driveway-paving` | Driveway Paving Howell NJ | Concrete Driveway Contractor NJ, Stamped Concrete Driveways | High Transactional |
+| **Home Additions** | `/services/home-additions` | Home Additions Howell NJ | Second Story Addition Monmouth County, Master Suite Addition NJ | High Transactional |
+| **Basement Finishing** | `/services/basement-finishing` | Basement Finishing Howell NJ | Basement Remodeling Contractor NJ, Waterproof Basement Finishing | High Transactional |
 
 ---
 
-### Service Keywords (Long-tail)
+### 2. Dedicated Local Service Area Hubs
 
-#### Kitchen Remodeling
+| Location Landing Page | Canonical URL | Primary Target Keyword | Secondary Local Keywords | Target Municipality |
+| :--- | :--- | :--- | :--- | :--- |
+| **Areas We Serve Hub** | `/areas-we-serve` | Contractor Service Areas Central NJ | General Contractor Monmouth and Ocean County | Central New Jersey |
+| **Howell Township HQ** | `/areas-we-serve/howell-nj` | General Contractor Howell NJ | Home Remodeling Howell Township NJ, Howell NJ Kitchen & Bath Contractor | Howell, NJ (07731) |
+| **Freehold** | `/areas-we-serve/freehold-nj` | General Contractor Freehold NJ | Home Remodeling Freehold Borough NJ, Kitchen Remodel Freehold | Freehold, NJ (07728) |
+| **Jackson Township** | `/areas-we-serve/jackson-township-nj` | General Contractor Jackson NJ | Home Remodeling Jackson Township NJ, Patio Contractor Jackson NJ | Jackson, NJ (08527) |
+| **Brick Township** | `/areas-we-serve/brick-township-nj` | General Contractor Brick NJ | Home Remodeling Brick Township NJ, Coastal Deck & Bathroom Remodeling | Brick, NJ (08723/08724) |
+| **Lakewood** | `/areas-we-serve/lakewood-nj` | General Contractor Lakewood NJ | Home Additions Lakewood NJ, Multi-Gen Remodeling Lakewood NJ | Lakewood, NJ (08701) |
+
+---
+
+### 3. Legal & Crawlability Pages
+
+| Page | Canonical URL | Target Purpose | Robots Directive |
+| :--- | :--- | :--- | :--- |
+| **Privacy Policy** | `/privacy-policy` | User Privacy Protection & Trust | `index, follow` |
+| **Terms of Service** | `/terms` | Contractor Terms & Conditions | `index, follow` |
+| **HTML Sitemap** | `/sitemap` | Complete Directory & Crawl Discovery | `index, follow` |
+
+---
+
+### 4. 301 Permanent Redirects (Legacy URL Migration)
+
+All legacy URLs have been redirected to canonical keyword routes via HTTP 301 permanent redirects:
+
+- `/services/kitchen-fitting` ➔ **301** ➔ `/services/kitchen-remodeling`
+- `/services/bathroom-fitting` ➔ **301** ➔ `/services/bathroom-remodeling`
+- `/services/patios` ➔ **301** ➔ `/services/patio-installation`
+- `/services/driveways` ➔ **301** ➔ `/services/driveway-paving`
+- `/services/room-additions` ➔ **301** ➔ `/services/home-additions`
+
+---
+
+## Complete Keyword Inventory by Category
+
+### Category A: General Contractor & Brand Keywords
+- general contractor Howell NJ
+- general contractor Howell Township NJ
+- general contractor Monmouth County NJ
+- general contractor near me Howell NJ
+- licensed general contractor NJ
+- residential general contractor Howell NJ
+- commercial contractor Howell NJ
+- home remodeling contractor Howell NJ
+- home improvement contractor Howell Township
+- Jhay's Construction
+- Jhay's Construction Howell NJ
+- Jhay's Construction reviews
+- Jhay's Construction phone number
+
+### Category B: Kitchen Remodeling Keywords
 - kitchen remodeling Howell NJ
 - kitchen renovation Howell Township NJ
-- kitchen remodeling contractor near me
 - custom kitchen cabinets Howell NJ
-- kitchen countertop installation Howell NJ
-- kitchen remodeling Freehold NJ
-- kitchen remodeling Jackson Township NJ
+- kitchen island installation Howell NJ
+- quartz countertop installation Howell NJ
+- modern kitchen design Monmouth County NJ
+- open concept kitchen remodel Howell NJ
+- kitchen remodeling contractor near me
+- kitchen renovation Freehold NJ
+- kitchen remodeling Jackson NJ
 - kitchen remodeling Monmouth County NJ
 
-#### Bathroom Remodeling
+### Category C: Bathroom Remodeling Keywords
 - bathroom remodeling Howell NJ
 - bathroom renovation Howell Township NJ
 - walk-in shower installation Howell NJ
-- bathroom tile installation Howell NJ
-- custom vanity installation NJ
-- bathroom gut renovation Howell NJ
+- master bath renovation Monmouth County NJ
+- custom bathroom tile contractor NJ
+- double vanity installation Howell NJ
+- tub to shower conversion Howell NJ
+- modern bathroom remodel NJ
 - bathroom remodeling Freehold NJ
-- bathroom remodeling Old Bridge NJ
+- bathroom remodeling Brick Township NJ
+- luxury spa bathroom renovation NJ
 
-#### Basement Finishing
+### Category D: Patio Installation & Outdoor Living Keywords
+- patio installation Howell NJ
+- paver patio contractor Howell Township NJ
+- outdoor living spaces Monmouth County NJ
+- interlocking paver patio NJ
+- outdoor kitchen contractor Howell NJ
+- fire pit and patio installation NJ
+- natural stone walkway Howell NJ
+- pool deck pavers Howell NJ
+- retaining wall installation Howell NJ
+- hardscaping contractor Howell Township NJ
+- patio installation Brick NJ
+- patio contractor Jackson Township NJ
+
+### Category E: Driveway Paving & Concrete Keywords
+- driveway paving Howell NJ
+- concrete driveway contractor Howell Township NJ
+- stamped concrete driveway NJ
+- interlocking paver driveway Howell NJ
+- driveway replacement Monmouth County NJ
+- concrete apron and curb installation NJ
+- commercial concrete paving Howell NJ
+- driveway contractor near me Howell NJ
+- driveway paving Freehold NJ
+- decorative concrete driveway NJ
+
+### Category F: Home Additions & Expansions Keywords
+- home additions Howell NJ
+- home addition contractor Howell Township NJ
+- second story addition Monmouth County NJ
+- master suite addition Howell NJ
+- sunroom addition Howell NJ
+- family room expansion NJ
+- in-law suite addition Howell Township NJ
+- two-story custom framing Howell NJ
+- structural room addition NJ
+- home additions Lakewood NJ
+- home addition Freehold NJ
+
+### Category G: Basement Finishing Keywords
 - basement finishing Howell NJ
-- basement finishing contractor Howell Township NJ
-- unfinished basement renovation NJ
-- basement remodeling Monmouth County NJ
-- home theater basement NJ
-- basement office finishing Howell NJ
+- basement remodeling Howell Township NJ
+- waterproof basement finishing NJ
+- finished basement entertainment room NJ
+- basement home office finishing Howell NJ
+- basement in-law suite Monmouth County NJ
+- basement wet bar and bathroom addition NJ
+- basement remodeling contractor near me
 - basement finishing Freehold NJ
 - basement finishing Toms River NJ
 
-#### Driveway Paving
-- driveway paving Howell NJ
-- asphalt driveway Howell Township NJ
-- concrete driveway Howell NJ
-- paver driveway installation NJ
-- driveway sealcoating Howell NJ
-- driveway repair Monmouth County NJ
-- driveway paving contractor near me Howell NJ
-- new driveway installation Howell NJ
-
-#### Patio Installation
-- patio installation Howell NJ
-- paver patio Howell Township NJ
-- outdoor patio contractor NJ
-- hardscaping Howell NJ
-- pergola installation Howell NJ
-- outdoor kitchen Howell NJ
-- natural stone patio NJ
-- patio installation Monmouth County NJ
-
-#### Home Additions
-- home addition contractor Howell NJ
-- room addition Howell Township NJ
-- home addition Monmouth County NJ
-- master suite addition NJ
-- second story addition Howell NJ
-- sunroom addition Howell NJ
-- family room addition NJ
-- home extension contractor Howell NJ
-
-#### General Contractor
-- general contractor Howell NJ
-- general contractor Howell Township NJ
-- residential contractor Howell NJ
-- commercial contractor Howell NJ
-- licensed contractor Howell Township NJ
-- home improvement contractor Howell NJ
-- general contractor Monmouth County NJ
-- contractor near me Howell NJ
+### Category H: Municipal & Geo-Targeted Keywords
+- **Howell Township, NJ (07731):**
+  - general contractor Howell NJ
+  - home remodeling Howell Township NJ
+  - Howell NJ kitchen & bath contractor
+  - general contractor 07731
+  - Ramtown remodeling contractor
+  - Freewood Acres home remodeling
+- **Freehold, NJ (07728):**
+  - general contractor Freehold NJ
+  - home remodeling Freehold Borough NJ
+  - home remodeling Freehold Township NJ
+  - kitchen remodeling Freehold NJ
+  - bathroom renovation Freehold NJ
+- **Jackson Township, NJ (08527):**
+  - general contractor Jackson NJ
+  - home remodeling Jackson Township NJ
+  - patio contractor Jackson NJ
+  - driveway paving Jackson NJ
+- **Brick Township, NJ (08723 / 08724):**
+  - general contractor Brick NJ
+  - home remodeling Brick Township NJ
+  - coastal home remodeling Brick NJ
+  - composite decking contractor Brick NJ
+- **Lakewood, NJ (08701):**
+  - general contractor Lakewood NJ
+  - home additions Lakewood NJ
+  - multi-generational home additions Lakewood NJ
+  - dual-prep kitchen remodeling Lakewood NJ
+- **Surrounding Central NJ Areas:**
+  - Toms River NJ general contractor
+  - Wall Township NJ pool patio & additions
+  - Manalapan NJ home remodeling
+  - Old Bridge NJ contractor
+  - Perth Amboy & Woodbridge NJ masonry & remodeling
 
 ---
 
-### Local Service Area Keywords
+## Technical & Schema SEO Summary
 
-| City | State | Keywords Targeted |
-|---|---|---|
-| Howell Township | NJ | All primary keywords (main market) |
-| Freehold | NJ | Kitchen, bathroom, basement |
-| Jackson Township | NJ | General contractor, kitchen, bathroom |
-| Lakewood | NJ | General contractor, patios |
-| Brick Township | NJ | General contractor, driveways, patios |
-| Toms River | NJ | Basement, patios |
-| Old Bridge | NJ | Bathroom, driveways |
-| Perth Amboy | NJ | General contractor |
-| Woodbridge | NJ | General contractor |
+| Schema Type | Context / File | Status |
+| :--- | :--- | :--- |
+| `LocalBusiness` / `GeneralContractor` | `src/routes/__root.tsx` (Global) | Verified with geo-coordinates, catalog, hours |
+| `WebSite` | `src/routes/__root.tsx` (Global) | Verified with canonical URL |
+| `ItemList` | `src/routes/services/index.tsx` | Catalogs all 6 core services |
+| `Service` | Each canonical service page | Injected on all 6 service routes |
+| `FAQPage` | Service, Contact & Local pages | Injected with unique consumer Q&As |
+| `ContactPage` | `src/routes/contact.tsx` | Injected with structured business entity |
 
 ---
 
-### Structured Data (JSON-LD Schemas)
+## Crawl Assets & Directives
 
-Implemented schemas:
-
-| Schema Type | Location | Pages |
-|---|---|---|
-| `GeneralContractor` | `__root.tsx` | All pages (global) |
-| `Organization` | `__root.tsx` | All pages (global) |
-| `WebSite` | `__root.tsx` | All pages (global) |
-| `Service` | Each service page | 6 service pages |
-| `BreadcrumbList` | Each service page | 6 service pages |
-
----
-
-## Project Structure
-
-```
-jhays/
-├── public/
-│   ├── robots.txt          # Crawler rules + sitemap reference
-│   └── sitemap.xml         # 12 canonical URLs
-├── src/
-│   ├── routes/
-│   │   ├── __root.tsx      # Global layout, JSON-LD schemas, default meta
-│   │   ├── index.tsx       # Homepage
-│   │   ├── about.tsx
-│   │   ├── reviews.tsx
-│   │   ├── contact.tsx
-│   │   ├── estimate.tsx
-│   │   ├── work.tsx
-│   │   └── services/
-│   │       ├── kitchen-fitting.tsx
-│   │       ├── bathroom-fitting.tsx
-│   │       ├── basement-finishing.tsx
-│   │       ├── driveways.tsx
-│   │       ├── patios.tsx
-│   │       └── room-additions.tsx
-│   ├── components/
-│   │   └── sections/
-│   │       ├── Header.tsx  # Navigation with SEO service labels
-│   │       ├── Footer.tsx  # NAP block, service area links
-│   │       ├── Hero.tsx    # Homepage hero with H1 + image alt text
-│   │       └── Services.tsx # Service cards with SEO titles + alt text
-│   └── assets/
-└── vite.config.ts
-```
-
----
-
-## SEO Checklist
-
-- [x] Unique `<title>` tag on every page (keyword-targeted)
-- [x] Unique meta `description` on every page (155–160 chars)
-- [x] `<link rel="canonical">` on every page
-- [x] Open Graph tags (`og:title`, `og:description`, `og:url`, `og:type`)
-- [x] Twitter Card tags
-- [x] `<html lang="en">` (set in root)
-- [x] Single `<h1>` per page (keyword-targeted, geo-specific)
-- [x] Descriptive image alt text (hero slider + service cards)
-- [x] `robots.txt` — allows all, references sitemap
-- [x] `sitemap.xml` — 12 URLs with priorities
-- [x] `GeneralContractor` JSON-LD with NAP, areaServed (9 cities), hours
-- [x] `Service` JSON-LD on all 6 service pages
-- [x] `BreadcrumbList` JSON-LD on all 6 service pages
-- [x] NAP consistent in footer `<address>` element
-- [x] NAP consistent in TopBar (phone + email)
-- [x] Keyword spam removed from footer
-- [x] No fabricated statistics
-- [x] Service area (9 NJ cities) listed in footer and structured data
-- [x] `loading="eager"` on LCP hero image, `lazy` on others
-
----
-
-## Post-Deploy Actions Required
-
-1. **Google Search Console** → Submit `https://www.jhaysconstruction.com/sitemap.xml`
-2. **Google Business Profile** → Claim listing with matching NAP (735 Hulses Corner Rd, Howell Township, NJ 07731)
-3. **Schema Validation** → Test at https://search.google.com/test/rich-results
-4. **Social Links** → Update TopBar Facebook/Instagram `href="#"` to real URLs
-5. **Deck Content Gap** → No deck service currently exists; create `/services/decks` if decking is offered to capture "Deck Contractor Howell NJ" traffic
+- **XML Sitemap:** `https://www.jhaysconstruction.com/sitemap.xml` (22 canonical URLs, 0 redirected URLs)
+- **Robots.txt:** `https://www.jhaysconstruction.com/robots.txt` (clean crawl directives referencing sitemap)
+- **Social Cards:** High-res preview at `https://www.jhaysconstruction.com/og-image.jpg`

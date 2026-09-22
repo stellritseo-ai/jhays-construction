@@ -26,28 +26,90 @@ import {
   CheckCircle
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import { submitLeadForm } from "@/lib/submit-lead";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Jhay's Construction | Howell Township, NJ" },
+      { title: "Contact Jhay's Construction | Howell Township, NJ General Contractor" },
       {
         name: "description",
         content:
           "Contact Jhay's Construction in Howell Township, NJ. Call (732) 673-1569, email jhaycconstruction@gmail.com, or request a free estimate online. Serving Howell, Freehold, Jackson, Brick, and surrounding NJ areas.",
       },
-      { property: "og:title", content: "Contact Jhay's Construction | Howell Township, NJ" },
+      { property: "og:title", content: "Contact Jhay's Construction | Howell Township, NJ General Contractor" },
       {
         property: "og:description",
         content:
-          "Get in touch with Jhay's Construction in Howell Township, NJ. Call, email, or submit a contact form. Free estimates available for all services.",
+          "Get in touch with Jhay's Construction in Howell Township, NJ. Call (732) 673-1569, email jhaycconstruction@gmail.com, or submit our contact form for a free consultation.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/contact" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/contact" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Jhay's Construction",
+          "url": "https://www.jhaysconstruction.com/contact",
+          "mainEntity": {
+            "@type": "GeneralContractor",
+            "name": "Jhay's Construction",
+            "telephone": "+17326731569",
+            "email": "jhaycconstruction@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "735 Hulses Corner Rd",
+              "addressLocality": "Howell Township",
+              "addressRegion": "NJ",
+              "postalCode": "07731",
+              "addressCountry": "US"
+            }
+          }
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How quickly do you respond to messages?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We respond to all calls, texts, emails, and form submissions within 24 business hours. Most inquiries receive a response within 2-4 hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I get a quote without a home visit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We can provide preliminary estimates based on photos and project scopes. For final, accurate quotes, we conduct an on-site consultation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are you licensed and insured in New Jersey?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Jhay's Construction is fully licensed in New Jersey and carries full liability insurance and workers' compensation coverage."
+              }
+            }
+          ]
+        }),
+      },
     ],
   }),
   component: ContactPage,
@@ -130,6 +192,7 @@ const hoursTable = [
 function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
 
@@ -164,38 +227,30 @@ function ContactPage() {
       return;
     }
 
+    setIsSubmitting(true);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: "New Contact Request from Jhay's Construction Website",
-          _captcha: "false",
-          Name: formData.fullName,
-          Phone: formData.phone,
-          Email: formData.email,
-          Message: formData.message,
-          Service: formData.serviceInterested || "Not specified",
-        }),
+      await submitLeadForm({
+        formType: "Contact Message",
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+        service: formData.serviceInterested,
+        message: formData.message,
+        referral: formData.referral,
       });
 
-      if (response.ok || response.status === 200) {
-        setSubmitted(true);
-        // Scroll to success card container
-        const element = document.getElementById("contact-form-card");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      } else {
-        const text = await response.text();
-        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
+      setSubmitted(true);
+      // Scroll to success card container
+      const element = document.getElementById("contact-form-card");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
       }
     } catch (error: any) {
       console.error(error);
-      alert(`Oops! There was a problem submitting your form: ${error.message}`);
+      alert(`Oops! There was a problem submitting your form: ${error.message || "Please try again or call us at (732) 673-1569"}`);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -204,16 +259,9 @@ function ContactPage() {
     if (!newsletterEmail) return;
 
     try {
-      await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: "New Newsletter Subscriber",
-          Email: newsletterEmail,
-        }),
+      await submitLeadForm({
+        formType: "Newsletter Subscription",
+        email: newsletterEmail,
       });
       setNewsletterSubscribed(true);
       setNewsletterEmail("");
@@ -637,10 +685,17 @@ function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                     style={{ backgroundColor: "#008000" }}
                   >
-                    Send Message <Send className="size-4" />
+                    {isSubmitting ? (
+                      <span>Sending Message...</span>
+                    ) : (
+                      <>
+                        Send Message <Send className="size-4" />
+                      </>
+                    )}
                   </button>
                 </form>
               </div>

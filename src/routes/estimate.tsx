@@ -24,6 +24,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import { submitLeadForm } from "@/lib/submit-lead";
 
 export const Route = createFileRoute("/estimate")({
   head: () => ({
@@ -42,6 +43,9 @@ export const Route = createFileRoute("/estimate")({
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/estimate" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [
@@ -138,6 +142,7 @@ const serviceAreas = [
 function EstimatePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -177,42 +182,32 @@ function EstimatePage() {
       return;
     }
 
+    setIsSubmitting(true);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/jhaycconstruction@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: "New Estimate Request from Jhay's Construction",
-          _captcha: "false",
-          Name: formData.fullName,
-          Phone: formData.phone,
-          Email: formData.email,
-          Address: formData.address,
-          ProjectType: formData.projectType,
-          PreferredDate: formData.prefDate || "Not specified",
-          PreferredTime: formData.prefTime || "Not specified",
-          Description: formData.description || "Not specified",
-          Referral: formData.referral || "Not specified",
-        }),
+      await submitLeadForm({
+        formType: "Estimate Request",
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+        projectType: formData.projectType,
+        preferredDate: formData.prefDate || "Not specified",
+        preferredTime: formData.prefTime || "Not specified",
+        details: formData.description || "Not specified",
+        referral: formData.referral || "Not specified",
       });
 
-      if (response.ok || response.status === 200) {
-        setSubmitted(true);
-        // Smooth scroll to success info
-        const element = document.getElementById("estimate-form-container");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      } else {
-        const text = await response.text();
-        alert(`Oops! There was a problem submitting your form. Server says: ${text}`);
+      setSubmitted(true);
+      // Smooth scroll to success info
+      const element = document.getElementById("estimate-form-container");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
       }
     } catch (error: any) {
       console.error(error);
-      alert(`Oops! There was a problem submitting your form: ${error.message}`);
+      alert(`Oops! There was a problem submitting your form: ${error.message || "Please try again or call us at (732) 673-1569"}`);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -676,10 +671,17 @@ function EstimatePage() {
 
                 <button
                   type="submit"
-                  className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full text-white font-bold py-4 rounded-xl hover:shadow-[0_8px_30px_rgba(0,128,0,0.3)] transition-all flex items-center justify-center gap-2 hover:scale-[1.01] cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                   style={{ backgroundColor: "#008000" }}
                 >
-                  Send My Free Estimate Request <ArrowRight className="size-4" />
+                  {isSubmitting ? (
+                    <span>Submitting Request...</span>
+                  ) : (
+                    <>
+                      Send My Free Estimate Request <ArrowRight className="size-4" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
@@ -771,7 +773,7 @@ function EstimatePage() {
                   Email Us
                 </div>
                 <div className="font-semibold text-gray-950 text-sm truncate">
-                  info@jhaysconstruction.com
+                  jhaycconstruction@gmail.com
                 </div>
               </div>
             </a>

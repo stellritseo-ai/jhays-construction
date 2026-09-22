@@ -8,18 +8,21 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Customer Reviews | Jhay's Construction — Howell, NJ" },
+      { title: "Customer Reviews & Testimonials | Jhay's Construction Howell NJ" },
       {
         name: "description",
-        content: "Read customer reviews for Jhay's Construction in Howell, NJ. Homeowners praise our kitchen remodels, bathroom renovations, basement finishing, patio installation, and outdoor projects. Call (732) 673-1569.",
+        content: "Read verified homeowner reviews for Jhay's Construction in Howell, NJ. Rated 4.9/5 for kitchen remodeling, bathroom renovation, basement finishing, and patios.",
       },
-      { property: "og:title", content: "Customer Reviews | Jhay's Construction — Howell, NJ" },
+      { property: "og:title", content: "Customer Reviews & Testimonials | Jhay's Construction Howell NJ" },
       {
         property: "og:description",
         content: "See why homeowners across Howell Township, NJ trust Jhay's Construction for kitchen remodeling, bathroom renovation, basement finishing, and outdoor hardscaping.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/reviews" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [
@@ -36,7 +39,7 @@ const featuredReviews = [
     quote: "Jhay and his team transformed our outdated 1980s bathroom into a modern spa. The tile work is flawless, the walk-in shower is gorgeous, and they finished a full week ahead of schedule. Clean, professional, and fairly priced. We're already booking them for our kitchen!",
     author: "Jennifer M.",
     location: "Howell Township, NJ",
-    project: "Bathroom Fitting",
+    project: "Bathroom Remodeling",
   },
   {
     rating: 5,
@@ -44,7 +47,7 @@ const featuredReviews = [
     quote: "From design to completion, Jhay's Construction exceeded every expectation. They helped us choose the perfect cabinets and quartz countertops within our budget. The crew was respectful, showed up on time daily, and kept the worksite clean. Our kitchen is now the heart of our home. Thank you!",
     author: "Michael & Lisa R.",
     location: "Freehold, NJ",
-    project: "Kitchen Fitting",
+    project: "Kitchen Remodeling",
   },
   {
     rating: 5,
@@ -76,7 +79,7 @@ const featuredReviews = [
     quote: "Our old driveway was cracked and sinking. Jhay's team removed everything, regraded the base, and poured a beautiful new concrete driveway. It's only been a few months, but it still looks perfect. Great communication and fair pricing.",
     author: "Linda C.",
     location: "Perth Amboy, NJ",
-    project: "Driveway Installation",
+    project: "Driveway Paving",
   },
   {
     rating: 5,
@@ -84,7 +87,7 @@ const featuredReviews = [
     quote: "We needed an extra bedroom for our growing family. Jhay's Construction made the process smooth from start to finish. They matched the existing architecture perfectly, and you'd never know it wasn't original to the house. Couldn't be happier.",
     author: "Thomas B.",
     location: "Wall Township, NJ",
-    project: "Room Addition",
+    project: "Home Addition",
   },
   {
     rating: 5,
@@ -92,7 +95,7 @@ const featuredReviews = [
     quote: "I've hired several contractors over the years, and Jhay is by far the most trustworthy. He gave us a detailed written estimate, stuck to it, and didn't try to upsell unnecessary work. The bathroom he remodeled for us is absolutely gorgeous. A rare find in this industry!",
     author: "Karen S.",
     location: "Woodbridge, NJ",
-    project: "Bathroom Fitting",
+    project: "Bathroom Remodeling",
   },
   {
     rating: 5,
@@ -100,7 +103,7 @@ const featuredReviews = [
     quote: "We hired Jhay for two projects at once — a kitchen remodel and a new patio. Both turned out amazing. He coordinated everything seamlessly, and we saved money by bundling the work. The kitchen cabinets are high quality, and the patio is perfect for morning coffee.",
     author: "Joseph & Maria D.",
     location: "Rahway, NJ",
-    project: "Kitchen Fitting & Patio Installation",
+    project: "Kitchen Remodeling & Patio",
   },
   {
     rating: 5,
@@ -303,14 +306,14 @@ function ReviewsPage() {
               <Phone className="size-5 text-[#008000] shrink-0 mt-0.5" />
               <div>
                 <div className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Call Us</div>
-                <div className="font-bold text-gray-900 text-sm">(732) 673-1569</div>
+                <a href="tel:7326731569" className="font-bold text-gray-900 text-sm hover:text-[#008000] transition-colors">(732) 673-1569</a>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="size-5 text-[#008000] shrink-0 mt-0.5" />
               <div>
                 <div className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Email Us</div>
-                <div className="font-bold text-gray-950 text-sm truncate">jhaycconstruction@gmail.com</div>
+                <a href="mailto:jhaycconstruction@gmail.com" className="font-bold text-gray-950 text-sm truncate hover:text-[#008000] transition-colors">jhaycconstruction@gmail.com</a>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -318,7 +321,7 @@ function ReviewsPage() {
               <div>
                 <div className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Visit Us</div>
                 <div className="font-bold text-gray-900 text-xs leading-normal">
-                  735 Hulses Corner Rd, NJ
+                  735 Hulses Corner Rd, Howell Township, NJ 07731
                 </div>
               </div>
             </div>

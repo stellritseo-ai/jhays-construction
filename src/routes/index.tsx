@@ -22,6 +22,9 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Trusted residential and commercial general contractor in Howell Township, NJ. Kitchen remodeling, bathroom renovation, basement finishing, home additions, patios, and driveway paving. Free estimates." },
       { property: "og:url", content: "https://www.jhaysconstruction.com/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [

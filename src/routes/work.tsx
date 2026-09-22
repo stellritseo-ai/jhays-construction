@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TopBar } from "@/components/sections/TopBar";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
@@ -14,7 +14,8 @@ import {
   ShieldCheck,
   Check,
   Sparkles,
-  Award
+  Award,
+  MapPin,
 } from "lucide-react";
 import p1 from "@/assets/g1.png";
 import p2 from "@/assets/g2.png";
@@ -25,21 +26,27 @@ import p6 from "@/assets/g6.png";
 import p7 from "@/assets/g7.png";
 import p8 from "@/assets/g8.png";
 import p9 from "@/assets/g9.png";
+import f1 from "@/assets/20260820_133324.jpg";
+import f2 from "@/assets/20260820_133420.jpg";
+import f3 from "@/assets/20260820_133304.jpg";
 import b1 from "@/assets/b1.png";
 import b2 from "@/assets/b2.png";
 import b3 from "@/assets/b3.png";
+import kitchenImg from "@/assets/kitchen.webp";
+import bathroomImg from "@/assets/bathroom.jpeg";
+import basementImg from "@/assets/basement.jpg";
 import heroImg from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Project Gallery | Jhay's Construction — Howell, NJ" },
+      { title: "Remodeling & Construction Project Gallery | Jhay's Construction NJ" },
       {
         name: "description",
         content:
           "Browse completed projects by Jhay's Construction in Howell, NJ. Kitchen remodels, bathroom renovations, basement finishing, patio installations, driveways, and home additions in Monmouth County, NJ.",
       },
-      { property: "og:title", content: "Project Gallery | Jhay's Construction — Howell, NJ" },
+      { property: "og:title", content: "Remodeling & Construction Project Gallery | Jhay's Construction NJ" },
       {
         property: "og:description",
         content:
@@ -47,6 +54,9 @@ export const Route = createFileRoute("/work")({
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/work" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [
@@ -57,86 +67,156 @@ export const Route = createFileRoute("/work")({
 });
 
 const projects = [
+  // First Row: Framing & Carpentry (5 cards)
   {
     id: 1,
-    src: p1,
-    category: "Bathrooms",
-    title: "Modern Spa Bathroom",
+    src: f1,
+    category: "Additions",
+    title: "Two-Story Custom Framing",
     location: "Howell Township, NJ",
-    desc: "A complete overhaul featuring custom tile work, glass walk-in shower, and premium vanity.",
-    ratio: 610 / 809,
+    desc: "Complete structural wood framing and engineered roof trusses for an expansive two-story home addition.",
   },
   {
     id: 2,
-    src: p2,
-    category: "Kitchens",
-    title: "Gourmet Kitchen Renovation",
-    location: "Freehold, NJ",
-    desc: "Custom cabinetry, stone countertops, and optimized layout for modern living.",
-    ratio: 610 / 809,
+    src: f2,
+    category: "Additions",
+    title: "Structural Timber Framing",
+    location: "Howell Township, NJ",
+    desc: "Precision wall framing, load-bearing headers, and subfloor construction built to New Jersey code.",
   },
   {
     id: 3,
-    src: p3,
-    category: "Outdoor Living",
-    title: "Custom Paver Patio",
-    location: "Brick Township, NJ",
-    desc: "Multi-level paver patio designed for outdoor entertaining and summer BBQs.",
-    ratio: 610 / 809,
+    src: f3,
+    category: "Additions",
+    title: "New Home Framing & Addition",
+    location: "Howell Township, NJ",
+    desc: "Full framing execution from foundation sill plates to second-story floor joists.",
   },
   {
     id: 4,
     src: p4,
     category: "Outdoor Living",
-    title: "Premium Composite Deck",
+    title: "Timber Deck Substructure",
     location: "Toms River, NJ",
     desc: "Low-maintenance composite deck with custom railings and integrated step lighting.",
-    ratio: 610 / 809,
   },
   {
     id: 5,
     src: p5,
-    category: "Driveways",
-    title: "Flawless Asphalt Driveway",
+    category: "Outdoor Living",
+    title: "Composite Deck & Railings",
     location: "Perth Amboy, NJ",
-    desc: "Full excavation, regrading, and high-durability asphalt paving.",
-    ratio: 1198 / 537,
+    desc: "Elevated outdoor living composite deck featuring low-maintenance vinyl railings.",
   },
+
+  // Second Row: Masonry & Pool Patios (5 cards)
   {
     id: 6,
-    src: p6,
-    category: "Additions",
-    title: "Seamless Room Addition",
-    location: "Wall Township, NJ",
-    desc: "Architecturally matched second-story extension expanding the family living space.",
-    ratio: 1198 / 537,
+    src: p1,
+    category: "Outdoor Living",
+    title: "Custom Stone Retaining Wall",
+    location: "Howell Township, NJ",
+    desc: "Structural stone retaining wall with integrated seating ledge and natural stone capstones.",
   },
   {
     id: 7,
-    src: p7,
-    category: "Basements",
-    title: "Cozy Finished Basement",
-    location: "Manalapan, NJ",
-    desc: "Transformed dark basement into a family room, guest bedroom, and full bath.",
-    ratio: 1198 / 537,
+    src: p2,
+    category: "Outdoor Living",
+    title: "Interlocking Paver Walkway",
+    location: "Freehold, NJ",
+    desc: "Curved front entryway paver walkway with decorative border and stone garden beds.",
   },
   {
     id: 8,
-    src: p8,
-    category: "Bathrooms",
-    title: "Classic Subway Tile Bath",
-    location: "Woodbridge, NJ",
-    desc: "Timeless design with subway tiling, walk-in tub, and high-efficiency fixtures.",
-    ratio: 610 / 809,
+    src: p3,
+    category: "Outdoor Living",
+    title: "Brick Entryway & Pillars",
+    location: "Brick Township, NJ",
+    desc: "Curved brick masonry accent wall and illuminated pillar lanterns for front driveway entrance.",
   },
   {
     id: 9,
+    src: p6,
+    category: "Outdoor Living",
+    title: "Inground Pool Concrete Surround",
+    location: "Wall Township, NJ",
+    desc: "Expansive brushed concrete pool patio deck engineered for slip-resistance and proper drainage.",
+  },
+  {
+    id: 10,
+    src: p7,
+    category: "Outdoor Living",
+    title: "Finished Pool Deck & Spa Patio",
+    location: "Manalapan, NJ",
+    desc: "Full poolside lounge concrete patio and spa surround with clean coping edges.",
+  },
+
+  // Third Row: Concrete, Driveways & Transformations (5 cards)
+  {
+    id: 11,
+    src: p8,
+    category: "Outdoor Living",
+    title: "Decorative Stamped Concrete",
+    location: "Woodbridge, NJ",
+    desc: "Textured slate pattern stamped concrete patio with custom tinted sealant.",
+  },
+  {
+    id: 12,
     src: p9,
     category: "Outdoor Living",
-    title: "Relaxing Backyard Patio",
+    title: "Precision Concrete Pool Patio",
     location: "Rahway, NJ",
-    desc: "Elegant brick-paver design perfect for peaceful morning coffee and reading.",
-    ratio: 1198 / 537,
+    desc: "Smooth finish concrete apron along in-ground swimming pool perimeter.",
+  },
+  {
+    id: 13,
+    src: b1,
+    category: "Additions",
+    title: "Sunroom & Deck Extension",
+    location: "Howell Township, NJ",
+    desc: "Seamless exterior room extension with wall-to-wall glass sliders and connected deck.",
+  },
+  {
+    id: 14,
+    src: b2,
+    category: "Driveways",
+    title: "Asphalt Driveway Paving",
+    location: "Freehold, NJ",
+    desc: "Full excavation, laser regrading, and heavy-duty asphalt paving with stone paver borders.",
+  },
+  {
+    id: 15,
+    src: b3,
+    category: "Outdoor Living",
+    title: "Custom Stone Patio Installation",
+    location: "Brick Township, NJ",
+    desc: "In-progress large-format architectural stone paver installation with gravel base compaction.",
+  },
+
+  // Remodeling & Interiors
+  {
+    id: 16,
+    src: kitchenImg,
+    category: "Kitchens",
+    title: "Gourmet Kitchen Renovation",
+    location: "Howell Township, NJ",
+    desc: "Custom shaker cabinetry, quartz countertops, tile backsplash, and recessed lighting.",
+  },
+  {
+    id: 17,
+    src: bathroomImg,
+    category: "Bathrooms",
+    title: "Luxury Walk-In Spa Bathroom",
+    location: "Howell Township, NJ",
+    desc: "Frameless glass walk-in shower, porcelain wall tile, and contemporary double vanity.",
+  },
+  {
+    id: 18,
+    src: basementImg,
+    category: "Basements",
+    title: "Finished Family Basement Suite",
+    location: "Manalapan, NJ",
+    desc: "Complete dry basement transformation with entertainment lounge, recessed LED lighting, and luxury vinyl plank flooring.",
   },
 ];
 
@@ -164,7 +244,7 @@ const spotlights = [
   },
 ];
 
-const categories = ["All", "Bathrooms", "Kitchens", "Outdoor Living", "Additions & Basements", "Driveways"];
+const categories = ["All", "Additions & Basements", "Outdoor Living", "Driveways", "Kitchens", "Bathrooms"];
 
 function OurWorkPage() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -196,6 +276,17 @@ function OurWorkPage() {
     setCurrentIndex(newIndex);
     setSelectedImage(filteredProjects[newIndex].src);
   };
+
+  useEffect(() => {
+    if (selectedImage === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedImage(null);
+      if (e.key === "ArrowLeft") navigateLightbox("prev");
+      if (e.key === "ArrowRight") navigateLightbox("next");
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage, currentIndex, filteredProjects]);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-clip">
@@ -248,7 +339,10 @@ function OurWorkPage() {
                 <div className="relative h-[250px] overflow-hidden">
                   <img
                     src={s.img}
-                    alt={s.title}
+                    alt={`${s.title} completed remodeling project in ${s.location} by Jhay's Construction`}
+                    loading="lazy"
+                    width={500}
+                    height={250}
                     className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 bg-[#008000] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
@@ -319,49 +413,59 @@ function OurWorkPage() {
             </div>
           </div>
 
-          {/* Justified flexbox gallery layout with animations */}
-          <div className="flex flex-wrap gap-4 min-h-[300px] transition-all duration-300">
+          {/* 5-Column Image Cards Grid (5 images per row) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 min-h-[300px] transition-all duration-300">
             {filteredProjects.map((p, i) => (
               <div
                 key={p.id}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm h-[200px] sm:h-[240px] md:h-[280px]"
-                style={{
-                  flexGrow: p.ratio,
-                  flexBasis: `${240 * p.ratio}px`,
-                }}
+                className="group bg-white rounded-2xl overflow-hidden border border-gray-150/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer flex flex-col"
                 onClick={() => handleImageClick(p.src, i)}
               >
-                <img
-                  src={p.src}
-                  alt={p.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+                {/* Image Frame with Aspect Ratio */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                  <img
+                    src={p.src}
+                    alt={`${p.title} - ${p.location} by Jhay's Construction`}
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
+                  />
 
-                {/* Hover Details overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
-                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-[9px] bg-[#008000] text-white px-2.5 py-0.5 rounded uppercase tracking-wider font-bold">
+                  {/* Dark Hover Overlay with Zoom Icon */}
+                  <div className="absolute inset-0 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="size-9 rounded-full bg-white text-[#008000] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <ZoomIn className="size-4.5" />
+                    </div>
+                  </div>
+
+                  {/* Category Pill Tag */}
+                  <div className="absolute top-2.5 left-2.5 z-10">
+                    <span className="inline-block bg-black/65 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-white/10 shadow-sm">
                       {p.category}
                     </span>
-                    <h3 className="font-display font-bold text-base mt-2 mb-1">
+                  </div>
+                </div>
+
+                {/* Card Content Footer */}
+                <div className="p-3.5 flex flex-col flex-1 justify-between bg-white">
+                  <div>
+                    <h3 className="font-bold text-xs sm:text-sm text-gray-900 group-hover:text-[#008000] transition-colors line-clamp-1">
                       {p.title}
                     </h3>
-                    <p className="text-[10px] text-gray-300 font-semibold mb-2">
-                      📍 {p.location}
+                    <p className="text-[11px] sm:text-xs text-gray-500 mt-1 flex items-center gap-1 line-clamp-1">
+                      <MapPin className="size-3 text-[#008000] shrink-0" />
+                      <span>{p.location}</span>
                     </p>
-                    <p className="text-[11px] text-white/80 line-clamp-2 leading-relaxed font-normal">
-                      {p.desc}
-                    </p>
-                    <div className="inline-flex items-center gap-1.5 text-xs text-white font-bold mt-3 border-t border-white/20 pt-2 w-full">
-                      <ZoomIn className="size-3.5 text-[#008000]" /> Click to zoom
-                    </div>
+                    {p.desc && (
+                      <p className="text-[11px] text-gray-500 mt-1.5 line-clamp-2 leading-relaxed">
+                        {p.desc}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
-            {/* Spacer for proper final row layout alignment */}
-            <div className="flex-grow-[999] h-[200px] sm:h-[240px] md:h-[280px]" style={{ flexBasis: "250px" }} />
           </div>
 
           {filteredProjects.length === 0 && (

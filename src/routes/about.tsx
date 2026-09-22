@@ -37,6 +37,9 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/about" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "robots", content: "index, follow" },
     ],
     links: [

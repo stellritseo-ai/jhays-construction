@@ -10,26 +10,56 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as EstimateRouteImport } from './routes/estimate'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as AreasWeServeIndexRouteImport } from './routes/areas-we-serve/index'
 import { Route as ServicesRoomAdditionsRouteImport } from './routes/services/room-additions'
 import { Route as ServicesPatiosRouteImport } from './routes/services/patios'
+import { Route as ServicesPatioInstallationRouteImport } from './routes/services/patio-installation'
+import { Route as ServicesKitchenRemodelingRouteImport } from './routes/services/kitchen-remodeling'
 import { Route as ServicesKitchenFittingRouteImport } from './routes/services/kitchen-fitting'
+import { Route as ServicesHomeAdditionsRouteImport } from './routes/services/home-additions'
 import { Route as ServicesDrivewaysRouteImport } from './routes/services/driveways'
+import { Route as ServicesDrivewayPavingRouteImport } from './routes/services/driveway-paving'
+import { Route as ServicesBathroomRemodelingRouteImport } from './routes/services/bathroom-remodeling'
 import { Route as ServicesBathroomFittingRouteImport } from './routes/services/bathroom-fitting'
 import { Route as ServicesBasementFinishingRouteImport } from './routes/services/basement-finishing'
+import { Route as AreasWeServeLakewoodNjRouteImport } from './routes/areas-we-serve/lakewood-nj'
+import { Route as AreasWeServeJacksonTownshipNjRouteImport } from './routes/areas-we-serve/jackson-township-nj'
+import { Route as AreasWeServeHowellNjRouteImport } from './routes/areas-we-serve/howell-nj'
+import { Route as AreasWeServeFreeholdNjRouteImport } from './routes/areas-we-serve/freehold-nj'
+import { Route as AreasWeServeBrickTownshipNjRouteImport } from './routes/areas-we-serve/brick-township-nj'
 
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EstimateRoute = EstimateRouteImport.update({
@@ -52,6 +82,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasWeServeIndexRoute = AreasWeServeIndexRouteImport.update({
+  id: '/areas-we-serve/',
+  path: '/areas-we-serve/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoomAdditionsRoute = ServicesRoomAdditionsRouteImport.update({
   id: '/services/room-additions',
   path: '/services/room-additions',
@@ -62,9 +102,26 @@ const ServicesPatiosRoute = ServicesPatiosRouteImport.update({
   path: '/services/patios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesPatioInstallationRoute =
+  ServicesPatioInstallationRouteImport.update({
+    id: '/services/patio-installation',
+    path: '/services/patio-installation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesKitchenRemodelingRoute =
+  ServicesKitchenRemodelingRouteImport.update({
+    id: '/services/kitchen-remodeling',
+    path: '/services/kitchen-remodeling',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesKitchenFittingRoute = ServicesKitchenFittingRouteImport.update({
   id: '/services/kitchen-fitting',
   path: '/services/kitchen-fitting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesHomeAdditionsRoute = ServicesHomeAdditionsRouteImport.update({
+  id: '/services/home-additions',
+  path: '/services/home-additions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesDrivewaysRoute = ServicesDrivewaysRouteImport.update({
@@ -72,6 +129,17 @@ const ServicesDrivewaysRoute = ServicesDrivewaysRouteImport.update({
   path: '/services/driveways',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesDrivewayPavingRoute = ServicesDrivewayPavingRouteImport.update({
+  id: '/services/driveway-paving',
+  path: '/services/driveway-paving',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesBathroomRemodelingRoute =
+  ServicesBathroomRemodelingRouteImport.update({
+    id: '/services/bathroom-remodeling',
+    path: '/services/bathroom-remodeling',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesBathroomFittingRoute = ServicesBathroomFittingRouteImport.update({
   id: '/services/bathroom-fitting',
   path: '/services/bathroom-fitting',
@@ -83,34 +151,91 @@ const ServicesBasementFinishingRoute =
     path: '/services/basement-finishing',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AreasWeServeLakewoodNjRoute = AreasWeServeLakewoodNjRouteImport.update({
+  id: '/areas-we-serve/lakewood-nj',
+  path: '/areas-we-serve/lakewood-nj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasWeServeJacksonTownshipNjRoute =
+  AreasWeServeJacksonTownshipNjRouteImport.update({
+    id: '/areas-we-serve/jackson-township-nj',
+    path: '/areas-we-serve/jackson-township-nj',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AreasWeServeHowellNjRoute = AreasWeServeHowellNjRouteImport.update({
+  id: '/areas-we-serve/howell-nj',
+  path: '/areas-we-serve/howell-nj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasWeServeFreeholdNjRoute = AreasWeServeFreeholdNjRouteImport.update({
+  id: '/areas-we-serve/freehold-nj',
+  path: '/areas-we-serve/freehold-nj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasWeServeBrickTownshipNjRoute =
+  AreasWeServeBrickTownshipNjRouteImport.update({
+    id: '/areas-we-serve/brick-township-nj',
+    path: '/areas-we-serve/brick-township-nj',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/estimate': typeof EstimateRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
   '/work': typeof WorkRoute
+  '/areas-we-serve/brick-township-nj': typeof AreasWeServeBrickTownshipNjRoute
+  '/areas-we-serve/freehold-nj': typeof AreasWeServeFreeholdNjRoute
+  '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
+  '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
+  '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
+  '/services/driveway-paving': typeof ServicesDrivewayPavingRoute
   '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/home-additions': typeof ServicesHomeAdditionsRoute
   '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/patio-installation': typeof ServicesPatioInstallationRoute
   '/services/patios': typeof ServicesPatiosRoute
   '/services/room-additions': typeof ServicesRoomAdditionsRoute
+  '/areas-we-serve/': typeof AreasWeServeIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/estimate': typeof EstimateRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
   '/work': typeof WorkRoute
+  '/areas-we-serve/brick-township-nj': typeof AreasWeServeBrickTownshipNjRoute
+  '/areas-we-serve/freehold-nj': typeof AreasWeServeFreeholdNjRoute
+  '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
+  '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
+  '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
+  '/services/driveway-paving': typeof ServicesDrivewayPavingRoute
   '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/home-additions': typeof ServicesHomeAdditionsRoute
   '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/patio-installation': typeof ServicesPatioInstallationRoute
   '/services/patios': typeof ServicesPatiosRoute
   '/services/room-additions': typeof ServicesRoomAdditionsRoute
+  '/areas-we-serve': typeof AreasWeServeIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -118,14 +243,29 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/estimate': typeof EstimateRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap': typeof SitemapRoute
+  '/terms': typeof TermsRoute
   '/work': typeof WorkRoute
+  '/areas-we-serve/brick-township-nj': typeof AreasWeServeBrickTownshipNjRoute
+  '/areas-we-serve/freehold-nj': typeof AreasWeServeFreeholdNjRoute
+  '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
+  '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
+  '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
+  '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
+  '/services/driveway-paving': typeof ServicesDrivewayPavingRoute
   '/services/driveways': typeof ServicesDrivewaysRoute
+  '/services/home-additions': typeof ServicesHomeAdditionsRoute
   '/services/kitchen-fitting': typeof ServicesKitchenFittingRoute
+  '/services/kitchen-remodeling': typeof ServicesKitchenRemodelingRoute
+  '/services/patio-installation': typeof ServicesPatioInstallationRoute
   '/services/patios': typeof ServicesPatiosRoute
   '/services/room-additions': typeof ServicesRoomAdditionsRoute
+  '/areas-we-serve/': typeof AreasWeServeIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -134,42 +274,87 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/estimate'
+    | '/privacy-policy'
     | '/reviews'
+    | '/sitemap'
+    | '/terms'
     | '/work'
+    | '/areas-we-serve/brick-township-nj'
+    | '/areas-we-serve/freehold-nj'
+    | '/areas-we-serve/howell-nj'
+    | '/areas-we-serve/jackson-township-nj'
+    | '/areas-we-serve/lakewood-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
+    | '/services/bathroom-remodeling'
+    | '/services/driveway-paving'
     | '/services/driveways'
+    | '/services/home-additions'
     | '/services/kitchen-fitting'
+    | '/services/kitchen-remodeling'
+    | '/services/patio-installation'
     | '/services/patios'
     | '/services/room-additions'
+    | '/areas-we-serve/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
     | '/estimate'
+    | '/privacy-policy'
     | '/reviews'
+    | '/sitemap'
+    | '/terms'
     | '/work'
+    | '/areas-we-serve/brick-township-nj'
+    | '/areas-we-serve/freehold-nj'
+    | '/areas-we-serve/howell-nj'
+    | '/areas-we-serve/jackson-township-nj'
+    | '/areas-we-serve/lakewood-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
+    | '/services/bathroom-remodeling'
+    | '/services/driveway-paving'
     | '/services/driveways'
+    | '/services/home-additions'
     | '/services/kitchen-fitting'
+    | '/services/kitchen-remodeling'
+    | '/services/patio-installation'
     | '/services/patios'
     | '/services/room-additions'
+    | '/areas-we-serve'
+    | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
     | '/estimate'
+    | '/privacy-policy'
     | '/reviews'
+    | '/sitemap'
+    | '/terms'
     | '/work'
+    | '/areas-we-serve/brick-township-nj'
+    | '/areas-we-serve/freehold-nj'
+    | '/areas-we-serve/howell-nj'
+    | '/areas-we-serve/jackson-township-nj'
+    | '/areas-we-serve/lakewood-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
+    | '/services/bathroom-remodeling'
+    | '/services/driveway-paving'
     | '/services/driveways'
+    | '/services/home-additions'
     | '/services/kitchen-fitting'
+    | '/services/kitchen-remodeling'
+    | '/services/patio-installation'
     | '/services/patios'
     | '/services/room-additions'
+    | '/areas-we-serve/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -177,14 +362,29 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   EstimateRoute: typeof EstimateRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ReviewsRoute: typeof ReviewsRoute
+  SitemapRoute: typeof SitemapRoute
+  TermsRoute: typeof TermsRoute
   WorkRoute: typeof WorkRoute
+  AreasWeServeBrickTownshipNjRoute: typeof AreasWeServeBrickTownshipNjRoute
+  AreasWeServeFreeholdNjRoute: typeof AreasWeServeFreeholdNjRoute
+  AreasWeServeHowellNjRoute: typeof AreasWeServeHowellNjRoute
+  AreasWeServeJacksonTownshipNjRoute: typeof AreasWeServeJacksonTownshipNjRoute
+  AreasWeServeLakewoodNjRoute: typeof AreasWeServeLakewoodNjRoute
   ServicesBasementFinishingRoute: typeof ServicesBasementFinishingRoute
   ServicesBathroomFittingRoute: typeof ServicesBathroomFittingRoute
+  ServicesBathroomRemodelingRoute: typeof ServicesBathroomRemodelingRoute
+  ServicesDrivewayPavingRoute: typeof ServicesDrivewayPavingRoute
   ServicesDrivewaysRoute: typeof ServicesDrivewaysRoute
+  ServicesHomeAdditionsRoute: typeof ServicesHomeAdditionsRoute
   ServicesKitchenFittingRoute: typeof ServicesKitchenFittingRoute
+  ServicesKitchenRemodelingRoute: typeof ServicesKitchenRemodelingRoute
+  ServicesPatioInstallationRoute: typeof ServicesPatioInstallationRoute
   ServicesPatiosRoute: typeof ServicesPatiosRoute
   ServicesRoomAdditionsRoute: typeof ServicesRoomAdditionsRoute
+  AreasWeServeIndexRoute: typeof AreasWeServeIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -196,11 +396,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reviews': {
       id: '/reviews'
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/estimate': {
@@ -231,6 +452,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-serve/': {
+      id: '/areas-we-serve/'
+      path: '/areas-we-serve'
+      fullPath: '/areas-we-serve/'
+      preLoaderRoute: typeof AreasWeServeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/room-additions': {
       id: '/services/room-additions'
       path: '/services/room-additions'
@@ -245,6 +480,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesPatiosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/patio-installation': {
+      id: '/services/patio-installation'
+      path: '/services/patio-installation'
+      fullPath: '/services/patio-installation'
+      preLoaderRoute: typeof ServicesPatioInstallationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/kitchen-remodeling': {
+      id: '/services/kitchen-remodeling'
+      path: '/services/kitchen-remodeling'
+      fullPath: '/services/kitchen-remodeling'
+      preLoaderRoute: typeof ServicesKitchenRemodelingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/kitchen-fitting': {
       id: '/services/kitchen-fitting'
       path: '/services/kitchen-fitting'
@@ -252,11 +501,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesKitchenFittingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/home-additions': {
+      id: '/services/home-additions'
+      path: '/services/home-additions'
+      fullPath: '/services/home-additions'
+      preLoaderRoute: typeof ServicesHomeAdditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/driveways': {
       id: '/services/driveways'
       path: '/services/driveways'
       fullPath: '/services/driveways'
       preLoaderRoute: typeof ServicesDrivewaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/driveway-paving': {
+      id: '/services/driveway-paving'
+      path: '/services/driveway-paving'
+      fullPath: '/services/driveway-paving'
+      preLoaderRoute: typeof ServicesDrivewayPavingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/bathroom-remodeling': {
+      id: '/services/bathroom-remodeling'
+      path: '/services/bathroom-remodeling'
+      fullPath: '/services/bathroom-remodeling'
+      preLoaderRoute: typeof ServicesBathroomRemodelingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/bathroom-fitting': {
@@ -273,6 +543,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBasementFinishingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas-we-serve/lakewood-nj': {
+      id: '/areas-we-serve/lakewood-nj'
+      path: '/areas-we-serve/lakewood-nj'
+      fullPath: '/areas-we-serve/lakewood-nj'
+      preLoaderRoute: typeof AreasWeServeLakewoodNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-serve/jackson-township-nj': {
+      id: '/areas-we-serve/jackson-township-nj'
+      path: '/areas-we-serve/jackson-township-nj'
+      fullPath: '/areas-we-serve/jackson-township-nj'
+      preLoaderRoute: typeof AreasWeServeJacksonTownshipNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-serve/howell-nj': {
+      id: '/areas-we-serve/howell-nj'
+      path: '/areas-we-serve/howell-nj'
+      fullPath: '/areas-we-serve/howell-nj'
+      preLoaderRoute: typeof AreasWeServeHowellNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-serve/freehold-nj': {
+      id: '/areas-we-serve/freehold-nj'
+      path: '/areas-we-serve/freehold-nj'
+      fullPath: '/areas-we-serve/freehold-nj'
+      preLoaderRoute: typeof AreasWeServeFreeholdNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-serve/brick-township-nj': {
+      id: '/areas-we-serve/brick-township-nj'
+      path: '/areas-we-serve/brick-township-nj'
+      fullPath: '/areas-we-serve/brick-township-nj'
+      preLoaderRoute: typeof AreasWeServeBrickTownshipNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -281,14 +586,29 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   EstimateRoute: EstimateRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ReviewsRoute: ReviewsRoute,
+  SitemapRoute: SitemapRoute,
+  TermsRoute: TermsRoute,
   WorkRoute: WorkRoute,
+  AreasWeServeBrickTownshipNjRoute: AreasWeServeBrickTownshipNjRoute,
+  AreasWeServeFreeholdNjRoute: AreasWeServeFreeholdNjRoute,
+  AreasWeServeHowellNjRoute: AreasWeServeHowellNjRoute,
+  AreasWeServeJacksonTownshipNjRoute: AreasWeServeJacksonTownshipNjRoute,
+  AreasWeServeLakewoodNjRoute: AreasWeServeLakewoodNjRoute,
   ServicesBasementFinishingRoute: ServicesBasementFinishingRoute,
   ServicesBathroomFittingRoute: ServicesBathroomFittingRoute,
+  ServicesBathroomRemodelingRoute: ServicesBathroomRemodelingRoute,
+  ServicesDrivewayPavingRoute: ServicesDrivewayPavingRoute,
   ServicesDrivewaysRoute: ServicesDrivewaysRoute,
+  ServicesHomeAdditionsRoute: ServicesHomeAdditionsRoute,
   ServicesKitchenFittingRoute: ServicesKitchenFittingRoute,
+  ServicesKitchenRemodelingRoute: ServicesKitchenRemodelingRoute,
+  ServicesPatioInstallationRoute: ServicesPatioInstallationRoute,
   ServicesPatiosRoute: ServicesPatiosRoute,
   ServicesRoomAdditionsRoute: ServicesRoomAdditionsRoute,
+  AreasWeServeIndexRoute: AreasWeServeIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

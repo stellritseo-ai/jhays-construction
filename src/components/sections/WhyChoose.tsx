@@ -8,7 +8,7 @@ const leftValues = [
   },
   {
     title: "Owner-Led, Locally Operated",
-    desc: "Led by Leon Holley, our company is proudly based in Township, New Jersey. We're committed to serving our community with integrity, honesty, and personal attention on every job.",
+    desc: "Led by Leon Holley, our company is proudly based in Howell Township, New Jersey. We're committed to serving our community with integrity, honesty, and personal attention on every job.",
   },
   {
     title: "Quality That Lasts",

@@ -81,6 +81,7 @@ const localBusinessSchema = {
   "url": "https://www.jhaysconstruction.com",
   "telephone": "+17326731569",
   "email": "jhaycconstruction@gmail.com",
+  "image": "https://www.jhaysconstruction.com/og-image.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "735 Hulses Corner Rd",
@@ -88,6 +89,11 @@ const localBusinessSchema = {
     "addressRegion": "NJ",
     "postalCode": "07731",
     "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.1658,
+    "longitude": -74.2255
   },
   "areaServed": [
     { "@type": "City", "name": "Howell Township, NJ" },
@@ -100,7 +106,7 @@ const localBusinessSchema = {
     { "@type": "City", "name": "Perth Amboy, NJ" },
     { "@type": "City", "name": "Woodbridge, NJ" }
   ],
-  "description": "Jhay's Construction is a licensed and insured residential and commercial general contractor serving Howell Township, NJ and surrounding areas. Specializing in kitchen remodeling, bathroom renovation, basement finishing, home additions, patio installation, and driveway paving.",
+  "description": "Jhay's Construction is a licensed and insured residential and commercial general contractor serving Howell Township, NJ and surrounding Monmouth, Ocean, and Middlesex County areas. Specializing in kitchen remodeling, bathroom renovation, basement finishing, home additions, patio installation, and driveway paving.",
   "hasMap": "https://www.google.com/maps?cid=14612765001879197538",
   "priceRange": "$$",
   "openingHoursSpecification": [
@@ -109,8 +115,68 @@ const localBusinessSchema = {
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
       "opens": "08:00",
       "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "14:00"
     }
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "General Contracting & Home Remodeling Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchen Remodeling",
+          "url": "https://www.jhaysconstruction.com/services/kitchen-remodeling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bathroom Remodeling",
+          "url": "https://www.jhaysconstruction.com/services/bathroom-remodeling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Patio Installation",
+          "url": "https://www.jhaysconstruction.com/services/patio-installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Driveway Paving",
+          "url": "https://www.jhaysconstruction.com/services/driveway-paving"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Additions",
+          "url": "https://www.jhaysconstruction.com/services/home-additions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Basement Finishing",
+          "url": "https://www.jhaysconstruction.com/services/basement-finishing"
+        }
+      }
+    ]
+  },
   "sameAs": [
     "https://www.jhaysconstruction.com"
   ]
@@ -122,6 +188,7 @@ const organizationSchema = {
   "@id": "https://www.jhaysconstruction.com/#organization",
   "name": "Jhay's Construction",
   "url": "https://www.jhaysconstruction.com",
+  "logo": "https://www.jhaysconstruction.com/og-image.jpg",
   "telephone": "+17326731569",
   "email": "jhaycconstruction@gmail.com",
   "address": {
@@ -161,9 +228,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Trusted residential and commercial general contractor serving Howell Township, NJ. Kitchen remodeling, bathroom renovation, basement finishing, home additions, patios, and driveway paving." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.jhaysconstruction.com/" },
+      { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Jhay's Construction - General Contractor in Howell, NJ" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "General Contractor in Howell, NJ | Jhay's Construction" },
       { name: "twitter:description", content: "Trusted general contractor in Howell Township, NJ. Kitchen remodeling, bathrooms, basements, home additions, patios, and driveways." },
+      { name: "twitter:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: logoImg },

@@ -1,49 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import basementImg from "@/assets/basement.jpg";
-import expectImg from "@/assets/basement.jpg";
+import bathroomImg from "@/assets/bathroom.jpeg";
+import expectImg from "@/assets/bathroom.jpeg";
 import {
   CheckCircle2,
   ArrowRight,
   Star,
+  Clock,
   Shield,
   Wrench,
+  Droplets,
+  Sparkles,
   Layers,
-  Lightbulb,
-  Thermometer,
-  Film,
-  Clock,
   MapPin,
   ChevronRight,
   Home,
 } from "lucide-react";
 
-export const Route = createFileRoute("/services/basement-finishing")({
+export const Route = createFileRoute("/services/bathroom-remodeling")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Bathroom Remodeling Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Upgrade your bathroom with custom tile, walk-in frameless showers, luxury vanities, and radiant floors in Howell, NJ. Licensed general contractor. Free estimates.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Bathroom Remodeling in Howell, NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Full-service bathroom renovations in Howell Township, NJ. Custom tile showers, soaking tubs, heated floors, and vanities by Jhay's Construction.",
       },
-      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/bathroom-remodeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
-      { name: "twitter:description", content: "Turn your raw basement into livable square footage with Howell Township's trusted remodeling contractor." },
+      { name: "twitter:title", content: "Bathroom Remodeling Howell NJ | Jhay's Construction" },
+      { name: "twitter:description", content: "Expert bathroom renovation and shower remodel contractor in Howell Township, NJ." },
       { name: "robots", content: "index, follow" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/bathroom-remodeling" },
     ],
     scripts: [
       {
@@ -51,9 +50,9 @@ export const Route = createFileRoute("/services/basement-finishing")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "@id": "https://www.jhaysconstruction.com/services/basement-finishing#service",
-          "name": "Basement Finishing Services",
-          "serviceType": "Basement Finishing",
+          "@id": "https://www.jhaysconstruction.com/services/bathroom-remodeling#service",
+          "name": "Bathroom Remodeling Services",
+          "serviceType": "Bathroom Remodeling",
           "provider": {
             "@type": "GeneralContractor",
             "@id": "https://www.jhaysconstruction.com/#business",
@@ -75,7 +74,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
             { "@type": "City", "name": "Brick Township, NJ" },
             { "@type": "City", "name": "Lakewood, NJ" }
           ],
-          "description": "Professional basement finishing services in Howell Township, NJ: moisture vapor barriers, insulation, drywall, recessed lighting, wet bars, home theaters, and bathroom additions."
+          "description": "Professional bathroom remodeling in Howell Township, NJ: custom tile walk-in showers, freestanding tubs, quartz double vanities, heated flooring, waterproofing membrane systems, and plumbing fixtures."
         }),
       },
       {
@@ -86,7 +85,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+            { "@type": "ListItem", "position": 3, "name": "Bathroom Remodeling", "item": "https://www.jhaysconstruction.com/services/bathroom-remodeling" }
           ]
         }),
       },
@@ -98,34 +97,34 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much does it cost to finish a basement in Howell, NJ?",
+              "name": "How long does a bathroom remodel take in Howell, NJ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates."
+                "text": "A standard hall bathroom renovation takes approximately 2 to 3 weeks. Full master bathroom gut renovations with custom tile walk-in showers, freestanding tubs, and heated floors typically take 3 to 5 weeks."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you install basement waterproofing before finishing?",
+              "name": "How much does a bathroom remodel typically cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall."
+                "text": "Bathroom remodeling in Howell Township generally ranges from $12,000 to $35,000+ depending on whether plumbing fixtures are moved, tile specifications, vanity selections, and glass shower enclosures."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I legally add a bedroom in my finished basement?",
+              "name": "Do you install waterproof membrane systems behind shower tile?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation."
+                "text": "Yes, absolutely. We install premium waterproof backing systems (such as Schluter-KERDI or GoBoard) behind all shower and tub surround tile to ensure 100% leak-proof performance."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you handle Howell Township building permits for basement finishing?",
+              "name": "Can you convert an old tub into a walk-in shower?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department."
+                "text": "Tub-to-shower conversions are one of our most requested projects. We remove the old fiberglass or cast iron tub, reconfigure the drain, install waterproof backing, custom tile, and frameless glass."
               }
             }
           ]
@@ -133,82 +132,70 @@ export const Route = createFileRoute("/services/basement-finishing")({
       }
     ],
   }),
-  component: BasementFinishingPage,
+  component: BathroomRemodelingPage,
 });
 
 const benefits = [
   {
-    icon: <Film className="w-6 h-6" />,
-    title: "Home Theater & Entertainment",
-    desc: "Acoustic insulation, soundproofing channels, built-in media consoles, hidden wire raceways, and dimmable recessed lighting.",
-  },
-  {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Home Offices & Guest Suites",
-    desc: "Egress window installations, closet framing, and whisper-quiet HVAC supply air create fully permitted, livable bedroom suites.",
+    icon: <Droplets className="w-6 h-6" />,
+    title: "Custom Walk-In Showers",
+    desc: "Frameless heavy glass enclosures, custom porcelain or marble wall tile, built-in shampoo niches, bench seating, and rain shower heads.",
   },
   {
     icon: <Layers className="w-6 h-6" />,
-    title: "Moisture & Vapor Barriers",
-    desc: "Heavy-duty vapor barriers against foundation walls, subfloor thermal breaks, and closed-cell spray foam for mold prevention.",
-  },
-  {
-    icon: <Thermometer className="w-6 h-6" />,
-    title: "HVAC & Climate Control",
-    desc: "Engineered supply and return air duct extensions or dedicated ductless mini-split units keeping your basement comfortable year-round.",
+    title: "Artisan Tile Installation",
+    desc: "Hexagon floor patterns, subway wall tile, herringbone accents, and large-format porcelain set with precision leveling clips.",
   },
   {
     icon: <Wrench className="w-6 h-6" />,
-    title: "Wet Bars & Kitchenettes",
-    desc: "Custom quartz bar tops, beverage coolers, sink plumbing, tile backsplashes, and under-cabinet accent lighting.",
+    title: "Vanity & Plumbing Upgrades",
+    desc: "Single and double vanity installations, quartz countertops, undermount sinks, designer faucets, and freestanding soaking tubs.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Dedicated Electrical Subpanels",
-    desc: "Licensed electrical work including dedicated circuits for appliances, home gyms, gaming systems, and full code-compliant GFCI outlets.",
+    title: "Certified Waterproofing",
+    desc: "Guaranteed moisture-barrier membranes behind every wet area. Licensed plumbers reroute supply and waste lines to current New Jersey plumbing code.",
+  },
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    title: "Radiant In-Floor Heating",
+    desc: "Thermostatically controlled electric radiant floor heating under tile—bringing luxury warmth to chilly New Jersey mornings.",
+  },
+  {
+    icon: <Star className="w-6 h-6" />,
+    title: "Complete Gut Renovations",
+    desc: "Studs-out demolition, mold remediation if discovered, upgraded high-CFM quiet ventilation, GFCI electrical, and custom recessed lighting.",
   },
 ];
 
 const steps = [
-  { num: "01", title: "Moisture & Space Inspection", desc: "We evaluate existing concrete foundation walls, floor pitch, headroom clearances, and existing plumbing rough-ins." },
-  { num: "02", title: "Layout & Architectural Plans", desc: "We design a floor plan that maximizes usable space while cleverly boxing in support columns and ductwork." },
-  { num: "03", title: "Permits & Framing", desc: "We pull Howell Township permits and erect treated baseplate stud framing with proper moisture vapor separation." },
-  { num: "04", title: "Mechanicals & Insulation", desc: "Electrical rough-ins, bathroom plumbing, HVAC duct runs, and high-R value insulation are inspected and approved." },
-  { num: "05", title: "Drywall, Flooring & Finishes", desc: "Mold-resistant drywall, luxury vinyl plank (LVP) waterproof flooring, custom doors, trim, and paint completed." },
-];
-
-const ideas = [
-  "Home Theater / Media Room",
-  "Home Office or Study",
-  "Guest Bedroom Suite (with Egress)",
-  "Kids' Playroom & Game Area",
-  "Home Gym & Fitness Studio",
-  "Custom Wet Bar & Lounge",
-  "Full Lower-Level Bathroom",
-  "Wine Cellar / Tasting Room",
-  "Multi-Generational Living Suite",
+  { num: "01", title: "Free Design Consultation", desc: "We evaluate your existing bathroom layout in Howell, discuss fixture preferences, and measure for optimal clearances." },
+  { num: "02", title: "Detailed Proposal", desc: "You receive a transparent, itemized quote detailing material allowances, plumbing fixtures, tile, and labor." },
+  { num: "03", title: "Clean Demolition & Rough-In", desc: "We remove old fixtures, inspect framing and subfloors, install new plumbing, electrical, and commercial-grade waterproofing." },
+  { num: "04", title: "Tile Setting & Finish Trim", desc: "Precision tile installation, grout sealing, vanity setting, frameless glass measurement, and fixture installation." },
+  { num: "05", title: "Final Walkthrough & Sign-off", desc: "Thorough sanitization, fixture testing, Township plumbing and building code sign-offs, and final client approval." },
 ];
 
 const faqs = [
   {
-    q: "How much does it cost to finish a basement in Howell, NJ?",
-    a: "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates.",
+    q: "How long does a bathroom remodel take in Howell, NJ?",
+    a: "A standard guest or hall bathroom remodel takes roughly 2–3 weeks. Master bathroom gut renovations with custom tile showers, radiant floor heating, and double vanities take 3–5 weeks. We establish a clear project schedule before demolition begins.",
   },
   {
-    q: "Do you install basement waterproofing before finishing?",
-    a: "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall.",
+    q: "How much does a bathroom remodel typically cost?",
+    a: "Bathroom remodeling in Howell Township and Monmouth County typically ranges from $12,000 to $35,000+ based on scope, fixture selections, tile choices, and whether plumbing lines are moved. We provide upfront, transparent pricing.",
   },
   {
-    q: "Can I legally add a bedroom in my finished basement?",
-    a: "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation.",
+    q: "Do you install waterproof membrane systems behind shower tile?",
+    a: "Yes. Water damage prevention is our highest priority. We use proven continuous waterproofing systems (like Schluter-KERDI) behind all tile walls, shower floors, and curbs before setting a single tile.",
   },
   {
-    q: "Do you handle Howell Township building permits for basement finishing?",
-    a: "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department.",
+    q: "Can you convert an old tub into a walk-in shower?",
+    a: "Yes! Tub-to-shower conversions are one of our most popular services. We remove the existing tub, re-plumb the drain, build a curbed or low-threshold shower pan, and install custom tile with a frameless glass door.",
   },
 ];
 
-function BasementFinishingPage() {
+function BathroomRemodelingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -217,7 +204,7 @@ function BasementFinishingPage() {
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${basementImg})` }}
+          style={{ backgroundImage: `url(${bathroomImg})` }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.78) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
@@ -227,13 +214,13 @@ function BasementFinishingPage() {
             <span className="text-white/60 text-xs">›</span>
             <a href="/services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
             <span className="text-white/60 text-xs">›</span>
-            <span className="text-white/90 text-xs font-semibold">Basement Finishing</span>
+            <span className="text-white/90 text-xs font-semibold">Bathroom Remodeling</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
+            Bathroom Remodeling <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-            Unlock your home's hidden square footage. We turn dark, unutilized basements into bright, luxurious family rooms, home theaters, guest suites, and wet bars. Serving Monmouth and Ocean County.
+            From modern spa retreats with custom frameless showers to space-efficient guest bathroom updates. Delivering licensed plumbing, artisan tile work, and honest pricing across Monmouth and Ocean County.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -241,7 +228,7 @@ function BasementFinishingPage() {
               className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-lg text-sm tracking-wide shadow-xl transition-all hover:scale-105"
               style={{ background: "#1a7c1a" }}
             >
-              Get Free Estimate <ArrowRight className="w-4 h-4" />
+              Get Your Free Estimate <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="tel:7326731569"
@@ -258,33 +245,17 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
           <div>
             <div className="text-sm text-gray-400">Serving Local Homeowners In</div>
-            <div className="text-lg font-bold text-white">Howell Township, Freehold, Jackson &amp; Brick</div>
+            <div className="text-lg font-bold text-white">Howell, Freehold, Jackson &amp; Brick, NJ</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Moisture Protection</div>
-            <div className="text-lg font-bold text-white">Continuous Vapor Barriers &amp; Waterproofing</div>
+            <div className="text-sm text-gray-400">Licensing &amp; Plumbing</div>
+            <div className="text-lg font-bold text-white">Licensed NJ Contractor • Code Compliant</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Schedule Consultation</div>
+            <div className="text-sm text-gray-400">Free Consultations</div>
             <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Ideas Pills */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-            Popular Finished Basement Concepts We Build
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ideas.map((idea) => (
-              <span key={idea} className="bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
-                {idea}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -293,12 +264,12 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Transformations</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Expert Craftsmanship</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Complete Basement Remodeling Solutions
+              Complete Bathroom Renovation Solutions
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We manage your basement renovation with careful attention to moisture mitigation, ceiling height optimization, and building code compliance.
+              We handle every detail of your remodel from subfloor preparation and plumbing rough-ins to tile setting, electrical, and glass installation.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,9 +290,9 @@ function BasementFinishingPage() {
       <section className="py-24" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Raw to Refined</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">The Remodeling Process</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Our 5-Stage Basement Finishing Process
+              How Your Bathroom Renovation Unfolds
             </h2>
           </div>
           <div className="relative">
@@ -346,20 +317,20 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Warm &amp; Dry Living Spaces</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Stress-Free Renovations</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                Engineered Specifically for Below-Grade Longevity
+                Clean, Courteous &amp; On-Time Execution
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Basements require specialized building science. Using organic materials directly against cold concrete leads to moisture problems. We install thermal breaks, mold-resistant drywall, and waterproof LVP flooring so your space stays clean and fresh.
+                We understand that having contractors in your home requires trust. Our crew arrives on time, seals off work areas to contain dust, protects flooring runners, and cleans up daily.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Continuous wall vapor barriers and subfloor air gaps",
-                  "Closed-cell spray foam insulation sealing rim joist perimeters",
-                  "Quiet exhaust ventilation and properly balanced HVAC air runs",
-                  "All permits pulled with Howell Township Code Enforcement",
-                  "Full 1-year warranty on all remodeling craftsmanship",
+                  "Licensed plumbers & electricians for all rough-in and fixture work",
+                  "100% waterproof membrane system backing on all shower enclosures",
+                  "Permits pulled and inspections scheduled with Howell Township",
+                  "Daily communication and project milestone check-ins",
+                  "Full 1-year warranty on all workmanship and installation",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -371,7 +342,7 @@ function BasementFinishingPage() {
             <div className="relative">
               <img
                 src={expectImg}
-                alt="Finished basement family room in Howell NJ by Jhay's Construction"
+                alt="Bathroom remodel project in Howell Township NJ by Jhay's Construction"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
               />
@@ -381,8 +352,8 @@ function BasementFinishingPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Timelines</div>
-                    <div className="text-xs text-gray-500">Typical projects finish in 4–6 weeks</div>
+                    <div className="font-extrabold text-gray-900 text-lg">Fast Turnarounds</div>
+                    <div className="text-xs text-gray-500">Most standard bathrooms finish in 2–3 weeks</div>
                   </div>
                 </div>
               </div>
@@ -401,30 +372,30 @@ function BasementFinishingPage() {
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Bathroom Additions
-                  </a>
-                </li>
-                <li>
-                  <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Above-Ground Space
-                  </a>
-                </li>
-                <li>
                   <a href="/services/kitchen-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Kitchen Remodeling in Howell, NJ
                   </a>
                 </li>
                 <li>
+                  <a href="/services/basement-finishing" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Remodeling &amp; Bathroom Additions
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Master Suite &amp; Bathroom Extensions
+                  </a>
+                </li>
+                <li>
                   <a href="/work" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Basement Before &amp; After Projects
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Bathroom Before &amp; After Projects
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#008000]" /> Basement Finishing Service Areas
+                <MapPin className="w-5 h-5 text-[#008000]" /> Bathroom Remodeling Service Areas
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -434,17 +405,17 @@ function BasementFinishingPage() {
                 </li>
                 <li>
                   <a href="/areas-we-serve/freehold-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Basement Remodeling
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Bathroom Renovations
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/jackson-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Basement Finishing
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Bath Remodels
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/brick-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Finished Basements
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Bathroom Services
                   </a>
                 </li>
               </ul>
@@ -458,7 +429,7 @@ function BasementFinishingPage() {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Questions</span>
-            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Basement Finishing FAQs</h2>
+            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Bathroom Remodeling FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -478,10 +449,10 @@ function BasementFinishingPage() {
       <section className="py-20" style={{ background: "linear-gradient(135deg, #0a280a 0%, #1a7c1a 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Ready to Finish Your Basement?
+            Ready to Redesign Your Bathroom?
           </h2>
           <p className="text-green-100 text-lg mb-8">
-            Contact Jhay's Construction today for a free on-site moisture check and detailed layout estimate.
+            Schedule your free estimate with Howell's premier bathroom renovation specialists today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

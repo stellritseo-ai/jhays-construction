@@ -1,49 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import basementImg from "@/assets/basement.jpg";
-import expectImg from "@/assets/basement.jpg";
+import kitchenImg from "@/assets/kitchen.webp";
+import expectImg from "@/assets/kitchen.webp";
 import {
+  ChefHat,
   CheckCircle2,
   ArrowRight,
   Star,
+  Clock,
   Shield,
   Wrench,
-  Layers,
-  Lightbulb,
-  Thermometer,
-  Film,
-  Clock,
+  Home,
+  Sparkles,
   MapPin,
   ChevronRight,
-  Home,
 } from "lucide-react";
 
-export const Route = createFileRoute("/services/basement-finishing")({
+export const Route = createFileRoute("/services/kitchen-remodeling")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Kitchen Remodeling Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Transform your kitchen with custom cabinetry, quartz countertops, modern islands, and full renovations in Howell, NJ. Licensed NJ general contractor. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Kitchen Remodeling in Howell, NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Custom kitchen remodeling in Howell Township, NJ. Custom cabinets, islands, countertops, appliances, and full kitchen design by Jhay's Construction.",
       },
-      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/kitchen-remodeling" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
-      { name: "twitter:description", content: "Turn your raw basement into livable square footage with Howell Township's trusted remodeling contractor." },
+      { name: "twitter:title", content: "Kitchen Remodeling Howell NJ | Jhay's Construction" },
+      { name: "twitter:description", content: "Custom kitchen remodeling and renovations in Howell Township, NJ. Free estimates from licensed contractors." },
       { name: "robots", content: "index, follow" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/kitchen-remodeling" },
     ],
     scripts: [
       {
@@ -51,9 +49,9 @@ export const Route = createFileRoute("/services/basement-finishing")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "@id": "https://www.jhaysconstruction.com/services/basement-finishing#service",
-          "name": "Basement Finishing Services",
-          "serviceType": "Basement Finishing",
+          "@id": "https://www.jhaysconstruction.com/services/kitchen-remodeling#service",
+          "name": "Kitchen Remodeling Services",
+          "serviceType": "Kitchen Remodeling",
           "provider": {
             "@type": "GeneralContractor",
             "@id": "https://www.jhaysconstruction.com/#business",
@@ -75,7 +73,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
             { "@type": "City", "name": "Brick Township, NJ" },
             { "@type": "City", "name": "Lakewood, NJ" }
           ],
-          "description": "Professional basement finishing services in Howell Township, NJ: moisture vapor barriers, insulation, drywall, recessed lighting, wet bars, home theaters, and bathroom additions."
+          "description": "Comprehensive kitchen remodeling in Howell Township, NJ: custom cabinetry, quartz and granite countertops, kitchen islands, backsplash installation, recessed lighting, and plumbing fixtures."
         }),
       },
       {
@@ -86,7 +84,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+            { "@type": "ListItem", "position": 3, "name": "Kitchen Remodeling", "item": "https://www.jhaysconstruction.com/services/kitchen-remodeling" }
           ]
         }),
       },
@@ -98,34 +96,34 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much does it cost to finish a basement in Howell, NJ?",
+              "name": "How much does a kitchen remodel cost in Howell, NJ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates."
+                "text": "Kitchen remodeling costs in Howell, NJ typically range from $25,000 to $65,000+ depending on kitchen size, custom cabinetry choices, countertop materials, and layout alterations. We provide detailed, itemized estimates before work begins."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you install basement waterproofing before finishing?",
+              "name": "How long does a kitchen remodel take from start to finish?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall."
+                "text": "Most complete kitchen remodels take between 3 to 6 weeks of active on-site construction once materials are delivered and permits are issued."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I legally add a bedroom in my finished basement?",
+              "name": "Do I need a building permit for kitchen remodeling in Howell Township?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation."
+                "text": "Yes, Howell Township requires permits for electrical alterations, plumbing rough-ins, and any structural wall modifications. Jhay's Construction handles all permit submissions and code inspections."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you handle Howell Township building permits for basement finishing?",
+              "name": "Can you open up a wall between our kitchen and living room?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department."
+                "text": "Yes. As licensed general contractors, we routinely evaluate load-bearing walls, engineer LVL beam supports, and create beautiful open-concept living spaces."
               }
             }
           ]
@@ -133,82 +131,70 @@ export const Route = createFileRoute("/services/basement-finishing")({
       }
     ],
   }),
-  component: BasementFinishingPage,
+  component: KitchenRemodelingPage,
 });
 
 const benefits = [
   {
-    icon: <Film className="w-6 h-6" />,
-    title: "Home Theater & Entertainment",
-    desc: "Acoustic insulation, soundproofing channels, built-in media consoles, hidden wire raceways, and dimmable recessed lighting.",
+    icon: <ChefHat className="w-6 h-6" />,
+    title: "Custom Cabinet Design",
+    desc: "Bespoke solid wood cabinetry, soft-close hardware, custom pantry pull-outs, and dovetail drawers tailored to maximize storage.",
   },
   {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Home Offices & Guest Suites",
-    desc: "Egress window installations, closet framing, and whisper-quiet HVAC supply air create fully permitted, livable bedroom suites.",
-  },
-  {
-    icon: <Layers className="w-6 h-6" />,
-    title: "Moisture & Vapor Barriers",
-    desc: "Heavy-duty vapor barriers against foundation walls, subfloor thermal breaks, and closed-cell spray foam for mold prevention.",
-  },
-  {
-    icon: <Thermometer className="w-6 h-6" />,
-    title: "HVAC & Climate Control",
-    desc: "Engineered supply and return air duct extensions or dedicated ductless mini-split units keeping your basement comfortable year-round.",
+    icon: <Sparkles className="w-6 h-6" />,
+    title: "Quartz & Granite Countertops",
+    desc: "Durable, non-porous quartz, elegant natural granite, and waterfall island edges measured with digital templating.",
   },
   {
     icon: <Wrench className="w-6 h-6" />,
-    title: "Wet Bars & Kitchenettes",
-    desc: "Custom quartz bar tops, beverage coolers, sink plumbing, tile backsplashes, and under-cabinet accent lighting.",
+    title: "Plumbing & Appliance Hookups",
+    desc: "New sink layouts, pot fillers, garbage disposals, gas cooktop lines, and integrated smart appliance installations.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Dedicated Electrical Subpanels",
-    desc: "Licensed electrical work including dedicated circuits for appliances, home gyms, gaming systems, and full code-compliant GFCI outlets.",
+    title: "Licensed Electrical & Lighting",
+    desc: "Under-cabinet LED task lighting, pendant fixtures over islands, dedicated circuits, and recessed ambient lighting.",
+  },
+  {
+    icon: <Home className="w-6 h-6" />,
+    title: "Open-Concept Layouts",
+    desc: "Structural wall removals, load-bearing header beams, and flow-enhancing floor plan reconfigurations.",
+  },
+  {
+    icon: <Star className="w-6 h-6" />,
+    title: "Guaranteed Craftsmanship",
+    desc: "Turnkey project management from design to final inspection. We guarantee our work and respect your schedule.",
   },
 ];
 
 const steps = [
-  { num: "01", title: "Moisture & Space Inspection", desc: "We evaluate existing concrete foundation walls, floor pitch, headroom clearances, and existing plumbing rough-ins." },
-  { num: "02", title: "Layout & Architectural Plans", desc: "We design a floor plan that maximizes usable space while cleverly boxing in support columns and ductwork." },
-  { num: "03", title: "Permits & Framing", desc: "We pull Howell Township permits and erect treated baseplate stud framing with proper moisture vapor separation." },
-  { num: "04", title: "Mechanicals & Insulation", desc: "Electrical rough-ins, bathroom plumbing, HVAC duct runs, and high-R value insulation are inspected and approved." },
-  { num: "05", title: "Drywall, Flooring & Finishes", desc: "Mold-resistant drywall, luxury vinyl plank (LVP) waterproof flooring, custom doors, trim, and paint completed." },
-];
-
-const ideas = [
-  "Home Theater / Media Room",
-  "Home Office or Study",
-  "Guest Bedroom Suite (with Egress)",
-  "Kids' Playroom & Game Area",
-  "Home Gym & Fitness Studio",
-  "Custom Wet Bar & Lounge",
-  "Full Lower-Level Bathroom",
-  "Wine Cellar / Tasting Room",
-  "Multi-Generational Living Suite",
+  { num: "01", title: "Free In-Home Consultation", desc: "We visit your Howell or Monmouth County home, measure the space, and discuss your lifestyle, layout desires, and budget." },
+  { num: "02", title: "3D Design & Material Selection", desc: "Select custom cabinet finishes, countertop slabs, backsplash tiles, and hardware with our design specialists." },
+  { num: "03", title: "Permits & Material Procurement", desc: "We pull all required Howell Township building permits and order verified materials before starting demolition." },
+  { num: "04", title: "Precision Demolition & Build", desc: "Our skilled carpenters, plumbers, and electricians work efficiently while maintaining clean, protected work zones." },
+  { num: "05", title: "Final Inspection & Reveal", desc: "Complete cleanup, code sign-offs, and a thorough final walkthrough ensuring 100% customer satisfaction." },
 ];
 
 const faqs = [
   {
-    q: "How much does it cost to finish a basement in Howell, NJ?",
-    a: "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates.",
+    q: "How much does a kitchen remodel cost in Howell, NJ?",
+    a: "Kitchen remodeling costs in Howell, NJ typically range from $25,000 to $65,000+ depending on the kitchen's square footage, cabinet construction, countertop materials, and layout alterations. We provide clear, itemized quotes with zero hidden fees.",
   },
   {
-    q: "Do you install basement waterproofing before finishing?",
-    a: "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall.",
+    q: "How long does a kitchen remodel take from start to finish?",
+    a: "Most kitchen renovations take 3–6 weeks of active work once materials have arrived and permits are approved. We create a firm project schedule and keep you updated daily.",
   },
   {
-    q: "Can I legally add a bedroom in my finished basement?",
-    a: "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation.",
+    q: "Do I need a building permit for kitchen remodeling in Howell Township?",
+    a: "Yes. Howell Township and surrounding Monmouth County municipalities require building, plumbing, and electrical permits for kitchen remodels that involve new wiring, plumbing moves, or wall alterations. Jhay's Construction handles all permit filings and code inspections directly.",
   },
   {
-    q: "Do you handle Howell Township building permits for basement finishing?",
-    a: "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department.",
+    q: "Can you open up a wall between our kitchen and living room?",
+    a: "Yes! As licensed general contractors, we frequently remove dividing walls to create open-concept kitchen and living areas. When dealing with load-bearing walls, we engineer and install proper steel or LVL support headers.",
   },
 ];
 
-function BasementFinishingPage() {
+function KitchenRemodelingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -217,7 +203,7 @@ function BasementFinishingPage() {
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${basementImg})` }}
+          style={{ backgroundImage: `url(${kitchenImg})` }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.78) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
@@ -227,13 +213,13 @@ function BasementFinishingPage() {
             <span className="text-white/60 text-xs">›</span>
             <a href="/services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
             <span className="text-white/60 text-xs">›</span>
-            <span className="text-white/90 text-xs font-semibold">Basement Finishing</span>
+            <span className="text-white/90 text-xs font-semibold">Kitchen Remodeling</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
+            Kitchen Remodeling <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-            Unlock your home's hidden square footage. We turn dark, unutilized basements into bright, luxurious family rooms, home theaters, guest suites, and wet bars. Serving Monmouth and Ocean County.
+            From custom cabinetry to luxury quartz countertops, we turn dated kitchens into functional, modern showpieces. Proudly serving Howell Township, Freehold, Jackson, and Monmouth County homeowners.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -241,7 +227,7 @@ function BasementFinishingPage() {
               className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-lg text-sm tracking-wide shadow-xl transition-all hover:scale-105"
               style={{ background: "#1a7c1a" }}
             >
-              Get Free Estimate <ArrowRight className="w-4 h-4" />
+              Get Your Free Estimate <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="tel:7326731569"
@@ -257,48 +243,32 @@ function BasementFinishingPage() {
       <section className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
           <div>
-            <div className="text-sm text-gray-400">Serving Local Homeowners In</div>
-            <div className="text-lg font-bold text-white">Howell Township, Freehold, Jackson &amp; Brick</div>
+            <div className="text-sm text-gray-400">Primary Service Area</div>
+            <div className="text-lg font-bold text-white">Howell Township &amp; Monmouth County, NJ</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Moisture Protection</div>
-            <div className="text-lg font-bold text-white">Continuous Vapor Barriers &amp; Waterproofing</div>
+            <div className="text-sm text-gray-400">Licensing &amp; Credentials</div>
+            <div className="text-lg font-bold text-white">Licensed &amp; Fully Insured NJ Contractor</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Schedule Consultation</div>
+            <div className="text-sm text-gray-400">Direct Inquiries</div>
             <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
           </div>
         </div>
       </section>
 
-      {/* Ideas Pills */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-            Popular Finished Basement Concepts We Build
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ideas.map((idea) => (
-              <span key={idea} className="bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
-                {idea}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
+      {/* Benefits / Services Included */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Transformations</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Full-Service Kitchen Renovation</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Complete Basement Remodeling Solutions
+              Complete Kitchen Remodeling Services in Howell, NJ
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We manage your basement renovation with careful attention to moisture mitigation, ceiling height optimization, and building code compliance.
+              We manage every aspect of your kitchen transformation—from layout design and framing to custom cabinetry, countertops, tile, plumbing, and electrical.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,9 +289,9 @@ function BasementFinishingPage() {
       <section className="py-24" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Raw to Refined</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Step-by-Step Workflow</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Our 5-Stage Basement Finishing Process
+              How We Execute Your Kitchen Remodel
             </h2>
           </div>
           <div className="relative">
@@ -346,20 +316,21 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Warm &amp; Dry Living Spaces</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">The Jhay's Difference</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                Engineered Specifically for Below-Grade Longevity
+                Organized, Clean &amp; Professional Remodeling
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Basements require specialized building science. Using organic materials directly against cold concrete leads to moisture problems. We install thermal breaks, mold-resistant drywall, and waterproof LVP flooring so your space stays clean and fresh.
+                Remodeling a kitchen shouldn't disrupt your entire life. Jhay's Construction assigns a dedicated lead contractor to your home to ensure clear daily communication, dust containment, and on-time milestone completions.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Continuous wall vapor barriers and subfloor air gaps",
-                  "Closed-cell spray foam insulation sealing rim joist perimeters",
-                  "Quiet exhaust ventilation and properly balanced HVAC air runs",
-                  "All permits pulled with Howell Township Code Enforcement",
-                  "Full 1-year warranty on all remodeling craftsmanship",
+                  "Dedicated project supervisor on-site every construction day",
+                  "Floor and adjoining room dust-barrier protection",
+                  "Clear, itemized pricing with zero surprise charges",
+                  "Howell Township permit acquisition and inspection coordination",
+                  "Rigorous post-installation cleaning and quality punch-list check",
+                  "Full 1-year warranty on all remodeling labor",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -371,7 +342,7 @@ function BasementFinishingPage() {
             <div className="relative">
               <img
                 src={expectImg}
-                alt="Finished basement family room in Howell NJ by Jhay's Construction"
+                alt="Finished kitchen remodel in Howell Township NJ by Jhay's Construction"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
               />
@@ -381,8 +352,8 @@ function BasementFinishingPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Timelines</div>
-                    <div className="text-xs text-gray-500">Typical projects finish in 4–6 weeks</div>
+                    <div className="font-extrabold text-gray-900 text-lg">On-Time Completion</div>
+                    <div className="text-xs text-gray-500">Committed project timelines &amp; milestones</div>
                   </div>
                 </div>
               </div>
@@ -397,34 +368,34 @@ function BasementFinishingPage() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <Home className="w-5 h-5 text-[#008000]" /> Related Home Improvement Services
+                <Home className="w-5 h-5 text-[#008000]" /> Related Remodeling Services
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Bathroom Additions
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Bathroom Remodeling in Howell, NJ
                   </a>
                 </li>
                 <li>
                   <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Above-Ground Space
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Kitchen Extensions
                   </a>
                 </li>
                 <li>
-                  <a href="/services/kitchen-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Kitchen Remodeling in Howell, NJ
+                  <a href="/services/basement-finishing" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Finished Basements &amp; Wet Bars
                   </a>
                 </li>
                 <li>
                   <a href="/work" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Basement Before &amp; After Projects
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Kitchen Before &amp; After Gallery
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#008000]" /> Basement Finishing Service Areas
+                <MapPin className="w-5 h-5 text-[#008000]" /> Kitchen Remodeling Service Areas
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -434,17 +405,17 @@ function BasementFinishingPage() {
                 </li>
                 <li>
                   <a href="/areas-we-serve/freehold-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Basement Remodeling
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Kitchen Remodeling
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/jackson-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Basement Finishing
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Kitchen Remodeling
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/brick-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Finished Basements
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Home Remodeling
                   </a>
                 </li>
               </ul>
@@ -457,8 +428,8 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Questions</span>
-            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Basement Finishing FAQs</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Frequently Asked Questions</span>
+            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Kitchen Remodeling FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -478,17 +449,17 @@ function BasementFinishingPage() {
       <section className="py-20" style={{ background: "linear-gradient(135deg, #0a280a 0%, #1a7c1a 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Ready to Finish Your Basement?
+            Ready to Build Your Dream Kitchen?
           </h2>
           <p className="text-green-100 text-lg mb-8">
-            Contact Jhay's Construction today for a free on-site moisture check and detailed layout estimate.
+            Request a free in-home consultation and itemized estimate from Howell's trusted remodeling contractor.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="/estimate"
               className="inline-flex items-center gap-2 bg-white text-green-900 font-bold px-10 py-4 rounded-lg text-sm tracking-wide shadow-xl hover:bg-gray-50 transition-all hover:scale-105"
             >
-              Get Free Estimate <ArrowRight className="w-4 h-4" />
+              Get My Free Estimate <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="tel:7326731569"

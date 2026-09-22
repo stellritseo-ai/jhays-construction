@@ -1,49 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
-import basementImg from "@/assets/basement.jpg";
-import expectImg from "@/assets/basement.jpg";
+import patiosImg from "@/assets/patios.jpg";
+import expectImg from "@/assets/patios.jpg";
 import {
   CheckCircle2,
   ArrowRight,
   Star,
+  TreePine,
   Shield,
   Wrench,
   Layers,
-  Lightbulb,
-  Thermometer,
-  Film,
+  Sun,
+  Sparkles,
   Clock,
   MapPin,
   ChevronRight,
   Home,
 } from "lucide-react";
 
-export const Route = createFileRoute("/services/basement-finishing")({
+export const Route = createFileRoute("/services/patio-installation")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Patio Installation Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Custom paver patio installation, stone hardscaping, outdoor kitchens, and fire pits in Howell, NJ. Engineered base for New Jersey weather. Free estimates. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Patio Installation Howell NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Custom interlocking paver patios, natural bluestone, pergolas, retaining walls, and outdoor living spaces in Howell Township, NJ by Jhay's Construction.",
       },
-      { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { property: "og:url", content: "https://www.jhaysconstruction.com/services/patio-installation" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "https://www.jhaysconstruction.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
-      { name: "twitter:description", content: "Turn your raw basement into livable square footage with Howell Township's trusted remodeling contractor." },
+      { name: "twitter:title", content: "Patio Installation Howell NJ | Jhay's Construction" },
+      { name: "twitter:description", content: "Expert paver patio design, hardscaping, and outdoor living installations in Howell Township, NJ." },
       { name: "robots", content: "index, follow" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/basement-finishing" },
+      { rel: "canonical", href: "https://www.jhaysconstruction.com/services/patio-installation" },
     ],
     scripts: [
       {
@@ -51,9 +51,9 @@ export const Route = createFileRoute("/services/basement-finishing")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "@id": "https://www.jhaysconstruction.com/services/basement-finishing#service",
-          "name": "Basement Finishing Services",
-          "serviceType": "Basement Finishing",
+          "@id": "https://www.jhaysconstruction.com/services/patio-installation#service",
+          "name": "Patio Installation & Hardscaping Services",
+          "serviceType": "Patio Installation",
           "provider": {
             "@type": "GeneralContractor",
             "@id": "https://www.jhaysconstruction.com/#business",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
             { "@type": "City", "name": "Brick Township, NJ" },
             { "@type": "City", "name": "Lakewood, NJ" }
           ],
-          "description": "Professional basement finishing services in Howell Township, NJ: moisture vapor barriers, insulation, drywall, recessed lighting, wet bars, home theaters, and bathroom additions."
+          "description": "Custom paver patio installation, hardscaping, natural stone walkways, retaining walls, fire pits, and outdoor living areas in Howell Township, NJ."
         }),
       },
       {
@@ -86,7 +86,7 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.jhaysconstruction.com/services" },
-            { "@type": "ListItem", "position": 3, "name": "Basement Finishing", "item": "https://www.jhaysconstruction.com/services/basement-finishing" }
+            { "@type": "ListItem", "position": 3, "name": "Patio Installation", "item": "https://www.jhaysconstruction.com/services/patio-installation" }
           ]
         }),
       },
@@ -98,34 +98,34 @@ export const Route = createFileRoute("/services/basement-finishing")({
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much does it cost to finish a basement in Howell, NJ?",
+              "name": "How long does a patio installation take in Howell, NJ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates."
+                "text": "Most residential paver patios take between 3 to 7 days from excavation to final polymeric sand compaction, depending on size, terrain grading, and features like sitting walls or fire pits."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you install basement waterproofing before finishing?",
+              "name": "Are interlocking pavers better than stamped concrete in New Jersey?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall."
+                "text": "Yes, interlocking pavers flex naturally with New Jersey's winter freeze-thaw ground movement, preventing the inevitable cracking common with large poured concrete slabs. If individual pavers ever shift, they can be re-leveled easily."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I legally add a bedroom in my finished basement?",
+              "name": "Do you install proper drainage under the patio?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation."
+                "text": "Every patio we build includes laser-graded excavation, woven geotextile separation fabric, 6–8 inches of compacted crushed stone aggregate base, and positive slope away from your home's foundation."
               }
             },
             {
               "@type": "Question",
-              "name": "Do you handle Howell Township building permits for basement finishing?",
+              "name": "Do I need a permit for a paver patio in Howell Township?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department."
+                "text": "Standard at-grade paver patios that do not alter municipal impervious coverage limits often do not require full building permits. However, gas fire pits, pergolas, and retaining walls over 4 feet do require permits. We verify all Howell Township zoning codes for you."
               }
             }
           ]
@@ -133,82 +133,70 @@ export const Route = createFileRoute("/services/basement-finishing")({
       }
     ],
   }),
-  component: BasementFinishingPage,
+  component: PatioInstallationPage,
 });
 
 const benefits = [
   {
-    icon: <Film className="w-6 h-6" />,
-    title: "Home Theater & Entertainment",
-    desc: "Acoustic insulation, soundproofing channels, built-in media consoles, hidden wire raceways, and dimmable recessed lighting.",
-  },
-  {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Home Offices & Guest Suites",
-    desc: "Egress window installations, closet framing, and whisper-quiet HVAC supply air create fully permitted, livable bedroom suites.",
-  },
-  {
     icon: <Layers className="w-6 h-6" />,
-    title: "Moisture & Vapor Barriers",
-    desc: "Heavy-duty vapor barriers against foundation walls, subfloor thermal breaks, and closed-cell spray foam for mold prevention.",
+    title: "Custom Paver Patterns",
+    desc: "Herringbone, ashlar slate, running bond, and modular multiformat pavers installed with edge restraint borders.",
   },
   {
-    icon: <Thermometer className="w-6 h-6" />,
-    title: "HVAC & Climate Control",
-    desc: "Engineered supply and return air duct extensions or dedicated ductless mini-split units keeping your basement comfortable year-round.",
+    icon: <TreePine className="w-6 h-6" />,
+    title: "Natural Stone Hardscapes",
+    desc: "Pennsylvania bluestone, thermal flagstone, travertine pool decking, and granite step treads built to endure.",
   },
   {
-    icon: <Wrench className="w-6 h-6" />,
-    title: "Wet Bars & Kitchenettes",
-    desc: "Custom quartz bar tops, beverage coolers, sink plumbing, tile backsplashes, and under-cabinet accent lighting.",
+    icon: <Sun className="w-6 h-6" />,
+    title: "Pergolas & Shade Pavilions",
+    desc: "Custom cedar pergolas, low-maintenance composite lattice covers, and covered outdoor pavilions with integrated lighting.",
+  },
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    title: "Outdoor Kitchens & Fire Pits",
+    desc: "Built-in stainless gas grills, granite bar counters, wood-burning and gas fire pits, and stone seat walls.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Dedicated Electrical Subpanels",
-    desc: "Licensed electrical work including dedicated circuits for appliances, home gyms, gaming systems, and full code-compliant GFCI outlets.",
+    title: "Engineered Base & Drainage",
+    desc: "Deep excavation, industrial geotextile cloth, 6-8 inch compacted quarry process gravel, and proper 1-inch bedding sand.",
+  },
+  {
+    icon: <Wrench className="w-6 h-6" />,
+    title: "Restoration & Re-Leveling",
+    desc: "Sunken, shifting, or weed-filled pavers? We power-wash, re-level base aggregate, apply polymeric sand, and seal.",
   },
 ];
 
 const steps = [
-  { num: "01", title: "Moisture & Space Inspection", desc: "We evaluate existing concrete foundation walls, floor pitch, headroom clearances, and existing plumbing rough-ins." },
-  { num: "02", title: "Layout & Architectural Plans", desc: "We design a floor plan that maximizes usable space while cleverly boxing in support columns and ductwork." },
-  { num: "03", title: "Permits & Framing", desc: "We pull Howell Township permits and erect treated baseplate stud framing with proper moisture vapor separation." },
-  { num: "04", title: "Mechanicals & Insulation", desc: "Electrical rough-ins, bathroom plumbing, HVAC duct runs, and high-R value insulation are inspected and approved." },
-  { num: "05", title: "Drywall, Flooring & Finishes", desc: "Mold-resistant drywall, luxury vinyl plank (LVP) waterproof flooring, custom doors, trim, and paint completed." },
-];
-
-const ideas = [
-  "Home Theater / Media Room",
-  "Home Office or Study",
-  "Guest Bedroom Suite (with Egress)",
-  "Kids' Playroom & Game Area",
-  "Home Gym & Fitness Studio",
-  "Custom Wet Bar & Lounge",
-  "Full Lower-Level Bathroom",
-  "Wine Cellar / Tasting Room",
-  "Multi-Generational Living Suite",
+  { num: "01", title: "Site Assessment & Measure", desc: "We evaluate yard grade, soil conditions, sun patterns, and drainage paths at your Howell or Monmouth County property." },
+  { num: "02", title: "Material & Pattern Selection", desc: "Choose top-grade pavers (Cambridge, Techo-Bloc, Unilock) or natural stone with our hardscaping specialists." },
+  { num: "03", title: "Excavation & Base Compaction", desc: "Precision excavation to proper frost depth, geotextile barrier installation, and multi-lift mechanical plate compaction." },
+  { num: "04", title: "Paver Screeding & Cutting", desc: "Craftsmen hand-lay each stone, cut clean curved borders with diamond saws, and install heavy-duty edge restraints." },
+  { num: "05", title: "Polymeric Sanding & Cleanup", desc: "Vibratory plate compaction with polymeric joint sand activation and complete final landscape grading." },
 ];
 
 const faqs = [
   {
-    q: "How much does it cost to finish a basement in Howell, NJ?",
-    a: "Basement finishing in Howell Township typically ranges from $45 to $85 per square foot depending on finishes, bathroom additions, egress window requirements, and wet bar installations. We provide comprehensive, itemized estimates.",
+    q: "How long does a patio installation take in Howell, NJ?",
+    a: "Most residential paver patios take between 3 to 7 days from excavation to final polymeric sand compaction, depending on size, terrain grading, and features like sitting walls or fire pits.",
   },
   {
-    q: "Do you install basement waterproofing before finishing?",
-    a: "Yes, we evaluate basement moisture levels prior to framing. We install commercial vapor barriers, closed-cell foam insulation, and can coordinate interior perimeter drain or sump pump systems before installing drywall.",
+    q: "Are interlocking pavers better than stamped concrete in New Jersey?",
+    a: "Yes, interlocking pavers flex naturally with New Jersey's winter freeze-thaw ground movement, preventing the inevitable cracking common with large poured concrete slabs. If individual pavers ever shift, they can be re-leveled easily.",
   },
   {
-    q: "Can I legally add a bedroom in my finished basement?",
-    a: "Yes. New Jersey building code requires an egress window or exterior walkout door with at least 5.7 sq ft of clear openable area in any basement bedroom. We handle concrete wall cutting and code-compliant well installation.",
+    q: "Do you install proper drainage under the patio?",
+    a: "Every patio we build includes laser-graded excavation, woven geotextile separation fabric, 6–8 inches of compacted crushed stone aggregate base, and positive slope away from your home's foundation.",
   },
   {
-    q: "Do you handle Howell Township building permits for basement finishing?",
-    a: "Yes, Jhay's Construction handles all architectural submittals, building permits, electrical and plumbing filings, and municipal inspections with the Howell Township Code Enforcement department.",
+    q: "Do I need a permit for a paver patio in Howell Township?",
+    a: "Standard at-grade paver patios that do not alter municipal impervious coverage limits often do not require full building permits. However, gas fire pits, pergolas, and retaining walls over 4 feet do require permits. We verify all Howell Township zoning codes for you.",
   },
 ];
 
-function BasementFinishingPage() {
+function PatioInstallationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -217,7 +205,7 @@ function BasementFinishingPage() {
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${basementImg})` }}
+          style={{ backgroundImage: `url(${patiosImg})` }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,40,10,0.88) 0%, rgba(26,124,26,0.78) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24">
@@ -227,13 +215,13 @@ function BasementFinishingPage() {
             <span className="text-white/60 text-xs">›</span>
             <a href="/services" className="text-white/80 text-xs font-semibold hover:text-white transition-colors">Services</a>
             <span className="text-white/60 text-xs">›</span>
-            <span className="text-white/90 text-xs font-semibold">Basement Finishing</span>
+            <span className="text-white/90 text-xs font-semibold">Patio Installation</span>
           </nav>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">
-            Basement Finishing <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
+            Patio Installation <span style={{ color: "#6ee65a" }}>in Howell, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
-            Unlock your home's hidden square footage. We turn dark, unutilized basements into bright, luxurious family rooms, home theaters, guest suites, and wet bars. Serving Monmouth and Ocean County.
+            Expand your living space outdoors with engineered paver patios, natural bluestone, custom fire pits, and stone seating walls built specifically for New Jersey's freeze-thaw climate.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -257,34 +245,18 @@ function BasementFinishingPage() {
       <section className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 text-center">
           <div>
-            <div className="text-sm text-gray-400">Serving Local Homeowners In</div>
-            <div className="text-lg font-bold text-white">Howell Township, Freehold, Jackson &amp; Brick</div>
+            <div className="text-sm text-gray-400">Hardscaping Specialists In</div>
+            <div className="text-lg font-bold text-white">Howell, Freehold, Jackson &amp; Brick, NJ</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Moisture Protection</div>
-            <div className="text-lg font-bold text-white">Continuous Vapor Barriers &amp; Waterproofing</div>
+            <div className="text-sm text-gray-400">Foundation Engineering</div>
+            <div className="text-lg font-bold text-white">Commercial-Grade Compacted Aggregates</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-white/20" />
           <div>
-            <div className="text-sm text-gray-400">Schedule Consultation</div>
+            <div className="text-sm text-gray-400">Call For Pricing</div>
             <a href="tel:7326731569" className="text-lg font-bold" style={{ color: "#6ee65a" }}>(732) 673-1569</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Ideas Pills */}
-      <section className="py-12 bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-            Popular Finished Basement Concepts We Build
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {ideas.map((idea) => (
-              <span key={idea} className="bg-white border border-gray-200 text-gray-800 px-4 py-2 rounded-full text-xs font-semibold shadow-sm">
-                {idea}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -293,12 +265,12 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Custom Space Transformations</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Outdoor Living Excellence</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Complete Basement Remodeling Solutions
+              Custom Hardscape &amp; Patio Solutions in Howell, NJ
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We manage your basement renovation with careful attention to moisture mitigation, ceiling height optimization, and building code compliance.
+              From backyard entertainment patios to pool decks and custom fire pit gathering areas, we build durable, stunning outdoor retreats.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -319,9 +291,9 @@ function BasementFinishingPage() {
       <section className="py-24" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">From Raw to Refined</span>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Precision Engineering</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Our 5-Stage Basement Finishing Process
+              Our 5-Step Patio Installation Process
             </h2>
           </div>
           <div className="relative">
@@ -346,20 +318,20 @@ function BasementFinishingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Warm &amp; Dry Living Spaces</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Quality That Lasts Decades</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                Engineered Specifically for Below-Grade Longevity
+                Built to Withstand Severe NJ Winters
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Basements require specialized building science. Using organic materials directly against cold concrete leads to moisture problems. We install thermal breaks, mold-resistant drywall, and waterproof LVP flooring so your space stays clean and fresh.
+                In Monmouth County, poor base preparation causes pavers to shift, sink, and separate during winter freeze-thaw cycles. We never take shortcuts on excavation depth, sub-base gravel, or edge restraints.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Continuous wall vapor barriers and subfloor air gaps",
-                  "Closed-cell spray foam insulation sealing rim joist perimeters",
-                  "Quiet exhaust ventilation and properly balanced HVAC air runs",
-                  "All permits pulled with Howell Township Code Enforcement",
-                  "Full 1-year warranty on all remodeling craftsmanship",
+                  "Laser-guided excavation to ensure positive water pitch away from foundations",
+                  "Heavy-duty woven geotextile fabric prevents soil contamination into gravel base",
+                  "Minimum 6–8 inches of densely compacted quarry process aggregate base",
+                  "Commercial snap-edge paver restraints spiked with 10-inch steel pins",
+                  "Polymeric sand jointing prevents weed growth and insect infestation",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -371,7 +343,7 @@ function BasementFinishingPage() {
             <div className="relative">
               <img
                 src={expectImg}
-                alt="Finished basement family room in Howell NJ by Jhay's Construction"
+                alt="Custom paver patio installation in Howell NJ by Jhay's Construction"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
               />
@@ -381,8 +353,8 @@ function BasementFinishingPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Timelines</div>
-                    <div className="text-xs text-gray-500">Typical projects finish in 4–6 weeks</div>
+                    <div className="font-extrabold text-gray-900 text-lg">Fast Build Time</div>
+                    <div className="text-xs text-gray-500">Most projects finished in 3–7 business days</div>
                   </div>
                 </div>
               </div>
@@ -397,17 +369,17 @@ function BasementFinishingPage() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <Home className="w-5 h-5 text-[#008000]" /> Related Home Improvement Services
+                <Home className="w-5 h-5 text-[#008000]" /> Related Exterior Services
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <a href="/services/bathroom-remodeling" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Basement Bathroom Additions
+                  <a href="/services/driveway-paving" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Driveway Paving &amp; Belgian Block Borders
                   </a>
                 </li>
                 <li>
                   <a href="/services/home-additions" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Above-Ground Space
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Home Additions &amp; Covered Porches
                   </a>
                 </li>
                 <li>
@@ -417,14 +389,14 @@ function BasementFinishingPage() {
                 </li>
                 <li>
                   <a href="/work" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Basement Before &amp; After Projects
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> View Hardscaping Project Gallery
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-[#008000]" /> Basement Finishing Service Areas
+                <MapPin className="w-5 h-5 text-[#008000]" /> Patio Installation Service Areas
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -434,17 +406,17 @@ function BasementFinishingPage() {
                 </li>
                 <li>
                   <a href="/areas-we-serve/freehold-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Basement Remodeling
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Freehold, NJ Paver Patios
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/jackson-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Basement Finishing
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Jackson Township, NJ Outdoor Living
                   </a>
                 </li>
                 <li>
                   <a href="/areas-we-serve/brick-township-nj" className="text-gray-700 hover:text-[#008000] inline-flex items-center gap-1.5 transition-colors">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Finished Basements
+                    <ChevronRight className="w-3.5 h-3.5 text-[#008000]" /> Brick Township, NJ Decks &amp; Patios
                   </a>
                 </li>
               </ul>
@@ -457,8 +429,8 @@ function BasementFinishingPage() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Questions</span>
-            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Basement Finishing FAQs</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-green-700 mb-3 block">Common Hardscape Questions</span>
+            <h2 className="text-3xl font-extrabold text-gray-900">Howell NJ Patio Installation FAQs</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -478,10 +450,10 @@ function BasementFinishingPage() {
       <section className="py-20" style={{ background: "linear-gradient(135deg, #0a280a 0%, #1a7c1a 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Ready to Finish Your Basement?
+            Ready to Build Your Outdoor Living Oasis?
           </h2>
           <p className="text-green-100 text-lg mb-8">
-            Contact Jhay's Construction today for a free on-site moisture check and detailed layout estimate.
+            Contact Jhay's Construction today for a free design consultation and comprehensive quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
