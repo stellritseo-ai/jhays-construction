@@ -285,8 +285,30 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="pb-14 md:pb-0">
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </div>
+
+      {/* Mobile Sticky Quick-Action Conversion Bar (<md screens only) */}
+      <div className="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-4 py-2.5 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)] md:hidden">
+        <a
+          href="tel:7326731569"
+          className="flex-1 inline-flex items-center justify-center gap-2 bg-[#1a7c1a] text-white py-2.5 px-3 rounded-lg font-bold text-xs shadow hover:bg-green-800 transition-colors"
+          aria-label="Call Jhay's Construction (732) 673-1569"
+        >
+          <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call (732) 673-1569
+        </a>
+        <a
+          href="/estimate"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 bg-gray-900 text-white py-2.5 px-3 rounded-lg font-bold text-xs shadow hover:bg-black transition-colors"
+        >
+          Free Estimate
+        </a>
+      </div>
     </QueryClientProvider>
   );
 }

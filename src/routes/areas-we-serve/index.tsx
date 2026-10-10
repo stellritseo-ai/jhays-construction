@@ -98,6 +98,14 @@ const featuredLocations = [
     desc: "Specialized multi-generational living expansions, kosher kitchen remodels, extra bedroom additions, and finished lower levels.",
     services: ["Multi-Generational Additions", "Dual Sink Kitchens", "Second-Story Expansions", "Basement Living Suites"],
   },
+  {
+    name: "Toms River, NJ",
+    slug: "/areas-we-serve/toms-river-nj",
+    county: "Ocean County",
+    role: "Core Service Area",
+    desc: "General contracting, home additions, custom kitchen and bathroom renovations, paver patios, and driveway paving throughout Toms River.",
+    services: ["Home Additions & In-Law Suites", "Kitchen & Bath Remodeling", "Paver Patios & Pool Decks", "Driveway Paving & Basements"],
+  },
 ];
 
 const allCities = [
@@ -106,7 +114,7 @@ const allCities = [
   { name: "Jackson Township", county: "Ocean", url: "/areas-we-serve/jackson-township-nj" },
   { name: "Brick Township", county: "Ocean", url: "/areas-we-serve/brick-township-nj" },
   { name: "Lakewood", county: "Ocean", url: "/areas-we-serve/lakewood-nj" },
-  { name: "Toms River", county: "Ocean" },
+  { name: "Toms River", county: "Ocean", url: "/areas-we-serve/toms-river-nj" },
   { name: "Old Bridge", county: "Middlesex" },
   { name: "Perth Amboy", county: "Middlesex" },
   { name: "Woodbridge", county: "Middlesex" },

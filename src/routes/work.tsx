@@ -62,6 +62,35 @@ export const Route = createFileRoute("/work")({
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/work" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.jhaysconstruction.com/work" }
+          ]
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://www.jhaysconstruction.com/work#gallery",
+          "name": "Jhay's Construction Project Portfolio",
+          "url": "https://www.jhaysconstruction.com/work",
+          "description": "Portfolio of completed residential and commercial remodeling, framing, additions, patios, and driveway paving projects across New Jersey.",
+          "provider": {
+            "@type": "GeneralContractor",
+            "@id": "https://www.jhaysconstruction.com/#business",
+            "name": "Jhay's Construction"
+          }
+        }),
+      }
+    ],
   }),
   component: OurWorkPage,
 });

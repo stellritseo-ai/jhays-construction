@@ -31,6 +31,7 @@ import { Route as ServicesDrivewayPavingRouteImport } from './routes/services/dr
 import { Route as ServicesBathroomRemodelingRouteImport } from './routes/services/bathroom-remodeling'
 import { Route as ServicesBathroomFittingRouteImport } from './routes/services/bathroom-fitting'
 import { Route as ServicesBasementFinishingRouteImport } from './routes/services/basement-finishing'
+import { Route as AreasWeServeTomsRiverNjRouteImport } from './routes/areas-we-serve/toms-river-nj'
 import { Route as AreasWeServeLakewoodNjRouteImport } from './routes/areas-we-serve/lakewood-nj'
 import { Route as AreasWeServeJacksonTownshipNjRouteImport } from './routes/areas-we-serve/jackson-township-nj'
 import { Route as AreasWeServeHowellNjRouteImport } from './routes/areas-we-serve/howell-nj'
@@ -151,6 +152,11 @@ const ServicesBasementFinishingRoute =
     path: '/services/basement-finishing',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AreasWeServeTomsRiverNjRoute = AreasWeServeTomsRiverNjRouteImport.update({
+  id: '/areas-we-serve/toms-river-nj',
+  path: '/areas-we-serve/toms-river-nj',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AreasWeServeLakewoodNjRoute = AreasWeServeLakewoodNjRouteImport.update({
   id: '/areas-we-serve/lakewood-nj',
   path: '/areas-we-serve/lakewood-nj',
@@ -194,6 +200,7 @@ export interface FileRoutesByFullPath {
   '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
   '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
   '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
+  '/areas-we-serve/toms-river-nj': typeof AreasWeServeTomsRiverNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
   '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
@@ -223,6 +230,7 @@ export interface FileRoutesByTo {
   '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
   '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
   '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
+  '/areas-we-serve/toms-river-nj': typeof AreasWeServeTomsRiverNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
   '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
@@ -253,6 +261,7 @@ export interface FileRoutesById {
   '/areas-we-serve/howell-nj': typeof AreasWeServeHowellNjRoute
   '/areas-we-serve/jackson-township-nj': typeof AreasWeServeJacksonTownshipNjRoute
   '/areas-we-serve/lakewood-nj': typeof AreasWeServeLakewoodNjRoute
+  '/areas-we-serve/toms-river-nj': typeof AreasWeServeTomsRiverNjRoute
   '/services/basement-finishing': typeof ServicesBasementFinishingRoute
   '/services/bathroom-fitting': typeof ServicesBathroomFittingRoute
   '/services/bathroom-remodeling': typeof ServicesBathroomRemodelingRoute
@@ -284,6 +293,7 @@ export interface FileRouteTypes {
     | '/areas-we-serve/howell-nj'
     | '/areas-we-serve/jackson-township-nj'
     | '/areas-we-serve/lakewood-nj'
+    | '/areas-we-serve/toms-river-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
     | '/services/bathroom-remodeling'
@@ -313,6 +323,7 @@ export interface FileRouteTypes {
     | '/areas-we-serve/howell-nj'
     | '/areas-we-serve/jackson-township-nj'
     | '/areas-we-serve/lakewood-nj'
+    | '/areas-we-serve/toms-river-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
     | '/services/bathroom-remodeling'
@@ -342,6 +353,7 @@ export interface FileRouteTypes {
     | '/areas-we-serve/howell-nj'
     | '/areas-we-serve/jackson-township-nj'
     | '/areas-we-serve/lakewood-nj'
+    | '/areas-we-serve/toms-river-nj'
     | '/services/basement-finishing'
     | '/services/bathroom-fitting'
     | '/services/bathroom-remodeling'
@@ -372,6 +384,7 @@ export interface RootRouteChildren {
   AreasWeServeHowellNjRoute: typeof AreasWeServeHowellNjRoute
   AreasWeServeJacksonTownshipNjRoute: typeof AreasWeServeJacksonTownshipNjRoute
   AreasWeServeLakewoodNjRoute: typeof AreasWeServeLakewoodNjRoute
+  AreasWeServeTomsRiverNjRoute: typeof AreasWeServeTomsRiverNjRoute
   ServicesBasementFinishingRoute: typeof ServicesBasementFinishingRoute
   ServicesBathroomFittingRoute: typeof ServicesBathroomFittingRoute
   ServicesBathroomRemodelingRoute: typeof ServicesBathroomRemodelingRoute
@@ -543,6 +556,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesBasementFinishingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas-we-serve/toms-river-nj': {
+      id: '/areas-we-serve/toms-river-nj'
+      path: '/areas-we-serve/toms-river-nj'
+      fullPath: '/areas-we-serve/toms-river-nj'
+      preLoaderRoute: typeof AreasWeServeTomsRiverNjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/areas-we-serve/lakewood-nj': {
       id: '/areas-we-serve/lakewood-nj'
       path: '/areas-we-serve/lakewood-nj'
@@ -596,6 +616,7 @@ const rootRouteChildren: RootRouteChildren = {
   AreasWeServeHowellNjRoute: AreasWeServeHowellNjRoute,
   AreasWeServeJacksonTownshipNjRoute: AreasWeServeJacksonTownshipNjRoute,
   AreasWeServeLakewoodNjRoute: AreasWeServeLakewoodNjRoute,
+  AreasWeServeTomsRiverNjRoute: AreasWeServeTomsRiverNjRoute,
   ServicesBasementFinishingRoute: ServicesBasementFinishingRoute,
   ServicesBathroomFittingRoute: ServicesBathroomFittingRoute,
   ServicesBathroomRemodelingRoute: ServicesBathroomRemodelingRoute,

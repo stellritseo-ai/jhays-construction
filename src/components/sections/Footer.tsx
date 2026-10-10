@@ -59,6 +59,7 @@ export function Footer() {
               { label: "Jackson Township, NJ", href: "/areas-we-serve/jackson-township-nj" },
               { label: "Brick Township, NJ", href: "/areas-we-serve/brick-township-nj" },
               { label: "Lakewood, NJ", href: "/areas-we-serve/lakewood-nj" },
+              { label: "Toms River, NJ", href: "/areas-we-serve/toms-river-nj" },
               { label: "View All 25-Mile Radius", href: "/areas-we-serve" },
             ]}
           />

@@ -52,6 +52,7 @@
 | **Jackson Township** | `/areas-we-serve/jackson-township-nj` | General Contractor Jackson NJ | Home Remodeling Jackson Township NJ, Patio Contractor Jackson NJ | Jackson, NJ (08527) |
 | **Brick Township** | `/areas-we-serve/brick-township-nj` | General Contractor Brick NJ | Home Remodeling Brick Township NJ, Coastal Deck & Bathroom Remodeling | Brick, NJ (08723/08724) |
 | **Lakewood** | `/areas-we-serve/lakewood-nj` | General Contractor Lakewood NJ | Home Additions Lakewood NJ, Multi-Gen Remodeling Lakewood NJ | Lakewood, NJ (08701) |
+| **Toms River** | `/areas-we-serve/toms-river-nj` | General Contractor Toms River NJ | Home Remodeling Toms River NJ, Paver Patio Contractor Toms River | Toms River, NJ (08753/08755) |
 
 ---
 

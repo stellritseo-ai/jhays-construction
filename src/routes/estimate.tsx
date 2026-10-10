@@ -51,6 +51,68 @@ export const Route = createFileRoute("/estimate")({
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/estimate" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Free Estimate", "item": "https://www.jhaysconstruction.com/estimate" }
+          ]
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is the estimate really free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — 100% free. No hidden fees, no obligation to hire us."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to be home for the estimate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For in-home estimates, yes. For virtual estimates, you can show us the space via video call."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How accurate is the estimate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide line-item estimates based on current material prices and labor rates. Unless you change the scope of work, the price is locked in."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you handle permits?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We'll identify what permits your project requires and can handle the filing process for you."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if my project is outside your listed area?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Call us anyway. We serve much of central and northern New Jersey within our 25-mile radius."
+              }
+            }
+          ]
+        }),
+      }
+    ],
   }),
   component: EstimatePage,
 });

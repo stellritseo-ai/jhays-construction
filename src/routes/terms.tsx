@@ -13,10 +13,23 @@ export const Route = createFileRoute("/terms")({
       },
       { property: "og:title", content: "Terms of Service | Jhay's Construction" },
       { property: "og:url", content: "https://www.jhaysconstruction.com/terms" },
-      { name: "robots", content: "noindex, follow" },
+      { name: "robots", content: "index, follow" },
     ],
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/terms" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://www.jhaysconstruction.com/terms" }
+          ]
+        }),
+      }
     ],
   }),
   component: TermsPage,

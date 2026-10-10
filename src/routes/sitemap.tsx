@@ -56,6 +56,7 @@ const sitemapStructure = [
       { title: "Jackson Township, NJ", url: "/areas-we-serve/jackson-township-nj", desc: "Large-lot additions, pool surrounds, and asphalt driveways" },
       { title: "Brick Township, NJ", url: "/areas-we-serve/brick-township-nj", desc: "Coastal renovations, composite decks, and spa bathrooms" },
       { title: "Lakewood, NJ", url: "/areas-we-serve/lakewood-nj", desc: "Multi-bedroom additions, specialized kitchens & finished basements" },
+      { title: "Toms River, NJ", url: "/areas-we-serve/toms-river-nj", desc: "Ocean County additions, coastal paver patios, kitchens & driveways" },
     ],
   },
   {

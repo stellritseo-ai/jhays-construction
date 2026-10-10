@@ -45,6 +45,43 @@ export const Route = createFileRoute("/about")({
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/about" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.jhaysconstruction.com/about" }
+          ]
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "@id": "https://www.jhaysconstruction.com/about#page",
+          "name": "About Jhay's Construction",
+          "url": "https://www.jhaysconstruction.com/about",
+          "description": "Learn about Jhay's Construction, an owner-led general contractor based in Howell Township, NJ with over 20 years of craftsmanship experience.",
+          "mainEntity": {
+            "@type": "GeneralContractor",
+            "@id": "https://www.jhaysconstruction.com/#business",
+            "name": "Jhay's Construction",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "735 Hulses Corner Rd",
+              "addressLocality": "Howell Township",
+              "addressRegion": "NJ",
+              "postalCode": "07731",
+              "addressCountry": "US"
+            }
+          }
+        }),
+      }
+    ],
   }),
   component: AboutPage,
 });

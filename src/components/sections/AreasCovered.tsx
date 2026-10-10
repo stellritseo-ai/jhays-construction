@@ -65,7 +65,7 @@ export function AreasCovered() {
                 { name: "Jackson Township", href: "/areas-we-serve/jackson-township-nj" },
                 { name: "Brick Township", href: "/areas-we-serve/brick-township-nj" },
                 { name: "Lakewood", href: "/areas-we-serve/lakewood-nj" },
-                { name: "Toms River", href: "/areas-we-serve" },
+                { name: "Toms River", href: "/areas-we-serve/toms-river-nj" },
                 { name: "Old Bridge", href: "/areas-we-serve" },
                 { name: "Perth Amboy", href: "/areas-we-serve" },
                 { name: "Woodbridge", href: "/areas-we-serve" },

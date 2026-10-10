@@ -28,6 +28,19 @@ export const Route = createFileRoute("/reviews")({
     links: [
       { rel: "canonical", href: "https://www.jhaysconstruction.com/reviews" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.jhaysconstruction.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.jhaysconstruction.com/reviews" }
+          ]
+        }),
+      }
+    ],
   }),
   component: ReviewsPage,
 });
