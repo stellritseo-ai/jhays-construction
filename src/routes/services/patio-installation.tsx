@@ -22,17 +22,17 @@ import {
 export const Route = createFileRoute("/services/patio-installation")({
   head: () => ({
     meta: [
-      { title: "Patio Installation Howell NJ | Jhay's Construction" },
+      { title: "Paver Patio Installation & Deck Builder Howell NJ | Patio Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Custom paver patio installation, stone hardscaping, outdoor kitchens, and fire pits in Howell, NJ. Engineered base for New Jersey weather. Free estimates. Call (732) 673-1569.",
+          "Premier paver patio installation, patio contractor, custom deck builder & hardscaping in Howell & Monmouth County, NJ. Cambridge pavers, composite decks & fire pits. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Patio Installation Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Paver Patio Installation & Deck Builder Howell NJ | Patio Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Custom interlocking paver patios, natural bluestone, pergolas, retaining walls, and outdoor living spaces in Howell Township, NJ by Jhay's Construction.",
+          "Custom interlocking paver patios, composite decks, bluestone hardscaping, pergolas, and outdoor living in Howell Township and Monmouth County, NJ by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/patio-installation" },
       { property: "og:type", content: "website" },
@@ -127,6 +127,14 @@ export const Route = createFileRoute("/services/patio-installation")({
                 "@type": "Answer",
                 "text": "Standard at-grade paver patios that do not alter municipal impervious coverage limits often do not require full building permits. However, gas fire pits, pergolas, and retaining walls over 4 feet do require permits. We verify all Howell Township zoning codes for you."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you build custom composite decks and outdoor living spaces in Howell, NJ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Beyond paver patios, Jhay's Construction is a licensed deck builder serving Howell and Monmouth County. We design and construct multi-level composite decks (Trex, TimberTech), PVC railings, pergolas, and outdoor living extensions built with township-inspected footings."
+              }
             }
           ]
         }),
@@ -149,8 +157,8 @@ const benefits = [
   },
   {
     icon: <Sun className="w-6 h-6" />,
-    title: "Pergolas & Shade Pavilions",
-    desc: "Custom cedar pergolas, low-maintenance composite lattice covers, and covered outdoor pavilions with integrated lighting.",
+    title: "Custom Decks & Pergolas",
+    desc: "Multi-level composite decks (Trex, TimberTech), vinyl railings, cedar pergolas, and covered outdoor pavilions engineered to NJ building codes.",
   },
   {
     icon: <Sparkles className="w-6 h-6" />,
@@ -193,6 +201,10 @@ const faqs = [
   {
     q: "Do I need a permit for a paver patio in Howell Township?",
     a: "Standard at-grade paver patios that do not alter municipal impervious coverage limits often do not require full building permits. However, gas fire pits, pergolas, and retaining walls over 4 feet do require permits. We verify all Howell Township zoning codes for you.",
+  },
+  {
+    q: "Do you build custom composite decks and outdoor living spaces in Howell, NJ?",
+    a: "Yes. Beyond paver patios, Jhay's Construction is a licensed deck builder serving Howell and Monmouth County. We design and construct multi-level composite decks (Trex, TimberTech), PVC railings, pergolas, and outdoor living extensions built with township-inspected footings.",
   },
 ];
 

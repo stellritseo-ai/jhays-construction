@@ -22,17 +22,17 @@ import {
 export const Route = createFileRoute("/services/basement-finishing")({
   head: () => ({
     meta: [
-      { title: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { title: "Basement Finishing Howell NJ | Basement Remodeling Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Transform your unfinished basement into luxury living space. Jhay's Construction provides basement finishing, home theaters, and wet bars in Howell, NJ. Call (732) 673-1569.",
+          "Transform your basement with Howell's trusted basement remodeling contractor serving Monmouth County, NJ. Home theaters, guest suites, wet bars & moisture control. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Basement Finishing Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Basement Finishing Howell NJ | Basement Remodeling Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Professional basement finishing in Howell Township, NJ. Custom home theaters, guest suites, home gyms, and wet bars by Jhay's Construction.",
+          "Professional basement finishing and remodeling in Howell Township and Monmouth County, NJ. Custom home theaters, guest suites, gyms, and wet bars by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/basement-finishing" },
       { property: "og:type", content: "website" },

@@ -21,17 +21,17 @@ import {
 export const Route = createFileRoute("/services/home-additions")({
   head: () => ({
     meta: [
-      { title: "Home Additions Howell NJ | Jhay's Construction" },
+      { title: "Home Additions Howell NJ | Home Addition Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Expand your living space with custom home additions, master suites, second story expansions, and in-law suites in Howell, NJ. Licensed NJ builder. Call (732) 673-1569.",
+          "Expand your living space with Howell's trusted home addition contractor serving Monmouth County, NJ. Master suites, second stories, in-law suites & sunrooms. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Home Additions Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Home Additions Howell NJ | Home Addition Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Custom home additions, second story builds, master bedroom suites, and family room expansions in Howell Township, NJ by Jhay's Construction.",
+          "Custom home additions, second story builds, master bedroom suites, and family room expansions in Howell Township and Monmouth County, NJ by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/home-additions" },
       { property: "og:type", content: "website" },

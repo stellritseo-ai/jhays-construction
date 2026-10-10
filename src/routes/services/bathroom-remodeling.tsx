@@ -21,17 +21,17 @@ import {
 export const Route = createFileRoute("/services/bathroom-remodeling")({
   head: () => ({
     meta: [
-      { title: "Bathroom Remodeling Howell NJ | Jhay's Construction" },
+      { title: "Bathroom Remodeling Howell NJ | Bathroom Remodeling Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Upgrade your bathroom with custom tile, walk-in frameless showers, luxury vanities, and radiant floors in Howell, NJ. Licensed general contractor. Free estimates.",
+          "Howell's trusted bathroom remodeling contractor serving Monmouth County, NJ. Custom tile showers, frameless glass, luxury vanities, soaking tubs & heated floors. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Bathroom Remodeling in Howell, NJ | Jhay's Construction" },
+      { property: "og:title", content: "Bathroom Remodeling Howell NJ | Bathroom Remodeling Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Full-service bathroom renovations in Howell Township, NJ. Custom tile showers, soaking tubs, heated floors, and vanities by Jhay's Construction.",
+          "Full-service bathroom renovations in Howell Township and Monmouth County, NJ. Custom tile showers, soaking tubs, heated floors, and vanities by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/bathroom-remodeling" },
       { property: "og:type", content: "website" },

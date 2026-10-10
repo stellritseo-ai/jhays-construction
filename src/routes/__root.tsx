@@ -219,7 +219,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "General Contractor in Howell, NJ | Jhay's Construction" },
-      { name: "description", content: "Jhay's Construction is a trusted general contractor in Howell Township, NJ specializing in kitchen remodeling, bathroom renovation, basement finishing, home additions, patio installation, and driveway paving. Call (732) 673-1569." },
+      { name: "description", content: "Jhay's Construction is Howell Township's trusted general contractor and home improvement contractor. Serving Monmouth County, NJ with kitchen remodeling, bathroom renovations, additions, finished basements, paver patios, and driveway paving. Call (732) 673-1569." },
       { name: "author", content: "Jhay's Construction" },
       { name: "google-site-verification", content: "vRCCDOrVPJN5-ZxyiE9Z9TQLgv_GJCfR-Y47MlYiTNc" },
       { property: "og:site_name", content: "Jhay's Construction" },

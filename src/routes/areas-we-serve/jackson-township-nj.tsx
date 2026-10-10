@@ -20,17 +20,17 @@ import {
 export const Route = createFileRoute("/areas-we-serve/jackson-township-nj")({
   head: () => ({
     meta: [
-      { title: "General Contractor Jackson NJ | Jhay's Construction" },
+      { title: "General Contractor & Home Remodeling Jackson Township NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Licensed general contractor serving Jackson Township, NJ (08527). Specializing in home additions, paver patios, pool hardscapes, driveway paving & kitchen remodels. Call (732) 673-1569.",
+          "Licensed general contractor & home remodeling in Jackson Township, NJ (08527). Specializing in home additions, paver patios, pool hardscapes, driveways & kitchens. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "General Contractor Jackson NJ | Jhay's Construction" },
+      { property: "og:title", content: "General Contractor & Home Remodeling Jackson Township NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Top-rated general contracting and remodeling in Jackson Township, Ocean County, NJ. Home additions, pool patios, driveways, kitchens, and basements.",
+          "Top-rated home remodeling and general contracting in Jackson Township, Ocean County, NJ. Home additions, pool patios, driveways, kitchens, and basements.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/areas-we-serve/jackson-township-nj" },
       { property: "og:type", content: "website" },
@@ -189,7 +189,7 @@ function JacksonLocationPage() {
             <MapPin className="w-3.5 h-3.5" /> Serving Jackson Township, Ocean County, NJ (08527)
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5 max-w-3xl">
-            General Contractor in <span style={{ color: "#6ee65a" }}>Jackson, NJ</span>
+            General Contractor &amp; Home Remodeling in <span style={{ color: "#6ee65a" }}>Jackson, NJ</span>
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-8 leading-relaxed">
             Specializing in large-scale home additions, custom pool patios, long driveway paving, and luxury interior remodeling for Jackson Township homeowners. Licensed, insured, and locally based.

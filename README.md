@@ -225,6 +225,34 @@ All legacy URLs have been redirected to canonical keyword routes via HTTP 301 pe
 
 ## Crawl Assets & Directives
 
-- **XML Sitemap:** `https://www.jhaysconstruction.com/sitemap.xml` (22 canonical URLs, 0 redirected URLs)
+- **XML Sitemap:** `https://www.jhaysconstruction.com/sitemap.xml` (23 canonical URLs, 0 redirected URLs)
 - **Robots.txt:** `https://www.jhaysconstruction.com/robots.txt` (clean crawl directives referencing sitemap)
 - **Social Cards:** High-res preview at `https://www.jhaysconstruction.com/og-image.jpg`
+
+---
+
+## Phase 14: Top 20 Competitive Target Keywords Mapping & Optimization
+
+| # | Group | Target Keyword Theme | Search Intent | Target URL | Difficulty / Demand Context | Priority | Optimization Status |
+| :- | :--- | :--- | :--- | :--- | :--- | :-: | :-: |
+| 1 | A | **General contractor Howell NJ** | Commercial / Local | `/` & `/areas-we-serve/howell-nj` | Low-Med / High Local Demand | **Priority 1** | Optimized in H1, Title & Meta |
+| 2 | A | **General contractors Monmouth County NJ** | Commercial / Regional | `/` & `/services` | Med / High Value Countywide | **Priority 1** | Optimized in Welcome copy & Meta |
+| 3 | A | **Home remodeling Howell NJ** | Commercial / Local | `/` & `/areas-we-serve/howell-nj` | Low-Med / Steady Volume | **Priority 1** | Optimized in Title & Welcome |
+| 4 | A | **Home improvement contractor Howell NJ** | Commercial / Local | `/about` & `/` | Low / High E-E-A-T Conversion | **Priority 1** | Optimized in Welcome & Root Meta |
+| 5 | A | **Construction company Howell NJ** | Commercial / Local | `/` (Homepage) | Low-Med / Local Trust | **Priority 1** | Optimized in Welcome H3 & Copy |
+| 6 | B | **Kitchen remodeling Howell NJ** | High Transactional | `/services/kitchen-remodeling` | Med / High Ticket ($35k+) | **Priority 1** | Primary H1 & Meta Target |
+| 7 | B | **Kitchen remodeling contractor Monmouth County NJ** | High Transactional | `/services/kitchen-remodeling` | Med-High / Countywide Intent | **Priority 1** | Optimized in Title, Meta & FAQ |
+| 8 | B | **Bathroom remodeling Howell NJ** | High Transactional | `/services/bathroom-remodeling` | Med / High Volume | **Priority 1** | Primary H1 & Meta Target |
+| 9 | B | **Bathroom remodeling contractor Monmouth County NJ** | High Transactional | `/services/bathroom-remodeling` | Med / High Regional Demand | **Priority 1** | Optimized in Title, Meta & FAQ |
+| 10 | C | **Home additions Howell NJ** | High Transactional | `/services/home-additions` | Low-Med / Highest Ticket ($80k+) | **Priority 1** | Primary H1 & Meta Target |
+| 11 | C | **Home addition contractor Monmouth County NJ** | High Transactional | `/services/home-additions` | Med / High Value Regional | **Priority 1** | Optimized in Title, Meta & FAQ |
+| 12 | C | **Basement finishing Howell NJ** | High Transactional | `/services/basement-finishing` | Low / Steady Winter Demand | **Priority 2** | Primary H1 & Meta Target |
+| 13 | C | **Basement remodeling contractor Monmouth County NJ** | High Transactional | `/services/basement-finishing` | Low-Med / Regional Demand | **Priority 2** | Optimized in Title, Meta & FAQ |
+| 14 | D | **Paver patio installation Howell NJ** | High Transactional | `/services/patio-installation` | Low / High Spring-Fall Demand | **Priority 1** | Optimized in Title & Features |
+| 15 | D | **Patio contractor Monmouth County NJ** | High Transactional | `/services/patio-installation` | Low-Med / High Regional Value | **Priority 1** | Optimized in Title, Meta & Copy |
+| 16 | D | **Driveway paving Howell NJ** | Transactional | `/services/driveway-paving` | Med / Steady Outdoor Demand | **Priority 2** | Primary H1 & Meta Target |
+| 17 | D | **Paver driveway contractor Monmouth County NJ** | High Transactional | `/services/driveway-paving` | Low-Med / High Ticket Hardscape | **Priority 2** | Optimized in Title, Meta & FAQ |
+| 18 | D | **Deck builder Howell NJ** | High Transactional | `/services/patio-installation` | Low-Med / Outdoor Carpentry | **Priority 2** | Optimized in Title, Meta & FAQ |
+| 19 | E | **General contractor Freehold NJ** | Commercial / Nearby | `/areas-we-serve/freehold-nj` | Low-Med / High Adjacency Demand | **Priority 2** | Dedicated Local Landing Page |
+| 20 | E | **Home remodeling Jackson Township NJ** | Commercial / Nearby | `/areas-we-serve/jackson-township-nj` | Low-Med / High Growth Suburb | **Priority 2** | Dedicated Local Landing Page |
+

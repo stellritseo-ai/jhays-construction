@@ -23,17 +23,17 @@ import {
 export const Route = createFileRoute("/areas-we-serve/howell-nj")({
   head: () => ({
     meta: [
-      { title: "General Contractor Howell NJ | Jhay's Construction" },
+      { title: "General Contractor & Home Remodeling Howell NJ | Jhay's Construction" },
       {
         name: "description",
         content:
-          "Looking for a licensed general contractor in Howell, NJ? Jhay's Construction is headquartered at 735 Hulses Corner Rd. Kitchens, baths, additions, patios & paving. Call (732) 673-1569.",
+          "Hometown general contractor & home improvement contractor in Howell, NJ (07731). Headquartered at 735 Hulses Corner Rd. Kitchens, baths, additions, patios & paving. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "General Contractor Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "General Contractor & Home Remodeling Howell NJ | Jhay's Construction" },
       {
         property: "og:description",
         content:
-          "Howell Township's hometown general contractor and home remodeling specialist. Based in Howell, NJ. Kitchen remodeling, bathrooms, additions, basements, and patios.",
+          "Howell Township's hometown general contractor and home remodeling specialist. Headquartered at 735 Hulses Corner Rd, Howell, NJ. Kitchens, baths, additions, basements, and patios.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/areas-we-serve/howell-nj" },
       { property: "og:type", content: "website" },

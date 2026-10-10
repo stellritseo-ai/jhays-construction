@@ -20,17 +20,17 @@ import {
 export const Route = createFileRoute("/services/kitchen-remodeling")({
   head: () => ({
     meta: [
-      { title: "Kitchen Remodeling Howell NJ | Jhay's Construction" },
+      { title: "Kitchen Remodeling Howell NJ | Kitchen Remodeling Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Transform your kitchen with custom cabinetry, quartz countertops, modern islands, and full renovations in Howell, NJ. Licensed NJ general contractor. Call (732) 673-1569.",
+          "Transform your home with Howell's trusted kitchen remodeling contractor serving Monmouth County, NJ. Custom cabinetry, quartz islands & full design-build renovations. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Kitchen Remodeling in Howell, NJ | Jhay's Construction" },
+      { property: "og:title", content: "Kitchen Remodeling Howell NJ | Kitchen Remodeling Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Custom kitchen remodeling in Howell Township, NJ. Custom cabinets, islands, countertops, appliances, and full kitchen design by Jhay's Construction.",
+          "Custom kitchen remodeling in Howell Township and Monmouth County, NJ. Custom cabinets, islands, countertops, appliances, and full kitchen design by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/kitchen-remodeling" },
       { property: "og:type", content: "website" },

@@ -22,17 +22,17 @@ import {
 export const Route = createFileRoute("/services/driveway-paving")({
   head: () => ({
     meta: [
-      { title: "Driveway Paving Howell NJ | Jhay's Construction" },
+      { title: "Driveway Paving Howell NJ | Paver Driveway Contractor Monmouth County" },
       {
         name: "description",
         content:
-          "Professional asphalt driveway paving, concrete driveways, Belgian block curbing, and sealcoating in Howell, NJ. Durable foundations built for heavy vehicles. Call (732) 673-1569.",
+          "Expert asphalt driveway paving, paver driveway contractor & concrete paving in Howell & Monmouth County, NJ. Belgian block curbing & excavation. Call (732) 673-1569.",
       },
-      { property: "og:title", content: "Driveway Paving Howell NJ | Jhay's Construction" },
+      { property: "og:title", content: "Driveway Paving Howell NJ | Paver Driveway Contractor Monmouth County" },
       {
         property: "og:description",
         content:
-          "Expert driveway paving in Howell Township, NJ. Hot-mix asphalt, reinforced concrete, interlocking pavers, and Belgian block curbing by Jhay's Construction.",
+          "Expert asphalt and interlocking paver driveway contractor in Howell Township and Monmouth County, NJ by Jhay's Construction.",
       },
       { property: "og:url", content: "https://www.jhaysconstruction.com/services/driveway-paving" },
       { property: "og:type", content: "website" },
@@ -127,6 +127,14 @@ export const Route = createFileRoute("/services/driveway-paving")({
                 "@type": "Answer",
                 "text": "A direct replacement of an existing driveway footprint generally does not require a complex building permit, but widening a driveway or modifying the street curb cut / apron requires Howell Township engineering approval. We guide you through all local zoning rules."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you install interlocking paver driveways across Monmouth County, NJ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. As an experienced paver driveway contractor serving Monmouth County, we install heavy-duty vehicular interlocking pavers (Cambridge, Techo-Bloc, Unilock) built over an 8-to-10-inch compacted aggregate base with concrete edge restraints."
+              }
             }
           ]
         }),
@@ -193,6 +201,10 @@ const faqs = [
   {
     q: "Do I need a permit to repave my driveway in Howell Township?",
     a: "A direct replacement of an existing driveway footprint generally does not require a complex building permit, but widening a driveway or modifying the street curb cut / apron requires Howell Township engineering approval. We guide you through all local zoning rules.",
+  },
+  {
+    q: "Do you install interlocking paver driveways across Monmouth County, NJ?",
+    a: "Yes. As an experienced paver driveway contractor serving Monmouth County, we install heavy-duty vehicular interlocking pavers (Cambridge, Techo-Bloc, Unilock) built over an 8-to-10-inch compacted aggregate base with concrete edge restraints.",
   },
 ];
 
